@@ -820,19 +820,23 @@
                         "xPubSList": [],
                         "keyEncryptedList": []
                     },
-                    "success": {}
+                    "success": {
+                        "requestHash": {}
+                    }
                 },
                 "keyShareGet": {
                     "paramList": {
                         "xPubSList": []
                     },
                     "success": {
+                        "requestHash": {},
                         "xPubSList": [],
                         "keyEncryptedList": []
                     }
                 },
                 "keyShareConfirm": {
                     "paramList": {
+                        "requestHash": {},
                         "xPubSList": [],
                         "keyEncryptedList": [],
                         "sig": {}
@@ -840,7 +844,8 @@
                     "success": {}
                 },
                 "keyShareConfirmGet": {
-                    "paramList": {                        
+                    "paramList": {        
+                        "requestHash": {},                
                         "xPubSList": [],
                         "keyEncryptedList": [],
                         "sigList": []
@@ -850,24 +855,49 @@
             },
             "boarding": {
                 "boardingTemplateGet": {
-                    "paramList": {},
-                    "success": {}
+                    "paramList": {
+                        "contribution": {}
+                    },
+                    "success": {
+                        "contribution": {}
+                    }
                 },
                 "boarding": {
-                    "paramList": {},
-                    "success": {}
+                    "paramList": {
+                        "contribution": {}
+                    },
+                    "success": {
+                        "requestHash": {}
+                    }
                 },
                 "boardingGet": {
-                    "paramList": {},
-                    "success": {}
+                    "paramList": {
+                        "xPubSList": []
+                    },
+                    "success": {
+                        "requestHash": {},
+                        "xPubSList": [],
+                        "contributionList": []
+                    }
                 },
                 "boardingBroadcast": {
-                    "paramList": {},
+                    "paramList": {
+                        "requestHash": {},
+                        "xPubSList": [],
+                        "contributionList": [],
+                        "sigList": []
+                    },
                     "success": {}
                 },
                 "boardingBroadcastGet": {
-                    "paramList": {},
-                    "success": {}
+                    "paramList": {
+                        "requestHash": {}
+                    },
+                    "success": {
+                        "xPubSList": [],
+                        "contributionList": [],
+                        "sigList": []
+                    }
                 }
             },
             "contribution": {
