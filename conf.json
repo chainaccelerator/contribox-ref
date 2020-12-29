@@ -97,10 +97,22 @@
             "min" : 0,
             "max" : 0
         },
+        "pubKeyEncrypted":{
+            "encrypted": ""
+        },
+        "rangeEncrypted": {
+            "encrypted": ""
+        },
+        "xPubEncrypted": {
+            "encrypted": ""
+        },
         "xPub" : {
             "index": 0,
             "data": "",
-            "xPubRange" : {}
+            "xPubRange" : {},
+            "encrypted" : {},
+            "rangeEncrypted" : {},
+            "pubKeyEncrypted" : {}
         },
         "jsonData": {
             "data": ""
@@ -204,9 +216,16 @@
         "sig": {
             "txVoutindex": 0,
             "sigData": {},
-            "pubKey": {},    
-            "xPub": {},    
+            "pubKey": {},   
+            "pubKeyEncrypted": {}, 
+            "pubKeyS": {},   
+            "pubKeySEncrypted": {},    
+            "xPub": {},  
+            "xPubHash": {},  
+            "xPubEncrypted": {},        
             "XPubS": {},    
+            "XPubSHash": {},    
+            "xPubSEncrypted": {},
             "yes": 0,
             "txId": {},    
             "txAmount": 0,
@@ -214,9 +233,6 @@
             "txUtxo": {},
             "script":  {},
             "voutSigList": []
-        },
-        "rangeEncrypted": {
-            "encrypted": ""
         },
         "issueAsset" : {},
         "blindingKeyEncrypted": {
@@ -231,10 +247,6 @@
             "blindKeyEncryptedList": [],
             "boardingList": [],
             "Sig": {}    
-        },
-        "keyEncrypte" : {
-            "key" : {},
-            "encrypted": ""
         },
         "keyEncrypted" : {
             "key" : {},
@@ -287,18 +299,16 @@
            "data": "share|backup|lock"
         },
         "reason": {
-            "data": "todo|done|completed|broadcasted"
+            "resource": {},
+            "data": "",
+            "msg": "",
+            "code": 0,
+            "state": "mock",
+            "type": "share|backup|lock",
+            "step": "todo|toComplete|done|rejected|stored"
         },
         "paramList": {
-            "type": "share|backup|lock",
-            "resource": {},
-            "reason": {}
-        },
-        "success": {
-            "reason": {}
-        },
-        "error": {
-            "reason": {}
+
         },
         "result": {
             "bool": 0
@@ -307,15 +317,17 @@
             "name": ""
         },        
         "request": {
+            "methodHash": {},
             "metaData": {},
             "method": {},
-            "paramList": []
+            "paramList": [],
+            "reason": {}
         },
         "response": {
+            "methodHash": {},
             "metaData": {},
             "result": 0,
-            "success": {},
-            "error": 0    
+            "reason": {}  
         }
     },
     "typeControle" : {        
@@ -812,61 +824,60 @@
         "response": {
             "metaData": {},
             "result": 0,
-            "success": {},
+            "reason": {},
             "error": 0    
         },
         "method": {
             "authentification": {
                 "authOtpGet": {
                     "paramList": {},
-                    "success": {}
+                    "reason": {}
                 },
                 "authOtpFinalGet": {
                     "paramList": {},
-                    "success": {}
+                    "reason": {}
                 },
                 "authResponseGet": {
                     "paramList": {},
-                    "success": {}
+                    "reason": {}
                 }
             },
             "key": {
                 "keyShare": {
                     "paramList": {
-                        "xPubSList": [],
-                        "keyEncryptedList": []
+                        "pubKeyEncrypted": ["encrypted"],
+                        "pubKeySEncryptedList": ["encrypted"],
+                        "keyEncryptedList": ["encrypted"]     
                     },
-                    "success": {
-                        "requestHash": {}
+                    "reason": {
+                        "requestHash": ["hash"]
                     }
                 },
                 "keyShareGet": {
                     "paramList": {
-                        "xPubSList": []
+                        "pubKeySEncryptedList": ["encrypted"]
                     },
-                    "success": {
-                        "requestHash": {},
-                        "xPubSList": [],
-                        "keyEncryptedList": []
+                    "reason": {
+                        "requestHash": ["hash"],
+                        "pubKeyEncrypted": ["encrypted"],
+                        "keyEncryptedList": ["encrypted"]      
                     }
                 },
                 "keyShareConfirm": {
                     "paramList": {
-                        "requestHash": {},
-                        "xPubSList": [],
-                        "keyEncryptedList": [],
-                        "sig": {}
+                        "requestHash": ["hash"],
+                        "pubKeySEncryptedList": ["encrypted"],
+                        "sigList": ["txVoutindex", "sigData", "yes"]
                     },
-                    "success": {}
+                    "reason": {}
                 },
                 "keyShareConfirmGet": {
                     "paramList": {        
-                        "requestHash": {},                
-                        "xPubSList": [],
-                        "keyEncryptedList": [],
-                        "sigList": []
+                        "requestHash": ["hash"]
                     },
-                    "success": {}
+                    "reason": {
+                        "sigList": ["pubKeyEncrypted"]
+                    }
                 }
             },
             "boarding": {
@@ -874,7 +885,7 @@
                     "paramList": {
                         "contribution": {}
                     },
-                    "success": {
+                    "reason": {
                         "contribution": {}
                     }
                 },
@@ -882,34 +893,34 @@
                     "paramList": {
                         "contribution": {}
                     },
-                    "success": {
-                        "requestHash": {}
+                    "reason": {
+                        "requestHash": ["hash"]
                     }
                 },
                 "boardingGet": {
                     "paramList": {
                         "xPubSList": []
                     },
-                    "success": {
-                        "requestHash": {},
+                    "reason": {
+                        "requestHash": ["hash"],
                         "xPubSList": [],
                         "contributionList": []
                     }
                 },
                 "boardingBroadcast": {
                     "paramList": {
-                        "requestHash": {},
+                        "requestHash": ["hash"],
                         "xPubSList": [],
                         "contributionList": [],
                         "sigList": []
                     },
-                    "success": {}
+                    "reason": {}
                 },
                 "boardingBroadcastGet": {
                     "paramList": {
-                        "requestHash": {}
+                        "requestHash": ["hash"]
                     },
-                    "success": {
+                    "reason": {
                         "xPubSList": [],
                         "contributionList": [],
                         "sigList": []
@@ -921,47 +932,47 @@
                     "paramList": {
                         "contribution": {}
                     },
-                    "success": {
-                        "requestHash": {}
+                    "reason": {
+                        "requestHash": ["hash"]
                     }
                 },
                 "contributionGet": {
                     "paramList": {
                         "xPubSList": []
                     },
-                    "success": {
-                        "requestHash": {}
+                    "reason": {
+                        "requestHash": ["hash"]
                     }
                 },
                 "contributionConfirm": {
                     "paramList": {
                         "xPubSList": [],
                         "sigList": [],
-                        "requestHash": {}
+                        "requestHash": ["hash"]
                     },
-                    "success": {}
+                    "reason": {}
                 },
                 "contributionConfirmGet": {
                     "paramList": {
-                        "requestHash": {}
+                        "requestHash": ["hash"]
                     },
-                    "success": {
+                    "reason": {
                         "xPubSList": [],
                         "sigList": []
                     }
                 },
                 "contributionBroadcast": {
                     "paramList": {
-                        "requestHash": {},                        
+                        "requestHash": ["hash"],                        
                         "sigList": []
                     },
-                    "success": {}
+                    "reason": {}
                 },
                 "contributionBroadcastGet": {
                     "paramList": {
-                        "requestHash": {}
+                        "requestHash": ["hash"]
                     },
-                    "success": {     
+                    "reason": {     
                         "contribution": {},                                          
                         "sigList": []
                     }
@@ -970,19 +981,19 @@
             "Public": {
                 "publicPeerListGet": {
                     "paramList": {},
-                    "success": {
+                    "reason": {
                         "contribution": {}
                     }
                 },
                 "publicSDKGet": {
                     "paramList": {},
-                    "success": {
+                    "reason": {
                         "contribution": {}
                     }
                 },
                 "publicArchiveGet": {
                     "paramList": {},
-                    "success": {                        
+                    "reason": {                        
                         "contribution": {}
                     }
                 },
@@ -990,7 +1001,7 @@
                     "paramList": {
                         "contributionHash": {}
                     },
-                    "success": {
+                    "reason": {
                         "contribution": {}
                     }
                 }
@@ -1000,7 +1011,7 @@
                     "paramList": {
                         "ipv4": {}
                     },
-                    "success": {}
+                    "reason": {}
                 }
             }
         }
