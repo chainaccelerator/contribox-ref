@@ -297,9 +297,25 @@
         "success": {
             "reason": {}
         },
+        "error": {
+            "reason": {}
+        },
+        "result": {
+            "bool": 0
+        },
         "method": {
-            "paramList": {},
-            "success": {}            
+            "name": ""
+        },        
+        "request": {
+            "metaData": {},
+            "method": {},
+            "paramList": []
+        },
+        "response": {
+            "metaData": {},
+            "result": 0,
+            "success": {},
+            "error": 0    
         }
     },
     "typeControle" : {        
@@ -931,7 +947,7 @@
                     },
                     "success": {
                         "xPubSList": [],
-                        "sigList": [],
+                        "sigList": []
                     }
                 },
                 "contributionBroadcast": {

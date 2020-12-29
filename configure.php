@@ -18,13 +18,39 @@ class Type {
     public static $list;
 
     public $paramList;
+    public $name = '';
+    public $description = '';
 
-    public function __construct($name, $def){
+    public function __construct($name, $def, $description){
 
+        $this->name = $name;
+        $this->description = $description;
         $this->paramList = $def;
         $hash = new Hash($name, $def);
         $this->paramList->hash = $hash->paramList;
         $this->paramList->state = "mock";
+    }
+}
+
+class Method {
+
+    public static $list;
+
+    public $name = '';
+    public $method = '';
+    public $description = '';
+    public $metadata;
+    public $paramList = '';
+    public $success = '';
+
+    public function __construct($name, $def){
+
+        $this->name = $name;
+        $this->method = $name;
+        $this->description = $description;
+        $this->metadata = Type::$list->metadata;
+        $this->paramList = Type::$list->paramList;
+        $this->sucess = Type::$list->succes;
     }
 }
 
@@ -224,6 +250,46 @@ foreach($conf->type as $name => $def) {
                     $obj->paramList->transctionHash = Type::$list->hash->paramList;
                     $obj->paramList->gitCommitHash = Type::$list->hash->paramList;
                 break;
+            case 'type':
+
+                break;
+            case 'reason':
+
+                break;
+            case 'paramList':
+                
+                    $obj->paramList->type = Type::$list->type->paramList;
+                    $obj->paramList->resource = new stdClass();
+                    $obj->paramList->reason = Type::$list->reason->paramList;
+                break;
+            case 'success':
+
+                    $obj->paramList->resource = new stdClass();
+                    $obj->paramList->reason = Type::$list->reason->paramList;
+                break;
+            case 'error':
+
+                    $obj->paramList->reason = Type::$list->reason->paramList;
+                break;
+            case 'method':
+            
+                break;
+            case 'result':
+                
+                break;
+            case 'request':
+
+                    $obj->paramList->metaData = Type::$list->metaData->paramList;
+                    $obj->paramList->method = Type::$list->method->paramList;
+                    $obj->paramList->paramList = Type::$list->paramList->paramList;
+                break;
+            case 'response':
+
+                    $obj->paramList->metaData = Type::$list->metaData->paramList;
+                    $obj->paramList->result = Type::$list->result->paramList;
+                    $obj->paramList->success = Type::$list->success->paramList;
+                    $obj->paramList->error = Type::$list->error->paramerrorList;
+                break;
             default:
                 
                 break;
@@ -234,6 +300,100 @@ foreach($conf->type as $name => $def) {
 $c = new stdClass();
 
 foreach(Type::$list as $k => $v) {
+
+    $c->$k = $v->paramList;
+}
+$proto_file = 'prototypes.json';
+$proto_content = json_encode($c, JSON_PRETTY_PRINT, 10);
+
+file_put_contents('prototypes.json', $proto_content);
+
+echo '<a href="'.$proto_file.'" target="_blank">Prototypes</a><br>';
+
+Method::$list = new stdClass();
+
+foreach($conf->method as $type => $method) {
+
+    foreach($method as $name => $def) {
+
+        $obj = new Type($name, $def);
+
+        switch ($name) {
+
+            case 'authOtpFinalGet':                
+                
+                break;
+            case 'authResponseGet':                
+                
+                break;
+            case 'keyShare':                
+                
+                break;
+            case 'keyShareGet':                
+                
+                break;
+            case 'keyShareConfirm':                
+                
+                break;
+            case 'keyShareConfirmGet':                
+                
+                break;
+            case 'boardingTemplateGet':                
+                
+                break;
+            case 'boardingGet':                
+                
+                break;
+            case 'boardingBroadcast':                
+                
+                break;
+            case 'boardingBroadcastGet':                
+                
+                break;
+            case 'contribution':                
+                
+                break;
+            case 'contributionGet':                
+                
+                break;
+            case 'contributionConfirm':                
+                
+                break;
+            case 'contributionConfirmGet':                
+                
+                break;
+            case 'contributionBroadcast':                
+                
+                break;
+            case 'contributionBroadcastGet':                
+                
+                break;
+            case 'publicPeerListGet':                
+                
+                break;
+            case 'publicSDKGet':                
+                
+                break;
+            case 'publicArchiveGet':                
+                
+                break;
+            case 'publicDidGet':                
+                
+                break;
+            case 'peerCheck':                
+                
+                break;
+            default:
+                
+                break;
+        }
+        Type::$list->$name = $obj;
+    }
+}    
+
+$c = new stdClass();
+
+foreach(Method::$list as $k => $v) {
 
     $c->$k = $v->paramList;
 }
