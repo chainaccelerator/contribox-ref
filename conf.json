@@ -282,6 +282,24 @@
             "sigNo": [],
             "transctionHash": {},
             "gitCommitHash": {}
+        },
+        "type": {
+           "data": "share|backup|lock"
+        },
+        "reason": {
+            "data": "todo|done|completed|broadcasted"
+        },
+        "paramList": {
+            "type": "share|backup|lock",
+            "resource": {},
+            "reason": {}
+        },
+        "success": {
+            "reason": {}
+        },
+        "method": {
+            "paramList": {},
+            "success": {}            
         }
     },
     "typeControle" : {        
@@ -511,6 +529,11 @@
             "type": "bool",
             "valueList": [0, 1],
             "default": 1
+        },
+        "type": {
+            "type": "string",
+            "valueList": ["share", "backup", "lock"],
+            "default": "share"
         }
     },
     "signature": {
@@ -793,19 +816,35 @@
             },
             "key": {
                 "keyShare": {
-                    "paramList": {},
+                    "paramList": {
+                        "xPubSList": [],
+                        "keyEncryptedList": []
+                    },
                     "success": {}
                 },
                 "keyShareGet": {
-                    "paramList": {},
-                    "success": {}
+                    "paramList": {
+                        "xPubSList": []
+                    },
+                    "success": {
+                        "xPubSList": [],
+                        "keyEncryptedList": []
+                    }
                 },
                 "keyShareConfirm": {
-                    "paramList": {},
+                    "paramList": {
+                        "xPubSList": [],
+                        "keyEncryptedList": [],
+                        "sig": {}
+                    },
                     "success": {}
                 },
                 "keyShareConfirmGet": {
-                    "paramList": {},
+                    "paramList": {                        
+                        "xPubSList": [],
+                        "keyEncryptedList": [],
+                        "sigList": []
+                    },
                     "success": {}
                 }
             },
