@@ -902,51 +902,88 @@
             },
             "contribution": {
                 "contribution": {
-                    "paramList": {},
-                    "success": {}
+                    "paramList": {
+                        "contribution": {}
+                    },
+                    "success": {
+                        "requestHash": {}
+                    }
                 },
                 "contributionGet": {
-                    "paramList": {},
-                    "success": {}
+                    "paramList": {
+                        "xPubSList": []
+                    },
+                    "success": {
+                        "requestHash": {}
+                    }
                 },
                 "contributionConfirm": {
-                    "paramList": {},
+                    "paramList": {
+                        "xPubSList": [],
+                        "sigList": [],
+                        "requestHash": {}
+                    },
                     "success": {}
                 },
                 "contributionConfirmGet": {
-                    "paramList": {},
-                    "success": {}
+                    "paramList": {
+                        "requestHash": {}
+                    },
+                    "success": {
+                        "xPubSList": [],
+                        "sigList": [],
+                    }
                 },
                 "contributionBroadcast": {
-                    "paramList": {},
+                    "paramList": {
+                        "requestHash": {},                        
+                        "sigList": []
+                    },
                     "success": {}
                 },
                 "contributionBroadcastGet": {
-                    "paramList": {},
-                    "success": {}
+                    "paramList": {
+                        "requestHash": {}
+                    },
+                    "success": {     
+                        "contribution": {},                                          
+                        "sigList": []
+                    }
                 }
             },
             "Public": {
                 "publicPeerListGet": {
                     "paramList": {},
-                    "success": {}
+                    "success": {
+                        "contribution": {}
+                    }
                 },
                 "publicSDKGet": {
                     "paramList": {},
-                    "success": {}
+                    "success": {
+                        "contribution": {}
+                    }
                 },
                 "publicArchiveGet": {
                     "paramList": {},
-                    "success": {}
+                    "success": {                        
+                        "contribution": {}
+                    }
                 },
                 "publicDidGet": {
-                    "paramList": {},
-                    "success": {}
+                    "paramList": {
+                        "contributionHash": {}
+                    },
+                    "success": {
+                        "contribution": {}
+                    }
                 }
             },
             "Peer": {
                 "peerCheck": {
-                    "paramList": {},
+                    "paramList": {
+                        "ipv4": {}
+                    },
                     "success": {}
                 }
             }
