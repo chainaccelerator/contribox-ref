@@ -1,0 +1,2434 @@
+{
+    "integration": {
+        "share": {
+            "master": {
+                "privK": "",
+                "xPub": "",
+                "range": [],
+                "seedWords": []
+            },
+            "backup": [
+                    {
+                        "privK": "",
+                        "xPub": "",
+                        "range": [],
+                        "xPubShare": "",
+                        "xPubShared": 0,
+                        "active": 1,
+                        "seedWords": []
+                    },
+                    {
+                        "privK": "",
+                        "xPub": "",
+                        "range": [],
+                        "xPubShare": "",
+                        "xPubShared": 0,
+                        "active": 1,
+                        "seedWords": []
+                    }
+            ],
+            "lock": [
+                    {
+                        "privK": "",
+                        "xPub": "",
+                        "range": [],
+                        "xPubShare": "",
+                        "xPubShared": 0,
+                        "active": 1,
+                        "seedWords": []
+                    },
+                    {
+                        "privK": "",
+                        "xPub": "",
+                        "range": [],
+                        "xPubShare": "",
+                        "xPubShared": 0,
+                        "active": 1,
+                        "seedWords": []
+                    }
+            ],
+            "witness": [
+                    {
+                        "privK": "",
+                        "xPub": "",
+                        "range": [],
+                        "xPubShare": "",
+                        "xPubShared": 0,
+                        "active": 1,
+                        "seedWords": []
+                    },
+                    {
+                        "privK": "",
+                        "xPub": "",
+                        "range": [],
+                        "xPubShare": "",
+                        "xPubShared": 0,
+                        "active": 1,
+                        "seedWords": []
+                    }
+            ]
+        },
+        "callback": {
+            "passwordGet": "",
+            "sign": "",
+            "signed": ""            
+        }
+    },
+    "type": {
+        "password" : {
+            "data" : ""
+        },
+        "hash": {
+            "hash": {
+                "data": ""
+            },
+            "hashLeft": {
+                "hash": {
+                    "data": ""
+                },
+                "hashLeft": {},
+                "hashRight": {}
+            },
+            "hashRight": {
+                "hash": {
+                    "data": ""
+                },
+                "hashLeft": {},
+                "hashRight": {}
+            }
+        },
+        "key" : {
+            "data" : ""
+        },
+        "blindingKey" : {
+            "data" : ""
+        },
+        "xPubRange" : {
+            "min" : 0,
+            "max" : 0
+        },
+        "xPub" : {
+            "hash": {
+                "data": ""
+            },
+            "index": 0,
+            "data": "",
+            "xPubRange" : {
+                "min" : 0,
+                "max" : 0
+            }
+        },
+        "rule" : {
+            "xpubList": [
+                {
+            "hash": {
+                "data": ""
+            },
+        
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                }        
+            ],
+            "timeout": {
+                "time": 0,
+                "delay": 0
+            },
+            "quorum": 0,
+            "backupRule": [
+                {
+                    "xpubList": [
+                        {
+                            "hash": {
+                                "data": ""
+                            },     
+                            "index": 0,
+                            "data": "",
+                            "xPubRange" : {
+                                "min" : 0,
+                                "max" : 0
+                            }
+                        }        
+                    ],
+                    "timeout": {
+                        "time": 0,
+                        "delay": 0
+                    },
+                    "quorum": 0
+                }
+            ],
+            "lockRule": [
+                {
+                    "xpubList": [
+                        {
+                            "hash": {
+                                "data": ""
+                            },     
+                            "index": 0,
+                            "data": "",
+                            "xPubRange" : {
+                                "min" : 0,
+                                "max" : 0
+                            }
+                        }        
+                    ],
+                    "timeout": {
+                        "time": 0,
+                        "delay": 0
+                    },
+                    "quorum": 0
+                }
+            ]
+        },
+        "ruleGroup" : {
+            "licenceHash": {
+                "data": ""
+            },
+            "boardRule": {
+                "xpubList": [
+                    {
+                        "hash": {
+                            "data": ""
+                        },     
+                        "index": 0,
+                        "data": "",
+                        "xPubRange" : {
+                            "min" : 0,
+                            "max" : 0
+                        }
+                    }        
+                ],
+                "timeout": {
+                    "time": 0,
+                    "delay": 0
+                },
+                "quorum": 0,
+                "backupRule": [
+                    {
+                        "xpubList": [
+                            {
+                                "hash": {
+                                    "data": ""
+                                },     
+                                "index": 0,
+                                "data": "",
+                                "xPubRange" : {
+                                    "min" : 0,
+                                    "max" : 0
+                                }
+                            }        
+                        ],
+                        "timeout": {
+                            "time": 0,
+                            "delay": 0
+                        },
+                        "quorum": 0
+                    }
+                ],
+                "lockRule": [
+                    {
+                        "xpubList": [
+                            {
+                                "hash": {
+                                    "data": ""
+                                },     
+                                "index": 0,
+                                "data": "",
+                                "xPubRange" : {
+                                    "min" : 0,
+                                    "max" : 0
+                                }
+                            }        
+                        ],
+                        "timeout": {
+                            "time": 0,
+                            "delay": 0
+                        },
+                        "quorum": 0
+                    }
+                ]
+            },
+            "memberRule": {
+                "xpubList": [
+                    {
+                        "hash": {
+                            "data": ""
+                        },     
+                        "index": 0,
+                        "data": "",
+                        "xPubRange" : {
+                            "min" : 0,
+                            "max" : 0
+                        }
+                    }        
+                ],
+                "timeout": {
+                    "time": 0,
+                    "delay": 0
+                },
+                "quorum": 0,
+                "backupRule": [
+                    {
+                        "xpubList": [
+                            {
+                                "index": 0,
+                                "data": "",
+                                "xPubRange" : {
+                                    "min" : 0,
+                                    "max" : 0
+                                }
+                            }        
+                        ],
+                        "timeout": {
+                            "time": 0,
+                            "delay": 0
+                        },
+                        "quorum": 0
+                    }
+                ],
+                "lockRule": [
+                    {
+                        "xpubList": [
+                            {
+                                "hash": {
+                                    "data": ""
+                                },     
+                                "index": 0,
+                                "data": "",
+                                "xPubRange" : {
+                                    "min" : 0,
+                                    "max" : 0
+                                }
+                            }        
+                        ],
+                        "timeout": {
+                            "time": 0,
+                            "delay": 0
+                        },
+                        "quorum": 0
+                    }
+                ]
+            },
+            "witnessRule": {
+                "xpubList": [
+                    {
+                        "hash": {
+                            "data": ""
+                        },     
+                        "index": 0,
+                        "data": "",
+                        "xPubRange" : {
+                            "min" : 0,
+                            "max" : 0
+                        }
+                    }        
+                ],
+                "timeout": {
+                    "time": 0,
+                    "delay": 0
+                },
+                "quorum": 0,
+                "backupRule": [
+                    {
+                        "xpubList": [
+                            {
+                                "hash": {
+                                    "data": ""
+                                },     
+                                "index": 0,
+                                "data": "",
+                                "xPubRange" : {
+                                    "min" : 0,
+                                    "max" : 0
+                                }
+                            }        
+                        ],
+                        "timeout": {
+                            "time": 0,
+                            "delay": 0
+                        },
+                        "quorum": 0
+                    }
+                ],
+                "lockRule": [
+                    {
+                        "xpubList": [
+                            {
+                                "hash": {
+                                    "data": ""
+                                },     
+                                "index": 0,
+                                "data": "",
+                                "xPubRange" : {
+                                    "min" : 0,
+                                    "max" : 0
+                                }
+                            }        
+                        ],
+                        "timeout": {
+                            "time": 0,
+                            "delay": 0
+                        },
+                        "quorum": 0
+                    }
+                ]
+            },
+            "parentRuleList": [
+                {
+                    "xpubList": [
+                        {
+                            "hash": {
+                                "data": ""
+                            },     
+                            "index": 0,
+                            "data": "",
+                            "xPubRange" : {
+                                "min" : 0,
+                                "max" : 0
+                            }
+                        }        
+                    ],
+                    "timeout": {
+                        "time": 0,
+                        "delay": 0
+                    },
+                    "quorum": 0,
+                    "backupRule": [
+                        {
+                            "xpubList": [
+                                {
+                                    "hash": {
+                                        "data": ""
+                                    },     
+                                    "index": 0,
+                                    "data": "",
+                                    "xPubRange" : {
+                                        "min" : 0,
+                                        "max" : 0
+                                    }
+                                }        
+                            ],
+                            "timeout": {
+                                "time": 0,
+                                "delay": 0
+                            },
+                            "quorum": 0
+                        }
+                    ],
+                    "lockRule": [
+                        {
+                            "xpubList": [
+                                {
+                                    "hash": {
+                                        "data": ""
+                                    },     
+                                    "index": 0,
+                                    "data": "",
+                                    "xPubRange" : {
+                                        "min" : 0,
+                                        "max" : 0
+                                    }
+                                }        
+                            ],
+                            "timeout": {
+                                "time": 0,
+                                "delay": 0
+                            },
+                            "quorum": 0
+                        }
+                    ]
+                }
+            ],
+            "cosignerRuleList": [
+                {
+                    "xpubList": [
+                        {
+                            "hash": {
+                                "data": ""
+                            },     
+                            "index": 0,
+                            "data": "",
+                            "xPubRange" : {
+                                "min" : 0,
+                                "max" : 0
+                            }
+                        }        
+                    ],
+                    "timeout": {
+                        "time": 0,
+                        "delay": 0
+                    },
+                    "quorum": 0,
+                    "backupRule": [
+                        {
+                            "xpubList": [
+                                {
+                                    "hash": {
+                                        "data": ""
+                                    },     
+                                    "index": 0,
+                                    "data": "",
+                                    "xPubRange" : {
+                                        "min" : 0,
+                                        "max" : 0
+                                    }
+                                }        
+                            ],
+                            "timeout": {
+                                "time": 0,
+                                "delay": 0
+                            },
+                            "quorum": 0
+                        }
+                    ],
+                    "lockRule": [
+                        {
+                            "xpubList": [
+                                {
+                                    "hash": {
+                                        "data": ""
+                                    },     
+                                    "index": 0,
+                                    "data": "",
+                                    "xPubRange" : {
+                                        "min" : 0,
+                                        "max" : 0
+                                    }
+                                }        
+                            ],
+                            "timeout": {
+                                "time": 0,
+                                "delay": 0
+                            },
+                            "quorum": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        "jsonData": {
+            "data": ""
+        },
+        "stateReason": {
+            "reason": "todo|toComplete|done|rejected|stored",
+            "hash": {
+                "data": ""
+            }
+        },
+        "KeyVal": {
+            "key": "",
+            "val": {
+                "jsonData": {
+                    "data": ""
+                }
+            },
+            "hash": {
+                "data": ""
+            }
+        },
+        "proof": {
+            "hash": {
+                "data": ""
+            },
+            "xPub" : {
+                "index": 0,
+                "data": "",
+                "xPubRange" : {
+                    "min" : 0,
+                    "max" : 0
+                }
+            },    
+            "project": {
+                "name": "",
+                "hash": {
+                    "data": ""
+                }
+            },
+            "licence":  {
+                "name": "",
+                "SPDX": "",
+                "hash": {
+                    "data": ""
+                }
+            },
+            "licenceChange":  {
+                "name": "",
+                "SPDX": "",
+                "hash": {
+                    "data": ""
+                }
+            },
+            "groupRole": {
+                "name": "",
+                "hash": {
+                    "data": ""
+                }
+            },
+            "descriptionPublicList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "identityList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "event": {
+                "hash": {
+                    "data": ""
+                }
+            },
+            "environnementList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "qualityList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "contributeList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "originList": [
+                {
+                    "data": ""
+                }
+            ],
+            "parentList": [
+                {
+                    "data": ""
+                }
+            ],
+            "previousList": [
+                {
+                    "data": ""
+                }
+            ],
+            "leftList": [
+                {
+                    "data": ""
+                }
+            ],
+            "ndaList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "condifidentialDataList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "metaDataList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "officerList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "ediList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "certificateList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "exportControlList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "keyValueList": [
+                {
+                    "key": "",
+                    "val": {
+                        "jsonData": {
+                            "data": ""
+                        }
+                    },
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ],
+            "forList": [
+                {
+                    "hash": {
+                        "data": ""
+                    },
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                }        
+            ],
+            "toList": [
+                {
+                    "hash": {
+                        "data": ""
+                    },
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                }        
+            ],
+            "tagList": [""]
+        },
+        "project": {
+            "name": "",
+            "hash": {
+                "data": ""
+            }
+        },
+        "licence": {
+            "name": "",
+            "SPDX": "",
+            "hash": {
+                "data": ""
+            }
+        },
+        "groupRole": {
+            "name": "",
+            "hash": {
+                "data": ""
+            }
+        },
+        "userRole": {
+            "name": "",
+            "hash": {
+                "data": ""
+            }
+        },
+        "boarding": {
+            "xPubList": [
+                {
+                    "hash": {
+                        "data": ""
+                    },
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                }
+            ],
+            "in": 1,
+            "groupRoleList": [
+                {
+                    "name": "",
+                    "hash": {
+                        "data": ""
+                    }
+                }        
+            ],
+            "groupActionList": [
+                {
+                    "name": "",
+                    "hash": {
+                        "data": ""
+                    }
+                }
+            ]
+        },
+        "templateUser": {
+            "hash": {
+                "data": ""
+            },
+            "quorum": "x||any|timeout||timeout|any||any"
+        },
+        "templateProject": {
+            "hash": {
+                "data": ""
+            },
+            "quorum": "x||all||51%||any|timeout"
+        },
+        "template": {
+            "hash": {
+                "data": ""
+            },
+            "contributionHash": {
+                "data": ""
+            },
+            "userRequirement": 0,
+            "projectRequirement": 0,
+            "userUser": {
+                "hash": {
+                    "data": ""
+                },
+                "quorum": "x||any|timeout||timeout|any||any"
+            },
+            "userBackup": {
+                "hash": {
+                    "data": ""
+                },
+                "quorum": "x||any|timeout||timeout|any||any"
+            },
+            "userLock": {
+                "hash": {
+                    "data": ""
+                },
+                "quorum": "x||any|timeout||timeout|any||any"
+            },
+            "userWitness": {
+                "hash": {
+                    "data": ""
+                },
+                "quorum": "x||any|timeout||timeout|any||any"
+            },
+            "userUserXPubList": [
+                {
+                    "hash": {
+                        "hash": ""
+                    },
+                    "index": 0,
+                    "xPub": "",
+                    "range": {
+                        "min": 0,
+                        "max": 0
+                    }
+                }
+            ],
+            "userBackupXPubList": [
+                {
+                    "hash": {
+                        "hash": ""
+                    },
+                    "index": 0,
+                    "xPub": "",
+                    "range": {
+                        "min": 0,
+                        "max": 0
+                    }
+                }
+            ],
+            "userLockXPubList": [
+                {
+                    "hash": {
+                        "hash": ""
+                    },
+                    "index": 0,
+                    "xPub": "",
+                    "range": {
+                        "min": 0,
+                        "max": 0
+                    }
+                }
+            ],
+            "userWitnessXPubList": [
+                {
+                    "hash": {
+                        "hash": ""
+                    },
+                    "index": 0,
+                    "xPub": "",
+                    "range": {
+                        "min": 0,
+                        "max": 0
+                    }
+                }
+            ],
+            "projectOId": {
+                "hash": {
+                    "data": ""
+                },
+                "quorum": "x||all||51%||any|timeout"
+            },
+            "projectParent": {
+                "hash": {
+                    "data": ""
+                },
+                "quorum": "x||all||51%||any|timeout"
+            },
+            "projectBoard": {
+                "hash": {
+                    "data": ""
+                },
+                "quorum": "x||all||51%||any|timeout"
+            },
+            "projectMember": {
+                "hash": {
+                    "data": ""
+                },
+                "quorum": "x||all||51%||any|timeout"
+            },
+            "projectCosigner": {
+                "hash": {
+                    "data": ""
+                },
+                "quorum": "x||all||51%||any|timeout"
+            },
+            "projectWitness": {
+                "hash": {
+                    "data": ""
+                },
+                "quorum": "x||all||51%||any|timeout"
+            },
+            "projectOIdXPubList": [
+                {
+                    "hash": {
+                        "hash": ""
+                    },
+                    "index": 0,
+                    "xPub": "",
+                    "range": {
+                        "min": 0,
+                        "max": 0
+                    }
+                }
+            ],
+            "projectParentXPubList": [
+                {
+                    "hash": {
+                        "hash": ""
+                    },
+                    "index": 0,
+                    "xPub": "",
+                    "range": {
+                        "min": 0,
+                        "max": 0
+                    }
+                }
+            ],
+            "projectBoardXPubList": [
+                {
+                    "hash": {
+                        "hash": ""
+                    },
+                    "index": 0,
+                    "xPub": "",
+                    "range": {
+                        "min": 0,
+                        "max": 0
+                    }
+                }
+            ],
+            "projectMemberXPubList": [
+                {
+                    "hash": {
+                        "hash": ""
+                    },
+                    "index": 0,
+                    "xPub": "",
+                    "range": {
+                        "min": 0,
+                        "max": 0
+                    }
+                }
+            ],
+            "projectCosignerXPubList": [
+                {
+                    "hash": {
+                        "hash": ""
+                    },
+                    "index": 0,
+                    "xPub": "",
+                    "range": {
+                        "min": 0,
+                        "max": 0
+                    }
+                }
+            ],
+            "projectWitnessXPubList": [
+                {
+                    "hash": {
+                        "hash": ""
+                    },
+                    "index": 0,
+                    "xPub": "",
+                    "range": {
+                        "min": 0,
+                        "max": 0
+                    }
+                }
+            ],
+            "scriptTemplate": [
+                {
+                    "hash": {
+                        "hash": ""
+                    },
+                    "index": 0,
+                    "xPub": "",
+                    "range": {
+                        "min": 0,
+                        "max": 0
+                    }
+                }
+            ]
+        },
+        "utxoData": {
+            "hash": {
+                "data": ""
+            },
+            "data": ""
+        },
+        "txId": {
+            "hash": {
+                "data": ""
+            },
+            "id": ""
+        },
+        "script": {
+            "hash": {
+                "data": ""
+            },
+            "data": ""
+        },
+        "utxo": {
+            "hash": {
+                "data": ""
+            },
+            "txId": {
+                "hash": {
+                    "data": ""
+                },
+                "id": ""
+            },    
+            "utxoData": {
+                "hash": {
+                    "data": ""
+                },
+                "data": ""
+            },
+            "script": {
+                "hash": {
+                    "data": ""
+                },
+                "data": ""
+            }    
+        },
+        "pubKey": {
+            "hash": {
+                "data": ""
+            },
+            "data": "",
+            "base58Encoded": 1
+        },
+        "sigData": {
+            "hash": {
+                "data": ""
+            },
+            "data": ""
+        },
+        "sig": {
+            "txVoutindex": 0,
+            "sigData": {
+                "hash": {
+                    "data": ""
+                },
+                "data": ""
+            },
+            "pubKey": {
+                "hash": {
+                    "data": ""
+                },
+                "data": "",
+                "base58Encoded": 1
+            },    
+            "xPub": {
+                "hash": {
+                    "data": ""
+                },
+                "index": 0,
+                "data": "",
+                "xPubRange" : {
+                    "min" : 0,
+                    "max" : 0
+                }
+            },    
+            "XPubS": {
+                "hash": {
+                    "data": ""
+                },
+                "index": 0,
+                "data": "",
+                "xPubRange" : {
+                    "min" : 0,
+                    "max" : 0
+                }
+            },    
+            "yes": 0,
+            "txId": {
+                "hash": {
+                    "data": ""
+                },
+                "id": ""
+            },    
+            "txAmount": 0,
+            "txIssueAsset": {
+                "hash": {
+                    "data": ""
+                },
+                "id": ""
+            }, 
+            "txUtxo": {
+                "hash": {
+                    "data": ""
+                },
+                "txId": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "id": ""
+                },    
+                "utxoData": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "data": ""
+                },
+                "script": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "data": ""
+                }    
+            },
+            "script":  {
+                "hash": {
+                    "data": ""
+                },
+                "data": ""
+            },
+            "voutSigList": [
+                {
+                    "txVoutindex": 0,
+                    "sigData": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "data": ""
+                    },
+                    "pubKey": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "data": "",
+                        "base58Encoded": 1
+                    },    
+                    "xPub": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "index": 0,
+                        "data": "",
+                        "xPubRange" : {
+                            "min" : 0,
+                            "max" : 0
+                        }
+                    },    
+                    "XPubS": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "index": 0,
+                        "data": "",
+                        "xPubRange" : {
+                            "min" : 0,
+                            "max" : 0
+                        }
+                    },    
+                    "yes": 0,
+                    "txId": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "id": ""
+                    },    
+                    "txAmount": 0,
+                    "txIssueAsset": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "id": ""
+                    }, 
+                    "txUtxo": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "txId": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "id": ""
+                        },    
+                        "utxoData": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "data": ""
+                        },
+                        "script": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "data": ""
+                        }    
+                    },
+                    "script":  {
+                        "hash": {
+                            "data": ""
+                        },
+                        "data": ""
+                    }
+                }
+            ]
+        },
+        "issueAsset" : {
+            "hash": {
+                "data": ""
+            }
+        },
+        "blindingKeyEncrypted": {
+            "hash": {
+                "data": ""
+            },
+            "xPub": {
+                "hash": {
+                    "data": ""
+                },
+                "index": 0,
+                "data": "",
+                "xPubRange" : {
+                    "min" : 0,
+                    "max" : 0
+                }
+            },
+            "encrypted": "",
+            "rangeEncrypted": {
+                "hash": {
+                    "data": ""
+                },
+                "encrypted": ""
+            }    
+        },
+        "rangeEncrypted": {
+            "hash": {
+                "data": ""
+            },
+            "encrypted": ""
+        },
+        "contribution": {
+            "hash": {
+                "data": ""
+            },    
+            "xPub": {
+                "hash": {
+                    "data": ""
+                },
+                "index": 0,
+                "data": "",
+                "xPubRange" : {
+                    "min" : 0,
+                    "max" : 0
+                }
+            },
+            "proof": {
+                "hash": {
+                    "data": ""
+                },
+                "xPub" : {
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                },    
+                "project": {
+                    "name": "",
+                    "hash": {
+                        "data": ""
+                    }
+                },
+                "licence":  {
+                    "name": "",
+                    "SPDX": "",
+                    "hash": {
+                        "data": ""
+                    }
+                },
+                "licenceChange":  {
+                    "name": "",
+                    "SPDX": "",
+                    "hash": {
+                        "data": ""
+                    }
+                },
+                "groupRole": {
+                    "name": "",
+                    "hash": {
+                        "data": ""
+                    }
+                },
+                "descriptionPublicList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "identityList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "event": {
+                    "hash": {
+                        "data": ""
+                    }
+                },
+                "environnementList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "qualityList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "contributeList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "originList": [
+                    {
+                        "data": ""
+                    }
+                ],
+                "parentList": [
+                    {
+                        "data": ""
+                    }
+                ],
+                "previousList": [
+                    {
+                        "data": ""
+                    }
+                ],
+                "leftList": [
+                    {
+                        "data": ""
+                    }
+                ],
+                "ndaList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "condifidentialDataList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "metaDataList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "officerList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "ediList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "certificateList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "exportControlList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "keyValueList": [
+                    {
+                        "key": "",
+                        "val": {
+                            "jsonData": {
+                                "data": ""
+                            }
+                        },
+                        "hash": {
+                            "data": ""
+                        }
+                    }
+                ],
+                "forList": [
+                    {
+                        "hash": {
+                            "data": ""
+                        },
+                        "index": 0,
+                        "data": "",
+                        "xPubRange" : {
+                            "min" : 0,
+                            "max" : 0
+                        }
+                    }        
+                ],
+                "toList": [
+                    {
+                        "hash": {
+                            "data": ""
+                        },
+                        "index": 0,
+                        "data": "",
+                        "xPubRange" : {
+                            "min" : 0,
+                            "max" : 0
+                        }
+                    }        
+                ],
+                "tagList": [""]
+            },    
+            "templateHash": {
+                "data": ""
+            },
+            "blindKeyEncryptedList": [
+                {
+                    "hash": {
+                        "data": ""
+                    },
+                    "xPub": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "index": 0,
+                        "data": "",
+                        "xPubRange" : {
+                            "min" : 0,
+                            "max" : 0
+                        }
+                    },
+                    "encrypted": "",
+                    "rangeEncrypted": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "encrypted": ""
+                    }    
+                } 
+            ],
+            "boardingList": [
+                {
+                    "xPubList": [
+                        {
+                            "hash": {
+                                "data": ""
+                            },
+                            "index": 0,
+                            "data": "",
+                            "xPubRange" : {
+                                "min" : 0,
+                                "max" : 0
+                            }
+                        }
+                    ],
+                    "in": 1,
+                    "groupRoleList": [
+                        {
+                            "name": "",
+                            "hash": {
+                                "data": ""
+                            }
+                        }        
+                    ],
+                    "groupActionList": [
+                        {
+                            "name": "",
+                            "hash": {
+                                "data": ""
+                            }
+                        }
+                    ]
+                }        
+            ],
+            "Sig": {
+                "txVoutindex": 0,
+                "sigData": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "data": ""
+                },
+                "pubKey": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "data": "",
+                    "base58Encoded": 1
+                },    
+                "xPub": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                },    
+                "XPubS": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                },    
+                "yes": 0,
+                "txId": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "id": ""
+                },    
+                "txAmount": 0,
+                "txIssueAsset": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "id": ""
+                }, 
+                "txUtxo": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "txId": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "id": ""
+                    },    
+                    "utxoData": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "data": ""
+                    },
+                    "script": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "data": ""
+                    }    
+                },
+                "script":  {
+                    "hash": {
+                        "data": ""
+                    },
+                    "data": ""
+                },
+                "voutSigList": [
+                    {
+                        "txVoutindex": 0,
+                        "sigData": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "data": ""
+                        },
+                        "pubKey": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "data": "",
+                            "base58Encoded": 1
+                        },    
+                        "xPub": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "index": 0,
+                            "data": "",
+                            "xPubRange" : {
+                                "min" : 0,
+                                "max" : 0
+                            }
+                        },    
+                        "XPubS": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "index": 0,
+                            "data": "",
+                            "xPubRange" : {
+                                "min" : 0,
+                                "max" : 0
+                            }
+                        },    
+                        "yes": 0,
+                        "txId": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "id": ""
+                        },    
+                        "txAmount": 0,
+                        "txIssueAsset": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "id": ""
+                        }, 
+                        "txUtxo": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "txId": {
+                                "hash": {
+                                    "data": ""
+                                },
+                                "id": ""
+                            },    
+                            "utxoData": {
+                                "hash": {
+                                    "data": ""
+                                },
+                                "data": ""
+                            },
+                            "script": {
+                                "hash": {
+                                    "data": ""
+                                },
+                                "data": ""
+                            }    
+                        },
+                        "script":  {
+                            "hash": {
+                                "data": ""
+                            },
+                            "data": ""
+                        }
+                    }
+                ]
+            }    
+        },
+        "keyEncrypte" : {
+            "hash": {
+                "data": ""
+            },
+            "key" : {
+                "hash": {
+                    "data": ""
+                },
+                "data": ""
+            },
+            "encrypted": ""
+        },
+        "keyShared": {
+            "xPubSList": [
+                {
+                    "hash": {
+                        "data": ""
+                    },
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                }
+            ],
+            "keyEncryptedList": [
+        
+            ],
+            "hash": {
+                "data": ""
+            }
+        },
+        "ipv4": {
+            "part1": 0,
+            "part2": 0,
+            "part3": 0,
+            "part4": 0
+        },
+        "nodeURI": {
+            "ipv4" : {
+                "part1": 0,
+                "part2": 0,
+                "part3": 0,
+                "part4": 0
+            },
+            "port": 0,
+            "hash": {
+                "data": ""
+            }
+        },
+        "metaData": {     
+            "version": "",               
+            "time": {
+                "time": 0,
+                "delay": 0
+            },
+            "peerList": [
+                {
+                    "ip": {                                
+                        "part1": 0,
+                        "part2": 0,
+                        "part3": 0,
+                        "part4": 0
+                    },
+                    "port": 0,
+                    "hash": {
+                        "hash": ""
+                    }
+                }
+            ],
+            "pubKey": {
+                "pubKey": "",
+                "base58Encoded": 0
+            },
+            "sig": {
+                "txVoutindex": 0,
+                "sigData": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "data": ""
+                },
+                "pubKey": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "data": "",
+                    "base58Encoded": 1
+                },    
+                "xPub": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                },    
+                "XPubS": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                },    
+                "yes": 0,
+                "txId": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "id": ""
+                },    
+                "txAmount": 0,
+                "txIssueAsset": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "id": ""
+                }, 
+                "txUtxo": {
+                    "hash": {
+                        "data": ""
+                    },
+                    "txId": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "id": ""
+                    },    
+                    "utxoData": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "data": ""
+                    },
+                    "script": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "data": ""
+                    }    
+                },
+                "script":  {
+                    "hash": {
+                        "data": ""
+                    },
+                    "data": ""
+                },
+                "voutSigList": [
+                    {
+                        "txVoutindex": 0,
+                        "sigData": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "data": ""
+                        },
+                        "pubKey": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "data": "",
+                            "base58Encoded": 1
+                        },    
+                        "xPub": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "index": 0,
+                            "data": "",
+                            "xPubRange" : {
+                                "min" : 0,
+                                "max" : 0
+                            }
+                        },    
+                        "XPubS": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "index": 0,
+                            "data": "",
+                            "xPubRange" : {
+                                "min" : 0,
+                                "max" : 0
+                            }
+                        },    
+                        "yes": 0,
+                        "txId": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "id": ""
+                        },    
+                        "txAmount": 0,
+                        "txIssueAsset": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "id": ""
+                        }, 
+                        "txUtxo": {
+                            "hash": {
+                                "data": ""
+                            },
+                            "txId": {
+                                "hash": {
+                                    "data": ""
+                                },
+                                "id": ""
+                            },    
+                            "utxoData": {
+                                "hash": {
+                                    "data": ""
+                                },
+                                "data": ""
+                            },
+                            "script": {
+                                "hash": {
+                                    "data": ""
+                                },
+                                "data": ""
+                            }    
+                        },
+                        "script":  {
+                            "hash": {
+                                "data": ""
+                            },
+                            "data": ""
+                        }
+                    }
+                ]
+            },
+            "hash": {
+                "data": ""
+            },
+            "PowDiff": 4,
+            "PowPrefix": "",
+            "PowNonce": 0,
+            "PowHash": {
+                "data": ""
+            },
+            "id": "",
+            "state": "mock|test|dev|prod",
+            "otp": {
+                "hash": {
+                    "data": ""
+                },
+                "salt": "",
+                "saltMethod": "",
+                "createDate": {
+                    "time": 0,
+                    "delay": 0
+                },
+                "expireDate": {
+                    "time": 0,
+                    "delay": 0
+                },
+                "pubKey": {
+                    "pubKey": "",
+                    "base58Encoded": 1
+                },
+                "pubId": {
+                    "data": ""
+                }
+            }
+        },
+        "otp": {
+            "hash": {
+                "data": ""
+            },
+            "salt": "",
+            "saltMethod": "",
+            "createDate": {
+                "time": 0,
+                "delay": 0
+            },
+            "expireDate": {
+                "time": 0,
+                "delay": 0
+            },
+            "pubKey": {
+                "pubKey": "",
+                "base58Encoded": 1
+            },
+            "pubId": {
+                "data": ""
+            }
+        },
+        "timestamp": {
+            "time": 0,
+            "delay": 0
+        },
+        "trace": {
+            "hash": {
+                "data": ""
+            },
+            "proofMerkleTree": [
+                {
+                    "hash": {
+                        "data": ""
+                    },
+                    "hashLeft": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "hashLeft": {},
+                        "hashRight": {}
+                    },
+                    "hashRight": {
+                        "hash": {
+                            "data": ""
+                        },
+                        "hashLeft": {},
+                        "hashRight": {}
+                    }
+                }
+            ],
+            "sigYes": [
+                {
+                    "hash": {
+                        "data": ""
+                    },
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                }
+            ],
+            "sigNo": [
+                {
+                    "hash": {
+                        "data": ""
+                    },
+                    "index": 0,
+                    "data": "",
+                    "xPubRange" : {
+                        "min" : 0,
+                        "max" : 0
+                    }
+                }
+            ],
+            "transctionHash": {
+                "data": ""
+            },
+            "gitCommitHash": {
+                "data": ""
+            }
+        }
+    },
+    "signature": {
+        "userRoleList": {
+            "onboarding": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "onboarding",
+                "user" : "any || timeout",
+                "backup" : "timeout && any",
+                "lock" : "any",
+                "witness" : "any || timeout"
+            },
+            "outboarding": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "outboarding",
+                "user" : "any || timeout",
+                "backup" : "timeout && any",
+                "lock" : "any",
+                "witness" : "any || timeout"
+            },
+            "ban": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "ban",
+                "user" : "x",
+                "backup" : "x",
+                "lock" : "x",
+                "witness" : "x"
+            },
+            "issue": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "issue",
+                "user" : "any || timeout",
+                "backup" : "timeout && any",
+                "lock" : "any",
+                "witness" : "any || timeout"
+            },
+            "transfert": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "transfert",
+                "user" : "any || timeout",
+                "backup" : "timeout && any",
+                "lock" : "any",
+                "witness" : "any || timeout"
+            },
+            "change": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "change",
+                "user" : "any || timeout",
+                "backup" : "timeout && any",
+                "lock" : "any",
+                "witness" : "any || timeout"
+            },
+            "including": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "including",
+                "user" : "any || timeout",
+                "backup" : "timeout && any",
+                "lock" : "any",
+                "witness" : "any || timeout"
+            },
+            "dataShare": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "dataShare",
+                "user" : "any || timeout",
+                "backup" : "timeout && any",
+                "lock" : "any",
+                "witness" : "any || timeout"
+            }
+        },
+        "groupRoleList": {
+            "onboarding": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "onboarding",
+                "old" : "x",
+                "parent" : "all",
+                "board" : "51%",
+                "member" : "any || timeout",
+                "cosigner" : "all",
+                "witness" : "any || timeout"
+            },
+            "outboarding": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "outboarding",
+                "old" : "x",
+                "parent" : "all",
+                "board" : "51%",
+                "member" : "any || timeout",
+                "cosigner" : "all",
+                "witness" : "any || timeout"
+            },
+            "ban": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "ban",
+                "old" : "x",
+                "parent" : "all",
+                "board" : "51%",
+                "member" : "any || timeout",
+                "cosigner" : "all",
+                "witness" : "any || timeout"
+            },
+            "issue": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "issue",
+                "old" : "x",
+                "parent" : "all",
+                "board" : "51%",
+                "member" : "any || timeout",
+                "cosigner" : "all",
+                "witness" : "any || timeout"
+            },
+            "transfert": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "transfert",
+                "old" : "x",
+                "parent" : "all",
+                "board" : "51%",
+                "member" : "any || timeout",
+                "cosigner" : "all",
+                "witness" : "any || timeout"
+            },
+            "change": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "change",
+                "old" : "all",
+                "parent" : "all",
+                "board" : "51%",
+                "member" : "any || timeout",
+                "cosigner" : "all",
+                "witness" : "any || timeout"
+            },
+            "including": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "including",
+                "old" : "x",
+                "parent" : "all",
+                "board" : "51%",
+                "member" : "any || timeout",
+                "cosigner" : "all",
+                "witness" : "any || timeout"
+            },
+            "dataShare": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "dataShare",
+                "old" : "x",
+                "parent" : "all",
+                "board" : "51%",
+                "member" : "any || timeout",
+                "cosigner" : "all",
+                "witness" : "any || timeout"
+            }
+        },
+        "roleActionList": {
+            "onboarding": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "onboarding",
+                "user" : 1,
+                "project" : 1
+            },
+            "outboarding": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "outboarding",
+                "user" : 1,
+                "project" : 1
+            },
+            "ban": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "ban",
+                "user" : 0,
+                "project" : 1
+            },
+            "issue": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "issue",
+                "user" : 1,
+                "project" : 1
+            },
+            "transfert": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "transfert",
+                "user" : 1,
+                "project" : 1
+            },
+            "change": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "change",
+                "user" : 1,
+                "project" : 1
+            },
+            "including": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "including",
+                "user" : 1,
+                "project" : 1
+            },
+            "dataShare": {
+                "hash": {
+                    "data" : ""
+                },
+                "name": "dataShare",
+                "user" : 1,
+                "project" : 1
+            }
+        }        
+    }    
+}
