@@ -81,7 +81,7 @@
             "hashRight": {}
         },
         "password" : {            
-            "data" : ""
+            "password" : ""
         },        
         "timestamp": {
             "time": 0,
@@ -295,6 +295,9 @@
             "type": "string",
             "min": 32,
             "max": 256
+        },
+        "password": {
+            "regexp": "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm"
         },
         "time": {
             "type": "int",
@@ -760,6 +763,125 @@
                 "projectState" : 1
             }
         }        
-    }    
+    },
+    "rpc": {
+        "request": {
+            "metaData": {},
+            "method": "",
+            "paramList": []
+        },
+        "response": {
+            "metaData": {},
+            "result": 0,
+            "success": {},
+            "error": 0    
+        },
+        "method": {
+            "authentification": {
+                "authOtpGet": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "authOtpFinalGet": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "authResponseGet": {
+                    "paramList": {},
+                    "success": {}
+                }
+            },
+            "key": {
+                "keyShare": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "keyShareGet": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "keyShareConfirm": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "keyShareConfirmGet": {
+                    "paramList": {},
+                    "success": {}
+                }
+            },
+            "boarding": {
+                "boardingTemplateGet": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "boarding": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "boardingGet": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "boardingBroadcast": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "boardingBroadcastGet": {
+                    "paramList": {},
+                    "success": {}
+                }
+            },
+            "contribution": {
+                "contribution": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "contributionGet": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "contributionConfirm": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "contributionConfirmGet": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "contributionBroadcast": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "contributionBroadcastGet": {
+                    "paramList": {},
+                    "success": {}
+                }
+            },
+            "Public": {
+                "publicPeerListGet": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "publicSDKGet": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "publicArchiveGet": {
+                    "paramList": {},
+                    "success": {}
+                },
+                "publicDidGet": {
+                    "paramList": {},
+                    "success": {}
+                }
+            },
+            "Peer": {
+                "peerCheck": {
+                    "paramList": {},
+                    "success": {}
+                }
+            }
+        }
+    }
 }
 
