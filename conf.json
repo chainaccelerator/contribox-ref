@@ -75,27 +75,17 @@
         }
     },
     "type": {
-        "password" : {
-            "data" : ""
-        },
         "hash": {
-            "hash": {
-                "data": ""
-            },
-            "hashLeft": {
-                "hash": {
-                    "data": ""
-                },
-                "hashLeft": {},
-                "hashRight": {}
-            },
-            "hashRight": {
-                "hash": {
-                    "data": ""
-                },
-                "hashLeft": {},
-                "hashRight": {}
-            }
+            "hash": "",
+            "hashLeft": {},
+            "hashRight": {}
+        },
+        "password" : {            
+            "data" : ""
+        },        
+        "timestamp": {
+            "time": 0,
+            "delay": 0
         },
         "key" : {
             "data" : ""
@@ -108,1755 +98,151 @@
             "max" : 0
         },
         "xPub" : {
-            "hash": {
-                "data": ""
-            },
             "index": 0,
             "data": "",
-            "xPubRange" : {
-                "min" : 0,
-                "max" : 0
-            }
-        },
-        "rule" : {
-            "xpubList": [
-                {
-            "hash": {
-                "data": ""
-            },
-        
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                }        
-            ],
-            "timeout": {
-                "time": 0,
-                "delay": 0
-            },
-            "quorum": 0,
-            "backupRule": [
-                {
-                    "xpubList": [
-                        {
-                            "hash": {
-                                "data": ""
-                            },     
-                            "index": 0,
-                            "data": "",
-                            "xPubRange" : {
-                                "min" : 0,
-                                "max" : 0
-                            }
-                        }        
-                    ],
-                    "timeout": {
-                        "time": 0,
-                        "delay": 0
-                    },
-                    "quorum": 0
-                }
-            ],
-            "lockRule": [
-                {
-                    "xpubList": [
-                        {
-                            "hash": {
-                                "data": ""
-                            },     
-                            "index": 0,
-                            "data": "",
-                            "xPubRange" : {
-                                "min" : 0,
-                                "max" : 0
-                            }
-                        }        
-                    ],
-                    "timeout": {
-                        "time": 0,
-                        "delay": 0
-                    },
-                    "quorum": 0
-                }
-            ]
-        },
-        "ruleGroup" : {
-            "licenceHash": {
-                "data": ""
-            },
-            "boardRule": {
-                "xpubList": [
-                    {
-                        "hash": {
-                            "data": ""
-                        },     
-                        "index": 0,
-                        "data": "",
-                        "xPubRange" : {
-                            "min" : 0,
-                            "max" : 0
-                        }
-                    }        
-                ],
-                "timeout": {
-                    "time": 0,
-                    "delay": 0
-                },
-                "quorum": 0,
-                "backupRule": [
-                    {
-                        "xpubList": [
-                            {
-                                "hash": {
-                                    "data": ""
-                                },     
-                                "index": 0,
-                                "data": "",
-                                "xPubRange" : {
-                                    "min" : 0,
-                                    "max" : 0
-                                }
-                            }        
-                        ],
-                        "timeout": {
-                            "time": 0,
-                            "delay": 0
-                        },
-                        "quorum": 0
-                    }
-                ],
-                "lockRule": [
-                    {
-                        "xpubList": [
-                            {
-                                "hash": {
-                                    "data": ""
-                                },     
-                                "index": 0,
-                                "data": "",
-                                "xPubRange" : {
-                                    "min" : 0,
-                                    "max" : 0
-                                }
-                            }        
-                        ],
-                        "timeout": {
-                            "time": 0,
-                            "delay": 0
-                        },
-                        "quorum": 0
-                    }
-                ]
-            },
-            "memberRule": {
-                "xpubList": [
-                    {
-                        "hash": {
-                            "data": ""
-                        },     
-                        "index": 0,
-                        "data": "",
-                        "xPubRange" : {
-                            "min" : 0,
-                            "max" : 0
-                        }
-                    }        
-                ],
-                "timeout": {
-                    "time": 0,
-                    "delay": 0
-                },
-                "quorum": 0,
-                "backupRule": [
-                    {
-                        "xpubList": [
-                            {
-                                "index": 0,
-                                "data": "",
-                                "xPubRange" : {
-                                    "min" : 0,
-                                    "max" : 0
-                                }
-                            }        
-                        ],
-                        "timeout": {
-                            "time": 0,
-                            "delay": 0
-                        },
-                        "quorum": 0
-                    }
-                ],
-                "lockRule": [
-                    {
-                        "xpubList": [
-                            {
-                                "hash": {
-                                    "data": ""
-                                },     
-                                "index": 0,
-                                "data": "",
-                                "xPubRange" : {
-                                    "min" : 0,
-                                    "max" : 0
-                                }
-                            }        
-                        ],
-                        "timeout": {
-                            "time": 0,
-                            "delay": 0
-                        },
-                        "quorum": 0
-                    }
-                ]
-            },
-            "witnessRule": {
-                "xpubList": [
-                    {
-                        "hash": {
-                            "data": ""
-                        },     
-                        "index": 0,
-                        "data": "",
-                        "xPubRange" : {
-                            "min" : 0,
-                            "max" : 0
-                        }
-                    }        
-                ],
-                "timeout": {
-                    "time": 0,
-                    "delay": 0
-                },
-                "quorum": 0,
-                "backupRule": [
-                    {
-                        "xpubList": [
-                            {
-                                "hash": {
-                                    "data": ""
-                                },     
-                                "index": 0,
-                                "data": "",
-                                "xPubRange" : {
-                                    "min" : 0,
-                                    "max" : 0
-                                }
-                            }        
-                        ],
-                        "timeout": {
-                            "time": 0,
-                            "delay": 0
-                        },
-                        "quorum": 0
-                    }
-                ],
-                "lockRule": [
-                    {
-                        "xpubList": [
-                            {
-                                "hash": {
-                                    "data": ""
-                                },     
-                                "index": 0,
-                                "data": "",
-                                "xPubRange" : {
-                                    "min" : 0,
-                                    "max" : 0
-                                }
-                            }        
-                        ],
-                        "timeout": {
-                            "time": 0,
-                            "delay": 0
-                        },
-                        "quorum": 0
-                    }
-                ]
-            },
-            "parentRuleList": [
-                {
-                    "xpubList": [
-                        {
-                            "hash": {
-                                "data": ""
-                            },     
-                            "index": 0,
-                            "data": "",
-                            "xPubRange" : {
-                                "min" : 0,
-                                "max" : 0
-                            }
-                        }        
-                    ],
-                    "timeout": {
-                        "time": 0,
-                        "delay": 0
-                    },
-                    "quorum": 0,
-                    "backupRule": [
-                        {
-                            "xpubList": [
-                                {
-                                    "hash": {
-                                        "data": ""
-                                    },     
-                                    "index": 0,
-                                    "data": "",
-                                    "xPubRange" : {
-                                        "min" : 0,
-                                        "max" : 0
-                                    }
-                                }        
-                            ],
-                            "timeout": {
-                                "time": 0,
-                                "delay": 0
-                            },
-                            "quorum": 0
-                        }
-                    ],
-                    "lockRule": [
-                        {
-                            "xpubList": [
-                                {
-                                    "hash": {
-                                        "data": ""
-                                    },     
-                                    "index": 0,
-                                    "data": "",
-                                    "xPubRange" : {
-                                        "min" : 0,
-                                        "max" : 0
-                                    }
-                                }        
-                            ],
-                            "timeout": {
-                                "time": 0,
-                                "delay": 0
-                            },
-                            "quorum": 0
-                        }
-                    ]
-                }
-            ],
-            "cosignerRuleList": [
-                {
-                    "xpubList": [
-                        {
-                            "hash": {
-                                "data": ""
-                            },     
-                            "index": 0,
-                            "data": "",
-                            "xPubRange" : {
-                                "min" : 0,
-                                "max" : 0
-                            }
-                        }        
-                    ],
-                    "timeout": {
-                        "time": 0,
-                        "delay": 0
-                    },
-                    "quorum": 0,
-                    "backupRule": [
-                        {
-                            "xpubList": [
-                                {
-                                    "hash": {
-                                        "data": ""
-                                    },     
-                                    "index": 0,
-                                    "data": "",
-                                    "xPubRange" : {
-                                        "min" : 0,
-                                        "max" : 0
-                                    }
-                                }        
-                            ],
-                            "timeout": {
-                                "time": 0,
-                                "delay": 0
-                            },
-                            "quorum": 0
-                        }
-                    ],
-                    "lockRule": [
-                        {
-                            "xpubList": [
-                                {
-                                    "hash": {
-                                        "data": ""
-                                    },     
-                                    "index": 0,
-                                    "data": "",
-                                    "xPubRange" : {
-                                        "min" : 0,
-                                        "max" : 0
-                                    }
-                                }        
-                            ],
-                            "timeout": {
-                                "time": 0,
-                                "delay": 0
-                            },
-                            "quorum": 0
-                        }
-                    ]
-                }
-            ]
+            "xPubRange" : {}
         },
         "jsonData": {
             "data": ""
         },
         "stateReason": {
-            "reason": "todo|toComplete|done|rejected|stored",
-            "hash": {
-                "data": ""
-            }
+            "reason": "todo|toComplete|done|rejected|stored"
         },
-        "KeyVal": {
+        "keyVal": {
             "key": "",
             "val": {
-                "jsonData": {
-                    "data": ""
-                }
-            },
-            "hash": {
-                "data": ""
+                "jsonData": {}
             }
-        },
-        "proof": {
-            "hash": {
-                "data": ""
-            },
-            "xPub" : {
-                "index": 0,
-                "data": "",
-                "xPubRange" : {
-                    "min" : 0,
-                    "max" : 0
-                }
-            },    
-            "project": {
-                "name": "",
-                "hash": {
-                    "data": ""
-                }
-            },
-            "licence":  {
-                "name": "",
-                "SPDX": "",
-                "hash": {
-                    "data": ""
-                }
-            },
-            "licenceChange":  {
-                "name": "",
-                "SPDX": "",
-                "hash": {
-                    "data": ""
-                }
-            },
-            "groupRole": {
-                "name": "",
-                "hash": {
-                    "data": ""
-                }
-            },
-            "descriptionPublicList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "identityList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "event": {
-                "hash": {
-                    "data": ""
-                }
-            },
-            "environnementList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "qualityList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "contributeList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "originList": [
-                {
-                    "data": ""
-                }
-            ],
-            "parentList": [
-                {
-                    "data": ""
-                }
-            ],
-            "previousList": [
-                {
-                    "data": ""
-                }
-            ],
-            "leftList": [
-                {
-                    "data": ""
-                }
-            ],
-            "ndaList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "condifidentialDataList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "metaDataList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "officerList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "ediList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "certificateList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "exportControlList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "keyValueList": [
-                {
-                    "key": "",
-                    "val": {
-                        "jsonData": {
-                            "data": ""
-                        }
-                    },
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ],
-            "forList": [
-                {
-                    "hash": {
-                        "data": ""
-                    },
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                }        
-            ],
-            "toList": [
-                {
-                    "hash": {
-                        "data": ""
-                    },
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                }        
-            ],
-            "tagList": [""]
         },
         "project": {
-            "name": "",
-            "hash": {
-                "data": ""
-            }
+            "name": ""
         },
         "licence": {
             "name": "",
-            "SPDX": "",
-            "hash": {
-                "data": ""
-            }
+            "SPDX": ""
         },
-        "groupRole": {
-            "name": "",
-            "hash": {
-                "data": ""
-            }
+        "tag": {
+            "name": ""
         },
-        "userRole": {
-            "name": "",
-            "hash": {
-                "data": ""
-            }
+        "proof": {
+            "xPub" : {},    
+            "project": {},
+            "licence":  {},
+            "licenceChange":  {},
+            "userRole":  {},
+            "groupRole":  {},
+            "actionRole":  {},
+            "descriptionPublicList": [],
+            "identityList": [],
+            "environnementList": [],
+            "qualityList": [],
+            "contributeList": [],
+            "originList": [],
+            "parentList": [],
+            "previousList": [],
+            "leftList": [],
+            "ndaList": [],
+            "condifidentialDataList": [],
+            "metaDataList": [],
+            "officerList": [],
+            "ediList": [],
+            "certificateList": [],
+            "exportControlList": [],
+            "keyValueList": [],
+            "forList": [],
+            "toList": [],
+            "tagList": []
         },
         "boarding": {
-            "xPubList": [
-                {
-                    "hash": {
-                        "data": ""
-                    },
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                }
-            ],
+            "xPubList": [],
             "in": 1,
-            "groupRoleList": [
-                {
-                    "name": "",
-                    "hash": {
-                        "data": ""
-                    }
-                }        
-            ],
-            "groupActionList": [
-                {
-                    "name": "",
-                    "hash": {
-                        "data": ""
-                    }
-                }
-            ]
+            "userRole":  {},
+            "groupRole":  {},
+            "actionRole":  {}
         },
-        "templateUser": {
-            "hash": {
-                "data": ""
-            },
-            "quorum": "x||any|timeout||timeout|any||any"
-        },
-        "templateProject": {
-            "hash": {
-                "data": ""
-            },
-            "quorum": "x||all||51%||any|timeout"
+        "script": {
+            "data": ""
         },
         "template": {
-            "hash": {
-                "data": ""
-            },
-            "contributionHash": {
-                "data": ""
-            },
-            "userRequirement": 0,
-            "projectRequirement": 0,
-            "userUser": {
-                "hash": {
-                    "data": ""
-                },
-                "quorum": "x||any|timeout||timeout|any||any"
-            },
-            "userBackup": {
-                "hash": {
-                    "data": ""
-                },
-                "quorum": "x||any|timeout||timeout|any||any"
-            },
-            "userLock": {
-                "hash": {
-                    "data": ""
-                },
-                "quorum": "x||any|timeout||timeout|any||any"
-            },
-            "userWitness": {
-                "hash": {
-                    "data": ""
-                },
-                "quorum": "x||any|timeout||timeout|any||any"
-            },
-            "userUserXPubList": [
-                {
-                    "hash": {
-                        "hash": ""
-                    },
-                    "index": 0,
-                    "xPub": "",
-                    "range": {
-                        "min": 0,
-                        "max": 0
-                    }
-                }
-            ],
-            "userBackupXPubList": [
-                {
-                    "hash": {
-                        "hash": ""
-                    },
-                    "index": 0,
-                    "xPub": "",
-                    "range": {
-                        "min": 0,
-                        "max": 0
-                    }
-                }
-            ],
-            "userLockXPubList": [
-                {
-                    "hash": {
-                        "hash": ""
-                    },
-                    "index": 0,
-                    "xPub": "",
-                    "range": {
-                        "min": 0,
-                        "max": 0
-                    }
-                }
-            ],
-            "userWitnessXPubList": [
-                {
-                    "hash": {
-                        "hash": ""
-                    },
-                    "index": 0,
-                    "xPub": "",
-                    "range": {
-                        "min": 0,
-                        "max": 0
-                    }
-                }
-            ],
-            "projectOId": {
-                "hash": {
-                    "data": ""
-                },
-                "quorum": "x||all||51%||any|timeout"
-            },
-            "projectParent": {
-                "hash": {
-                    "data": ""
-                },
-                "quorum": "x||all||51%||any|timeout"
-            },
-            "projectBoard": {
-                "hash": {
-                    "data": ""
-                },
-                "quorum": "x||all||51%||any|timeout"
-            },
-            "projectMember": {
-                "hash": {
-                    "data": ""
-                },
-                "quorum": "x||all||51%||any|timeout"
-            },
-            "projectCosigner": {
-                "hash": {
-                    "data": ""
-                },
-                "quorum": "x||all||51%||any|timeout"
-            },
-            "projectWitness": {
-                "hash": {
-                    "data": ""
-                },
-                "quorum": "x||all||51%||any|timeout"
-            },
-            "projectOIdXPubList": [
-                {
-                    "hash": {
-                        "hash": ""
-                    },
-                    "index": 0,
-                    "xPub": "",
-                    "range": {
-                        "min": 0,
-                        "max": 0
-                    }
-                }
-            ],
-            "projectParentXPubList": [
-                {
-                    "hash": {
-                        "hash": ""
-                    },
-                    "index": 0,
-                    "xPub": "",
-                    "range": {
-                        "min": 0,
-                        "max": 0
-                    }
-                }
-            ],
-            "projectBoardXPubList": [
-                {
-                    "hash": {
-                        "hash": ""
-                    },
-                    "index": 0,
-                    "xPub": "",
-                    "range": {
-                        "min": 0,
-                        "max": 0
-                    }
-                }
-            ],
-            "projectMemberXPubList": [
-                {
-                    "hash": {
-                        "hash": ""
-                    },
-                    "index": 0,
-                    "xPub": "",
-                    "range": {
-                        "min": 0,
-                        "max": 0
-                    }
-                }
-            ],
-            "projectCosignerXPubList": [
-                {
-                    "hash": {
-                        "hash": ""
-                    },
-                    "index": 0,
-                    "xPub": "",
-                    "range": {
-                        "min": 0,
-                        "max": 0
-                    }
-                }
-            ],
-            "projectWitnessXPubList": [
-                {
-                    "hash": {
-                        "hash": ""
-                    },
-                    "index": 0,
-                    "xPub": "",
-                    "range": {
-                        "min": 0,
-                        "max": 0
-                    }
-                }
-            ],
-            "scriptTemplate": [
-                {
-                    "hash": {
-                        "hash": ""
-                    },
-                    "index": 0,
-                    "xPub": "",
-                    "range": {
-                        "min": 0,
-                        "max": 0
-                    }
-                }
-            ]
+            "contributionHash": {},
+            "userRole":  {},
+            "groupRole":  {},
+            "actionRole":  {},
+            "script": {}
         },
         "utxoData": {
-            "hash": {
-                "data": ""
-            },
             "data": ""
         },
         "txId": {
-            "hash": {
-                "data": ""
-            },
             "id": ""
         },
-        "script": {
-            "hash": {
-                "data": ""
-            },
-            "data": ""
-        },
         "utxo": {
-            "hash": {
-                "data": ""
-            },
-            "txId": {
-                "hash": {
-                    "data": ""
-                },
-                "id": ""
-            },    
-            "utxoData": {
-                "hash": {
-                    "data": ""
-                },
-                "data": ""
-            },
-            "script": {
-                "hash": {
-                    "data": ""
-                },
-                "data": ""
-            }    
+            "txId": {},    
+            "utxoData": {},
+            "script": {}    
         },
         "pubKey": {
-            "hash": {
-                "data": ""
-            },
             "data": "",
             "base58Encoded": 1
         },
         "sigData": {
-            "hash": {
-                "data": ""
-            },
             "data": ""
+        },
+        "cosig": {
+            "txVoutindex": 0,
+            "sigData": {},
+            "pubKey": {},    
+            "xPub": {},    
+            "XPubS": {},    
+            "yes": 0,
+            "txId": {},    
+            "txAmount": 0,
+            "txIssueAsset": {}, 
+            "txUtxo": {},
+            "script":  {}
         },
         "sig": {
             "txVoutindex": 0,
-            "sigData": {
-                "hash": {
-                    "data": ""
-                },
-                "data": ""
-            },
-            "pubKey": {
-                "hash": {
-                    "data": ""
-                },
-                "data": "",
-                "base58Encoded": 1
-            },    
-            "xPub": {
-                "hash": {
-                    "data": ""
-                },
-                "index": 0,
-                "data": "",
-                "xPubRange" : {
-                    "min" : 0,
-                    "max" : 0
-                }
-            },    
-            "XPubS": {
-                "hash": {
-                    "data": ""
-                },
-                "index": 0,
-                "data": "",
-                "xPubRange" : {
-                    "min" : 0,
-                    "max" : 0
-                }
-            },    
+            "sigData": {},
+            "pubKey": {},    
+            "xPub": {},    
+            "XPubS": {},    
             "yes": 0,
-            "txId": {
-                "hash": {
-                    "data": ""
-                },
-                "id": ""
-            },    
+            "txId": {},    
             "txAmount": 0,
-            "txIssueAsset": {
-                "hash": {
-                    "data": ""
-                },
-                "id": ""
-            }, 
-            "txUtxo": {
-                "hash": {
-                    "data": ""
-                },
-                "txId": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "id": ""
-                },    
-                "utxoData": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "data": ""
-                },
-                "script": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "data": ""
-                }    
-            },
-            "script":  {
-                "hash": {
-                    "data": ""
-                },
-                "data": ""
-            },
-            "voutSigList": [
-                {
-                    "txVoutindex": 0,
-                    "sigData": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "data": ""
-                    },
-                    "pubKey": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "data": "",
-                        "base58Encoded": 1
-                    },    
-                    "xPub": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "index": 0,
-                        "data": "",
-                        "xPubRange" : {
-                            "min" : 0,
-                            "max" : 0
-                        }
-                    },    
-                    "XPubS": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "index": 0,
-                        "data": "",
-                        "xPubRange" : {
-                            "min" : 0,
-                            "max" : 0
-                        }
-                    },    
-                    "yes": 0,
-                    "txId": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "id": ""
-                    },    
-                    "txAmount": 0,
-                    "txIssueAsset": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "id": ""
-                    }, 
-                    "txUtxo": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "txId": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "id": ""
-                        },    
-                        "utxoData": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "data": ""
-                        },
-                        "script": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "data": ""
-                        }    
-                    },
-                    "script":  {
-                        "hash": {
-                            "data": ""
-                        },
-                        "data": ""
-                    }
-                }
-            ]
-        },
-        "issueAsset" : {
-            "hash": {
-                "data": ""
-            }
-        },
-        "blindingKeyEncrypted": {
-            "hash": {
-                "data": ""
-            },
-            "xPub": {
-                "hash": {
-                    "data": ""
-                },
-                "index": 0,
-                "data": "",
-                "xPubRange" : {
-                    "min" : 0,
-                    "max" : 0
-                }
-            },
-            "encrypted": "",
-            "rangeEncrypted": {
-                "hash": {
-                    "data": ""
-                },
-                "encrypted": ""
-            }    
+            "txIssueAsset": {}, 
+            "txUtxo": {},
+            "script":  {},
+            "voutSigList": []
         },
         "rangeEncrypted": {
-            "hash": {
-                "data": ""
-            },
             "encrypted": ""
+        },
+        "issueAsset" : {},
+        "blindingKeyEncrypted": {
+            "xPub": {},
+            "encrypted": "",
+            "rangeEncrypted": {}    
         },
         "contribution": {
-            "hash": {
-                "data": ""
-            },    
-            "xPub": {
-                "hash": {
-                    "data": ""
-                },
-                "index": 0,
-                "data": "",
-                "xPubRange" : {
-                    "min" : 0,
-                    "max" : 0
-                }
-            },
-            "proof": {
-                "hash": {
-                    "data": ""
-                },
-                "xPub" : {
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                },    
-                "project": {
-                    "name": "",
-                    "hash": {
-                        "data": ""
-                    }
-                },
-                "licence":  {
-                    "name": "",
-                    "SPDX": "",
-                    "hash": {
-                        "data": ""
-                    }
-                },
-                "licenceChange":  {
-                    "name": "",
-                    "SPDX": "",
-                    "hash": {
-                        "data": ""
-                    }
-                },
-                "groupRole": {
-                    "name": "",
-                    "hash": {
-                        "data": ""
-                    }
-                },
-                "descriptionPublicList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "identityList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "event": {
-                    "hash": {
-                        "data": ""
-                    }
-                },
-                "environnementList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "qualityList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "contributeList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "originList": [
-                    {
-                        "data": ""
-                    }
-                ],
-                "parentList": [
-                    {
-                        "data": ""
-                    }
-                ],
-                "previousList": [
-                    {
-                        "data": ""
-                    }
-                ],
-                "leftList": [
-                    {
-                        "data": ""
-                    }
-                ],
-                "ndaList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "condifidentialDataList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "metaDataList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "officerList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "ediList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "certificateList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "exportControlList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "keyValueList": [
-                    {
-                        "key": "",
-                        "val": {
-                            "jsonData": {
-                                "data": ""
-                            }
-                        },
-                        "hash": {
-                            "data": ""
-                        }
-                    }
-                ],
-                "forList": [
-                    {
-                        "hash": {
-                            "data": ""
-                        },
-                        "index": 0,
-                        "data": "",
-                        "xPubRange" : {
-                            "min" : 0,
-                            "max" : 0
-                        }
-                    }        
-                ],
-                "toList": [
-                    {
-                        "hash": {
-                            "data": ""
-                        },
-                        "index": 0,
-                        "data": "",
-                        "xPubRange" : {
-                            "min" : 0,
-                            "max" : 0
-                        }
-                    }        
-                ],
-                "tagList": [""]
-            },    
-            "templateHash": {
-                "data": ""
-            },
-            "blindKeyEncryptedList": [
-                {
-                    "hash": {
-                        "data": ""
-                    },
-                    "xPub": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "index": 0,
-                        "data": "",
-                        "xPubRange" : {
-                            "min" : 0,
-                            "max" : 0
-                        }
-                    },
-                    "encrypted": "",
-                    "rangeEncrypted": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "encrypted": ""
-                    }    
-                } 
-            ],
-            "boardingList": [
-                {
-                    "xPubList": [
-                        {
-                            "hash": {
-                                "data": ""
-                            },
-                            "index": 0,
-                            "data": "",
-                            "xPubRange" : {
-                                "min" : 0,
-                                "max" : 0
-                            }
-                        }
-                    ],
-                    "in": 1,
-                    "groupRoleList": [
-                        {
-                            "name": "",
-                            "hash": {
-                                "data": ""
-                            }
-                        }        
-                    ],
-                    "groupActionList": [
-                        {
-                            "name": "",
-                            "hash": {
-                                "data": ""
-                            }
-                        }
-                    ]
-                }        
-            ],
-            "Sig": {
-                "txVoutindex": 0,
-                "sigData": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "data": ""
-                },
-                "pubKey": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "data": "",
-                    "base58Encoded": 1
-                },    
-                "xPub": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                },    
-                "XPubS": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                },    
-                "yes": 0,
-                "txId": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "id": ""
-                },    
-                "txAmount": 0,
-                "txIssueAsset": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "id": ""
-                }, 
-                "txUtxo": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "txId": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "id": ""
-                    },    
-                    "utxoData": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "data": ""
-                    },
-                    "script": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "data": ""
-                    }    
-                },
-                "script":  {
-                    "hash": {
-                        "data": ""
-                    },
-                    "data": ""
-                },
-                "voutSigList": [
-                    {
-                        "txVoutindex": 0,
-                        "sigData": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "data": ""
-                        },
-                        "pubKey": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "data": "",
-                            "base58Encoded": 1
-                        },    
-                        "xPub": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "index": 0,
-                            "data": "",
-                            "xPubRange" : {
-                                "min" : 0,
-                                "max" : 0
-                            }
-                        },    
-                        "XPubS": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "index": 0,
-                            "data": "",
-                            "xPubRange" : {
-                                "min" : 0,
-                                "max" : 0
-                            }
-                        },    
-                        "yes": 0,
-                        "txId": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "id": ""
-                        },    
-                        "txAmount": 0,
-                        "txIssueAsset": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "id": ""
-                        }, 
-                        "txUtxo": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "txId": {
-                                "hash": {
-                                    "data": ""
-                                },
-                                "id": ""
-                            },    
-                            "utxoData": {
-                                "hash": {
-                                    "data": ""
-                                },
-                                "data": ""
-                            },
-                            "script": {
-                                "hash": {
-                                    "data": ""
-                                },
-                                "data": ""
-                            }    
-                        },
-                        "script":  {
-                            "hash": {
-                                "data": ""
-                            },
-                            "data": ""
-                        }
-                    }
-                ]
-            }    
+            "xPub": {},
+            "proof": {},    
+            "templateHash": {},
+            "blindKeyEncryptedList": [],
+            "boardingList": [],
+            "Sig": {}    
         },
         "keyEncrypte" : {
-            "hash": {
-                "data": ""
-            },
-            "key" : {
-                "hash": {
-                    "data": ""
-                },
-                "data": ""
-            },
+            "key" : {},
             "encrypted": ""
         },
+        "keyEncrypted" : {
+            "key" : {},
+            "encrypted": ""
+        },        
         "keyShared": {
-            "xPubSList": [
-                {
-                    "hash": {
-                        "data": ""
-                    },
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                }
-            ],
-            "keyEncryptedList": [
-        
-            ],
-            "hash": {
-                "data": ""
-            }
+            "xPubSList": [],
+            "keyEncryptedList": []
         },
         "ipv4": {
             "part1": 0,
@@ -1865,401 +251,344 @@
             "part4": 0
         },
         "nodeURI": {
-            "ipv4" : {
-                "part1": 0,
-                "part2": 0,
-                "part3": 0,
-                "part4": 0
-            },
-            "port": 0,
-            "hash": {
-                "data": ""
-            }
+            "ipv4" : {},
+            "port": 0
+        },
+        "otp": {
+            "salt": "",
+            "saltMethod": "",
+            "createDate": {},
+            "expireDate": {},
+            "pubKey": {},
+            "pubId": {}
         },
         "metaData": {     
             "version": "",               
-            "time": {
-                "time": 0,
-                "delay": 0
-            },
-            "peerList": [
-                {
-                    "ip": {                                
-                        "part1": 0,
-                        "part2": 0,
-                        "part3": 0,
-                        "part4": 0
-                    },
-                    "port": 0,
-                    "hash": {
-                        "hash": ""
-                    }
-                }
-            ],
-            "pubKey": {
-                "pubKey": "",
-                "base58Encoded": 0
-            },
-            "sig": {
-                "txVoutindex": 0,
-                "sigData": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "data": ""
-                },
-                "pubKey": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "data": "",
-                    "base58Encoded": 1
-                },    
-                "xPub": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                },    
-                "XPubS": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                },    
-                "yes": 0,
-                "txId": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "id": ""
-                },    
-                "txAmount": 0,
-                "txIssueAsset": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "id": ""
-                }, 
-                "txUtxo": {
-                    "hash": {
-                        "data": ""
-                    },
-                    "txId": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "id": ""
-                    },    
-                    "utxoData": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "data": ""
-                    },
-                    "script": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "data": ""
-                    }    
-                },
-                "script":  {
-                    "hash": {
-                        "data": ""
-                    },
-                    "data": ""
-                },
-                "voutSigList": [
-                    {
-                        "txVoutindex": 0,
-                        "sigData": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "data": ""
-                        },
-                        "pubKey": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "data": "",
-                            "base58Encoded": 1
-                        },    
-                        "xPub": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "index": 0,
-                            "data": "",
-                            "xPubRange" : {
-                                "min" : 0,
-                                "max" : 0
-                            }
-                        },    
-                        "XPubS": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "index": 0,
-                            "data": "",
-                            "xPubRange" : {
-                                "min" : 0,
-                                "max" : 0
-                            }
-                        },    
-                        "yes": 0,
-                        "txId": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "id": ""
-                        },    
-                        "txAmount": 0,
-                        "txIssueAsset": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "id": ""
-                        }, 
-                        "txUtxo": {
-                            "hash": {
-                                "data": ""
-                            },
-                            "txId": {
-                                "hash": {
-                                    "data": ""
-                                },
-                                "id": ""
-                            },    
-                            "utxoData": {
-                                "hash": {
-                                    "data": ""
-                                },
-                                "data": ""
-                            },
-                            "script": {
-                                "hash": {
-                                    "data": ""
-                                },
-                                "data": ""
-                            }    
-                        },
-                        "script":  {
-                            "hash": {
-                                "data": ""
-                            },
-                            "data": ""
-                        }
-                    }
-                ]
-            },
-            "hash": {
-                "data": ""
-            },
+            "time": {},
+            "peerList": [],
+            "pubKey": {},
+            "sig": {},
             "PowDiff": 4,
             "PowPrefix": "",
             "PowNonce": 0,
-            "PowHash": {
-                "data": ""
-            },
+            "PowHash": {},
             "id": "",
             "state": "mock|test|dev|prod",
-            "otp": {
-                "hash": {
-                    "data": ""
-                },
-                "salt": "",
-                "saltMethod": "",
-                "createDate": {
-                    "time": 0,
-                    "delay": 0
-                },
-                "expireDate": {
-                    "time": 0,
-                    "delay": 0
-                },
-                "pubKey": {
-                    "pubKey": "",
-                    "base58Encoded": 1
-                },
-                "pubId": {
-                    "data": ""
-                }
-            }
-        },
-        "otp": {
-            "hash": {
-                "data": ""
-            },
-            "salt": "",
-            "saltMethod": "",
-            "createDate": {
-                "time": 0,
-                "delay": 0
-            },
-            "expireDate": {
-                "time": 0,
-                "delay": 0
-            },
-            "pubKey": {
-                "pubKey": "",
-                "base58Encoded": 1
-            },
-            "pubId": {
-                "data": ""
-            }
-        },
-        "timestamp": {
-            "time": 0,
-            "delay": 0
+            "otp": {}
         },
         "trace": {
-            "hash": {
-                "data": ""
-            },
-            "proofMerkleTree": [
-                {
-                    "hash": {
-                        "data": ""
-                    },
-                    "hashLeft": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "hashLeft": {},
-                        "hashRight": {}
-                    },
-                    "hashRight": {
-                        "hash": {
-                            "data": ""
-                        },
-                        "hashLeft": {},
-                        "hashRight": {}
-                    }
-                }
-            ],
-            "sigYes": [
-                {
-                    "hash": {
-                        "data": ""
-                    },
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                }
-            ],
-            "sigNo": [
-                {
-                    "hash": {
-                        "data": ""
-                    },
-                    "index": 0,
-                    "data": "",
-                    "xPubRange" : {
-                        "min" : 0,
-                        "max" : 0
-                    }
-                }
-            ],
-            "transctionHash": {
-                "data": ""
-            },
-            "gitCommitHash": {
-                "data": ""
-            }
+            "proofMerkleTree": {},
+            "sigYes": [],
+            "sigNo": [],
+            "transctionHash": {},
+            "gitCommitHash": {}
+        }
+    },
+    "typeControle" : {        
+        "data": {
+            "type": "string",
+            "min": 64,
+            "max": 6400000000,
+            "default": ""
+        },
+        "hash": {
+            "type": "string",
+            "min": 32,
+            "max": 256
+        },
+        "time": {
+            "type": "int",
+            "min": 1,
+            "max": 14,
+            "default": 0
+        },
+        "delay":{
+            "type": "int",
+            "min": 1,
+            "max": 14,
+            "default": 0
+        },
+        "min" : {
+            "type": "int",
+            "min": 1,
+            "max": 14,
+            "default": 0
+        },
+        "max" : {
+            "type": "int",
+            "min": 1,
+            "max": 14,
+            "default": 1000
+        },
+        "index": {
+            "type": "int",
+            "min": 1,
+            "max": 10,
+            "default": 0
+        },
+        "reason": {
+            "type": "string",
+            "valueList": ["todo","toComplete","done","rejected","stored"],
+            "default": "todo"
+        },
+        "key":  {
+            "type": "string",
+            "min": 32,
+            "max": 256
+        },
+        "name": {
+            "type": "string",
+            "min": 1,
+            "max": 256,
+            "default": "default"
+        },
+        "SPDX": {
+            "type": "string",
+            "min": 1,
+            "max": 256,
+            "default": "default"
+        },
+        "id": {
+            "type": "string",
+            "min": 1,
+            "max": 256
+        },
+        "base58Encoded": {
+            "type": "string",
+            "valueList": [0, 1]
+        },
+        "txVoutindex":  {
+            "type": "int",
+            "min": 1,
+            "max": 10,
+            "default": 1
+        },
+        "yes": {
+            "type": "bool",
+            "valueList": [0, 1],
+            "default": 0
+        },
+        "txAmount": {
+            "type": "int",
+            "min": 1,
+            "max": 18,
+            "default": 0
+        },
+        "encrypted": {
+            "type": "string",
+            "min": 64,
+            "max": 6400000000
+        },
+        "part1": {
+            "type": "int",
+            "min": 1,
+            "max": 3,
+            "default": 0
+        },
+        "part2": {
+            "type": "int",
+            "min": 1,
+            "max": 3,
+            "default": 0
+        },
+        "part3": {
+            "type": "int",
+            "min": 1,
+            "max": 3,
+            "default": 0
+        },
+        "part4": {
+            "type": "int",
+            "min": 1,
+            "max": 3,
+            "default": 0
+        },
+        "port": {
+            "type": "int",
+            "min": 1,
+            "max": 5,
+            "default": 80
+        },
+        "salt":  {
+            "type": "string",
+            "min": 1,
+            "max": 256
+        },
+        "saltMethod":  {
+            "type": "string",
+            "min": 1,
+            "max": 256,
+            "default": "sha256"
+        },
+        "version":  {
+            "type": "string",
+            "min": 1,
+            "max": 256,
+            "default": "v0"
+        },               
+        "PowDifficulty": {
+            "type": "int",
+            "min": 1,
+            "max": 10,
+            "default": 4
+        },
+        "PowPrefix":  {
+            "type": "string",
+            "min": 1,
+            "max": 256,
+            "default": "W"
+        },
+        "PowNonce":  {
+            "type": "int",
+            "min": 1,
+            "max": 10,
+            "default": 0
+        },
+        "state":  {
+            "type": "string",
+            "valueList": ["mock","test","dev","prod"],
+            "default": "mock"
+        },
+        "user" : {
+            "type": "string",
+            "valueList": ["any || timeout", "timeout && any", "x", "any", "all", "51%"],
+            "default": "any || timeout"
+        },
+        "backup" : {
+            "type": "string",
+            "valueList": ["any || timeout", "timeout && any", "x", "any", "all", "51%"],
+            "default": "timeout && any"
+        },
+        "lock" : {
+            "type": "string",
+            "valueList": ["any || timeout", "timeout && any", "x", "any", "all", "51%"],
+            "default": "any"
+        },
+        "witness" : {
+            "type": "string",
+            "valueList": ["any || timeout", "timeout && any", "x", "any", "all", "51%"],
+            "default": "any || timeout"
+        },
+        "old" : {
+            "type": "string",
+            "valueList": ["any || timeout", "timeout && any", "x", "any", "all", "51%"],
+            "default": "x"
+        },
+        "parent" : {
+            "type": "string",
+            "valueList": ["any || timeout", "timeout && any", "x", "any", "all", "51%"],
+            "default": "all"
+        },
+        "board" : {
+            "type": "string",
+            "valueList": ["any || timeout", "timeout && any", "x", "any", "all", "51%"],
+            "default": "51%"
+        },
+        "member" : {
+            "type": "string",
+            "valueList": ["any || timeout", "timeout && any", "x", "any", "all", "51%"],
+            "default": "any || timeout"
+        },
+        "cosigner" : {
+            "type": "string",
+            "valueList": ["any || timeout", "timeout && any", "x", "any", "all", "51%"],
+            "default": "all"
+        },
+        "witnessG" : {
+            "type": "string",
+            "valueList": ["any || timeout", "timeout && any", "x", "any", "all", "51%"],
+            "default": "any || timeout"
+        },
+        "userState" : {
+            "type": "bool",
+            "valueList": [0, 1],
+            "default": 1
+        },
+        "projectState" : {
+            "type": "bool",
+            "valueList": [0, 1],
+            "default": 1
         }
     },
     "signature": {
-        "userRoleList": {
+        "timeout": {},
+        "userRoleList": {        
+            "default": {
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
+                "user" : "any || timeout",
+                "backup" : "timeout && any",
+                "lock" : "any",
+                "witness" : "any || timeout"
+            },            
             "onboarding": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "onboarding",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "user" : "any || timeout",
                 "backup" : "timeout && any",
                 "lock" : "any",
                 "witness" : "any || timeout"
             },
             "outboarding": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "outboarding",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "user" : "any || timeout",
                 "backup" : "timeout && any",
                 "lock" : "any",
                 "witness" : "any || timeout"
             },
             "ban": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "ban",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "user" : "x",
                 "backup" : "x",
                 "lock" : "x",
                 "witness" : "x"
             },
             "issue": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "issue",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "user" : "any || timeout",
                 "backup" : "timeout && any",
                 "lock" : "any",
                 "witness" : "any || timeout"
             },
             "transfert": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "transfert",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "user" : "any || timeout",
                 "backup" : "timeout && any",
                 "lock" : "any",
                 "witness" : "any || timeout"
             },
             "change": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "change",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "user" : "any || timeout",
                 "backup" : "timeout && any",
                 "lock" : "any",
                 "witness" : "any || timeout"
             },
             "including": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "including",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "user" : "any || timeout",
                 "backup" : "timeout && any",
                 "lock" : "any",
                 "witness" : "any || timeout"
             },
             "dataShare": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "dataShare",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "user" : "any || timeout",
                 "backup" : "timeout && any",
                 "lock" : "any",
@@ -2267,168 +596,170 @@
             }
         },
         "groupRoleList": {
-            "onboarding": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "onboarding",
+            "default": {
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "old" : "x",
                 "parent" : "all",
                 "board" : "51%",
                 "member" : "any || timeout",
                 "cosigner" : "all",
-                "witness" : "any || timeout"
+                "witnessG" : "any || timeout"
+            },
+            "onboarding": {
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
+                "old" : "x",
+                "parent" : "all",
+                "board" : "51%",
+                "member" : "any || timeout",
+                "cosigner" : "all",
+                "witnessG" : "any || timeout"
             },
             "outboarding": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "outboarding",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "old" : "x",
                 "parent" : "all",
                 "board" : "51%",
                 "member" : "any || timeout",
                 "cosigner" : "all",
-                "witness" : "any || timeout"
+                "witnessG" : "any || timeout"
             },
             "ban": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "ban",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "old" : "x",
                 "parent" : "all",
                 "board" : "51%",
                 "member" : "any || timeout",
                 "cosigner" : "all",
-                "witness" : "any || timeout"
+                "witnessG" : "any || timeout"
             },
             "issue": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "issue",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "old" : "x",
                 "parent" : "all",
                 "board" : "51%",
                 "member" : "any || timeout",
                 "cosigner" : "all",
-                "witness" : "any || timeout"
+                "witnessG" : "any || timeout"
             },
             "transfert": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "transfert",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "old" : "x",
                 "parent" : "all",
                 "board" : "51%",
                 "member" : "any || timeout",
                 "cosigner" : "all",
-                "witness" : "any || timeout"
+                "witnessG" : "any || timeout"
             },
             "change": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "change",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "old" : "all",
                 "parent" : "all",
                 "board" : "51%",
                 "member" : "any || timeout",
                 "cosigner" : "all",
-                "witness" : "any || timeout"
+                "witnessG" : "any || timeout"
             },
             "including": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "including",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "old" : "x",
                 "parent" : "all",
                 "board" : "51%",
                 "member" : "any || timeout",
                 "cosigner" : "all",
-                "witness" : "any || timeout"
+                "witnessG" : "any || timeout"
             },
             "dataShare": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "dataShare",
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
                 "old" : "x",
                 "parent" : "all",
                 "board" : "51%",
                 "member" : "any || timeout",
                 "cosigner" : "all",
-                "witness" : "any || timeout"
+                "witnessG" : "any || timeout"
             }
         },
         "roleActionList": {
+            "default": {
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
+                "userState" : 1,
+                "projectState" : 1
+            },
             "onboarding": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "onboarding",
-                "user" : 1,
-                "project" : 1
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
+                "userState" : 1,
+                "projectState" : 1
             },
             "outboarding": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "outboarding",
-                "user" : 1,
-                "project" : 1
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
+                "userState" : 1,
+                "projectState" : 1
             },
             "ban": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "ban",
-                "user" : 0,
-                "project" : 1
+                "xPubList": [],
+                "xPubYesList": [],
+                "userState" : 1,
+                "projectState" : 1
             },
             "issue": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "issue",
-                "user" : 1,
-                "project" : 1
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
+                "userState" : 1,
+                "projectState" : 1
             },
             "transfert": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "transfert",
-                "user" : 1,
-                "project" : 1
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
+                "userState" : 1,
+                "projectState" : 1
             },
             "change": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "change",
-                "user" : 1,
-                "project" : 1
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
+                "userState" : 1,
+                "projectState" : 1
             },
             "including": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "including",
-                "user" : 1,
-                "project" : 1
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
+                "userState" : 1,
+                "projectState" : 1
             },
             "dataShare": {
-                "hash": {
-                    "data" : ""
-                },
-                "name": "dataShare",
-                "user" : 1,
-                "project" : 1
+                "xPubList": [],
+                "xPubYesList": [],
+                "xPubNoList": [],
+                "userState" : 1,
+                "projectState" : 1
             }
         }        
     }    
 }
+
