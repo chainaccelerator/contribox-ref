@@ -1,8 +1,12 @@
 <?php
+declare(strict_types = 1);
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 
 class Html {
 
-    public static function confGen(strung $t):bool {
+    public static function confGen(string $t, stdClass $c):bool {
     
         $f = $t.'.json';
         $c = json_encode($c, JSON_PRETTY_PRINT, 10);
@@ -45,10 +49,9 @@ class Type {
         $this->paramList->hash = $hash->paramList;
         $this->paramList->state = "mock";
     }
-    public static function confGen():bool {
+    public static function confGen(stdClass $conf):bool {
 
         Type::$list = new stdClass();
-        $conf = json_decode(file_get_contents("conf.json"));
 
         foreach($conf->type as $name => $def) {
 
@@ -327,7 +330,7 @@ class Type {
             $c->$k = $v->paramList;
         }        
         self::$conf = $c;
-        Html::confGen($t);
+        Html::confGen(get_called_class(), $c);
 
         return true;
     }
@@ -410,7 +413,7 @@ class Method {
 
         return Method::confGenParam($obj, $paramList, $attribute, $listName);
     }
-    public static function confGen():bool {
+    public static function confGen(stdClass $conf):bool {
 
         Method::$list = new stdClass();
 
@@ -635,12 +638,13 @@ class Method {
             $c->$k = $v->paramList;
         }
         self::$conf = $c;
-        Html::confGen($t);
+        Html::confGen(get_called_class(), $c);
 
         return true;
     }
 }    
-Type::confGen();
-Method::confGen();
+$conf = json_decode(file_get_contents("conf.json"));
 
+Type::confGen($conf);
+Method::confGen($conf);
 
