@@ -1,8 +1,8 @@
 <?php
 
-class Html(){
+class Html {
 
-    public static function confGen($t){
+    public static function confGen(strung $t):bool {
     
         $f = $t.'.json';
         $c = json_encode($c, JSON_PRETTY_PRINT, 10);
@@ -10,14 +10,15 @@ class Html(){
         file_put_contents($f, $t::$conf);
 
         echo '<a href="'.$f.'" target="_blank">'.$t.'</a><br>';
+
+        return true;
     }
 }
-
 class Hash {
 
     public $paramList;
     
-    public function __construct($name, $def) {
+    public function __construct(string $name, stdClass $def) {
 
         $this->paramList = new stdClass();
         $this->paramList->left = hash('sha256', $name);
@@ -35,7 +36,7 @@ class Type {
     public $name = '';
     public $description = '';
 
-    public function __construct($name, $def, $description = ''){
+    public function __construct(string $name, stdClass $def, string $description = '') {
 
         $this->name = $name;
         $this->description = $description;
@@ -44,7 +45,7 @@ class Type {
         $this->paramList->hash = $hash->paramList;
         $this->paramList->state = "mock";
     }
-    public static function confGen(){
+    public static function confGen():bool {
 
         Type::$list = new stdClass();
         $conf = json_decode(file_get_contents("conf.json"));
@@ -317,6 +318,8 @@ class Type {
         }        
         self::$conf = $c;
         Html::confGen($t);
+
+        return true;
     }
 }
 
@@ -330,7 +333,7 @@ class Method {
     public $request;
     public $response;
 
-    public function __construct($name, $def, $type, $description = ''){
+    public function __construct(string $name, stdClass $def, string $type, string $description = ''){
 
         $this->name = $name;
         $this->description = $description;
@@ -347,7 +350,7 @@ class Method {
         $this->response->reason->state = "mock";
         $this->response->reason->type = $type;
     }
-    public static function confGenParamList($obj, $paramList, $attribute, $listName, $elementType){
+    public static function confGenParamList(stdClass $obj, stdClass $paramList, string $attribute, string $listName, string $elementType): stdClass {
 
         $obj->$way->$attribute->$listName[0] = new stdClass();
         $element = Type::$list->$elementType->paramList;
@@ -358,21 +361,21 @@ class Method {
         }
         return $obj;
     }
-    public static function confGenParamListRequest($obj, $def, $listName){
+    public static function confGenParamListRequest(stdClass $obj, stdClass $def, string $listName): stdClass {
 
         $attribute = 'paramList';
         $paramList = $def->paramList;
 
-        return public static function confGenParam($obj, $paramList, $attribute, $listName, $elementType);
+        return Method::confGenParam($obj, $paramList, $attribute, $listName, $elementType);
     }
-    public static function confGenParamListResponse($obj, $def, $listName, $elementType){
+    public static function confGenParamListResponse(stdClass $obj, stdClass $def, string $listName, string $elementType): stdClass {
 
         $attribute = 'resource';
         $paramList = $def->reason;
 
-        return public static function confGenParam($obj, $paramList, $attribute, $listName, $elementType);
+        return Method::confGenParam($obj, $paramList, $attribute, $listName, $elementType);
     }
-    public static function confGenParam($obj, $paramList, $attribute, $listName){
+    public static function confGenParam(stdClass $obj, stdClass $paramList, string $attribute, string $listName): stdClass {
 
         $obj->$way->$attribute->$listName = new stdClass();
         $element = Type::$list->$elementType->paramList;
@@ -383,22 +386,21 @@ class Method {
         }
         return $obj;
     }
-    public static function confGenParamRequest($obj, $def, $listName){
+    public static function confGenParamRequest(stdClass $obj, stdClass $def, string $listName): stdClass {
 
         $attribute = 'paramList';
         $paramList = $def->paramList;
 
-        return public static function confGenParam($obj, $paramList, $attribute, $way, $listName);
+        return Method::confGenParam($obj, $paramList, $attribute, $listName);
     }
-    public static function confGenParamResponse($obj, $def, $listName){
+    public static function confGenParamResponse(stdClass $obj, stdClass $def, string $listName): stdClass {
 
         $attribute = 'resource';
         $paramList = $def->reason;
 
-        return public static function confGenParam($obj, $paramList, $attribute, $way, $listName);
+        return Method::confGenParam($obj, $paramList, $attribute, $listName);
     }
-
-    public static function confGen(){
+    public static function confGen():bool {
 
         Method::$list = new stdClass();
 
@@ -406,7 +408,7 @@ class Method {
 
             switch ($type ) {
                 case 'authentification':
-                    $t = ''
+                    $t = '';
                     break;
                 case 'key':
                     $t = 'share|backup|lock';
@@ -496,12 +498,12 @@ class Method {
                         break;
                     case 'boardingBroadcastGet':
                         
-                        $obj = Method::confGenParamRequest($obj, $def, 'requestHash');
+                        $obj = Method::confGenParamRequest($obj, $def, 'requestHash'); 
                         
                         $obj = Method::confGenParamListResponse($obj, $def, 'pubKeyEncryptedList', 'pubKeyEncrypted');
                         $obj = Method::confGenParamListResponse($obj, $def, 'sigList', 'sig');                        
                         break;
-                    case 'contribution':                
+                    case 'contribution':
                         
                         break;
                     case 'contributionGet':                
@@ -550,6 +552,8 @@ class Method {
         }
         self::$conf = $c;
         Html::confGen($t);
+
+        return true;
     }
 }    
 Type::confGen();
