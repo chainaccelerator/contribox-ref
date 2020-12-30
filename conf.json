@@ -1337,7 +1337,7 @@
                     }
                 }
             },
-            "Peer": {
+            "peer": {
                 "peerCheck": {
                     "paramList": {},
                     "reason": {}

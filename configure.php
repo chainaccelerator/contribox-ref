@@ -429,6 +429,12 @@ class Method {
                 case 'contribution':
                     $t = 'default';
                     break;
+                case 'public':
+                    $t = 'default';
+                    break;
+                case 'peer':
+                    $t = 'default';
+                    break;
             }
             foreach($method as $name => $def) {
 
@@ -510,7 +516,7 @@ class Method {
                         
                         $obj = Method::confGenParamRequest($obj, $def, 'requestHash'); 
                         
-                        $obj = Method::confGenParamResponse($obj, $def, 'trace';                        
+                        $obj = Method::confGenParamResponse($obj, $def, 'trace');
                         break;
                     case 'contribution':
                         
@@ -584,6 +590,38 @@ class Method {
                         $obj = Method::confGenParamRequest($obj, $def, 'request');
 
                         $obj = Method::confGenParamResponse($obj, $def, 'response');
+                        break;
+                    case 'gitStore': 
+
+
+                        break;
+                    case 'gitGet': 
+
+                        
+                        break;
+                    case 'graphStore': 
+
+                        
+                        break;
+                    case 'graphGet': 
+
+                        
+                        break;
+                    case 'blockchainBroadcast': 
+
+                        
+                        break;
+                    case 'blockchainGet': 
+
+                        
+                        break;
+                    case 'blockchaiValidation': 
+
+                        
+                        break;
+                    case 'blockchainPegOut': 
+
+                        
                         break;
                 }
                 Type::$list->$name = $obj;
