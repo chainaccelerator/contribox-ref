@@ -303,8 +303,11 @@ class Type {
                             $obj->paramList->result = Type::$list->result->paramList;
                             $obj->paramList->reason = Type::$list->reason->paramList;
                         break;
-                    default:
-                        
+                    case 'gitData':
+
+                            $obj->paramList->ipv4 = Type::$list->ipv4->paramList;
+                            $obj->paramList->userRepositoryGitHash = Type::$list->hash->paramList;
+                            $obj->paramList->commitGitHash = Type::$list->hash->paramList;
                         break;
                 }
                 Type::$list->$name = $obj;
@@ -329,7 +332,7 @@ class Method {
     public static $list;
 
     public $name = '';
-    public $description = '';
+    public $description = ''; 
     public $request;
     public $response;
 
@@ -546,19 +549,23 @@ class Method {
                         
                         $obj = Method::confGenParamRequest($obj, $def, 'requestHash'); 
                         
-                        $obj = Method::confGenParamResponse($obj, $def, 'trace';       
+                        $obj = Method::confGenParamResponse($obj, $def, 'trace');       
                         break;
-                    case 'publicPeerListGet':                
+                    case 'publicPeerListGet':
                         
+                        $obj = Method::confGenParamListResponse($obj, $def, 'gitDataList', 'gitData');
                         break;
-                    case 'publicSDKGet':                
+                    case 'publicSDKGet':   
                         
+                        $obj = Method::confGenParamListResponse($obj, $def, 'gitDataList', 'gitData');
                         break;
-                    case 'publicArchiveGet':                
+                    case 'publicArchiveGet':
                         
+                        $obj = Method::confGenParamListResponse($obj, $def, 'gitDataList', 'gitData');
                         break;
-                    case 'publicDidGet':                
+                    case 'publicDidGet':
                         
+                        $obj = Method::confGenParamListResponse($obj, $def, 'gitDataList', 'gitData');
                         break;
                     case 'peerCheck':                
                         
