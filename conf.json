@@ -241,7 +241,7 @@
             "rangeEncrypted": {}    
         },
         "contribution": {
-            "xPub": {},
+            "xPubHash": {},
             "proof": {},    
             "templateHash": {},
             "blindKeyEncryptedList": [],
@@ -858,8 +858,8 @@
                         "pubKeySEncryptedList": ["encrypted"]
                     },
                     "reason": {
-                        "requestHash": ["hash"],
-                        "pubKeyEncrypted": ["encrypted"],
+                        "requestHashList": ["hash"],
+                        "pubKeyEncryptedList": ["encrypted"],
                         "keyEncryptedList": ["encrypted"]      
                     }
                 },
@@ -883,15 +883,22 @@
             "boarding": {
                 "boardingTemplateGet": {
                     "paramList": {
-                        "contribution": {}
+                        "project": ["name"],
+                        "licence": ["name"],
+                        "userRole": ["name"],
+                        "groupRole": ["name"],
+                        "actionRole": ["name"]
                     },
                     "reason": {
-                        "contribution": {}
+                        "contributionList": ["hash", "proof", "blindKeyEncryptedList", "boardingList", "sig"],
+                        "templateList": ["hash", "groupRole", "actionRole", "script"]
                     }
                 },
                 "boarding": {
                     "paramList": {
-                        "contribution": {}
+                        "pubKeyEncrypted": ["encrypted"],
+                        "contribution": ["hash", "xPubHash", "proof", "blindKeyEncryptedList", "boardingList", "sig"],
+                        "template": ["hash", "groupRole", "actionRole", "script"]
                     },
                     "reason": {
                         "requestHash": ["hash"]
@@ -899,20 +906,20 @@
                 },
                 "boardingGet": {
                     "paramList": {
-                        "xPubSList": []
+                        "pubKeySEncryptedList": ["encrypted"]
                     },
                     "reason": {
-                        "requestHash": ["hash"],
-                        "xPubSList": [],
-                        "contributionList": []
+                        "requestHashList": ["hash"],
+                        "pubKeyEncryptedList": ["encrypted"],
+                        "contributionList": ["hash", "xPubHash", "proof", "blindKeyEncryptedList", "boardingList", "sig"],
+                        "templateList": ["hash", "groupRole", "actionRole", "script"]
                     }
                 },
                 "boardingBroadcast": {
                     "paramList": {
                         "requestHash": ["hash"],
-                        "xPubSList": [],
-                        "contributionList": [],
-                        "sigList": []
+                        "pubKeySEncryptedList": ["encrypted"],
+                        "sigList": ["txVoutindex", "sigData", "txUtxo", "yes", "txId", "txAmount", "txIssueAsset", "voutSigList", "script"]
                     },
                     "reason": {}
                 },
@@ -921,9 +928,8 @@
                         "requestHash": ["hash"]
                     },
                     "reason": {
-                        "xPubSList": [],
-                        "contributionList": [],
-                        "sigList": []
+                        "pubKeySEncryptedList": ["encrypted"],
+                        "sigList": ["txVoutindex", "sigData", "txUtxo", "yes", "txId", "txAmount", "txIssueAsset", "voutSigList", "script"]
                     }
                 }
             },
