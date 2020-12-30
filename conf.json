@@ -292,6 +292,7 @@
             "proofMerkleTree": {},
             "sigYes": [],
             "sigNo": [],
+            "userRepositoryGitHash": {},
             "transctionHash": {},
             "gitCommitHash": {}
         },
@@ -327,11 +328,15 @@
             "result": 0,
             "reason": {}
         },
+        "pegOut": {
+            "sig": {}
+        },
         "gitData": {
             "ipv4": {},
             "userRepositoryGitHash": {},
             "commitGitHash": {},
-            "data": ""
+            "data": "",
+            "tag": {}
         }
     },
     "typeControle": {
@@ -1134,6 +1139,7 @@
                             "sigYesList",
                             "sigNoList",
                             "transctionHash",
+                            "userRepositoryGitHash",
                             "gitCommitHash"
                         ]
                     }
@@ -1273,6 +1279,7 @@
                                 "sigYesList",
                                 "sigNoList",
                                 "transctionHash",
+                                "userRepositoryGitHash",
                                 "gitCommitHash"
                             ]
                         }
@@ -1324,7 +1331,8 @@
                             "ipv4",
                             "userRepositoryGitHash",
                             "commitGitHash",
-                            "data"
+                            "data",
+                            "tag"
                         ]
                     }
                 }
@@ -1348,6 +1356,142 @@
                             "result",
                             "reason",
                             "error"
+                        ]
+                    }
+                },
+                "gitStore": {
+                    "paramList": {
+                        "gitDataList": [
+                            "tag",
+                            "data",
+                            "userRepositoryGitHash"
+                        ]
+                    },
+                    "reason": {
+                        "gitDataList": [
+                            "commitGitHash"
+                        ]
+                    }
+                },
+                "gitGet": {
+                    "paramList": {
+                        "gitDataList": [
+                            "commitGitHash"
+                        ]
+                    },
+                    "reason": {
+                        "gitDataList": [
+                            "data"
+                        ]
+                    }
+                },
+                "graphStore": {
+                    "paramList": {
+                        "trace": [
+                            "proofMerkleTree",
+                            "sigYesList",
+                            "sigNoList",
+                            "transctionHash",
+                            "userRepositoryGitHash",
+                            "gitCommitHash"
+                        ]
+                    },
+                    "reason": {
+                        "trace": [
+                            "hash"
+                        ]
+                    }
+                },
+                "graphGet": {
+                    "paramList": {
+                        "hash": [
+                            "hash"
+                        ]
+                    },
+                    "reason": {
+                        "trace": [
+                            "proofMerkleTree",
+                            "sigYesList",
+                            "sigNoList",
+                            "transctionHash",
+                            "userRepositoryGitHash",
+                            "gitCommitHash"
+                        ]
+                    }
+                },
+                "blockchainBroadcast": {
+                    "paramList": {
+                        "sigList": [
+                            "txVoutindex",
+                            "sigData",
+                            "txUtxo",
+                            "yes",
+                            "txId",
+                            "txAmount",
+                            "txIssueAsset",
+                            "voutSigList",
+                            "script"
+                        ]
+                    },
+                    "reason": {}
+                },
+                "blockchainGet": {
+                    "paramList": {
+                        "sigList": [
+                            "txId"
+                        ]
+                    },
+                    "reason": {
+                        "sigList": [
+                            "txVoutindex",
+                            "sigData",
+                            "txUtxo",
+                            "yes",
+                            "txId",
+                            "txAmount",
+                            "txIssueAsset",
+                            "voutSigList",
+                            "script"
+                        ]
+                    }
+                },
+                "blockchaiValidation": {
+                    "paramList": {},
+                    "reason": {
+                        "trace": [
+                            "hash",
+                            "proofMerkleTree",
+                            "sigYesList",
+                            "sigNoList",
+                            "transctionHash",
+                            "userRepositoryGitHash",
+                            "gitCommitHash"
+                        ]
+                    }
+                },
+                "blockchainPegOut": {
+                    "paramList": {
+                        "sig": [
+                            "txVoutindex",
+                            "sigData",
+                            "txUtxo",
+                            "yes",
+                            "txId",
+                            "txAmount",
+                            "txIssueAsset",
+                            "voutSigList",
+                            "script"
+                        ]
+                    },
+                    "reason": {
+                        "trace": [
+                            "hash",
+                            "proofMerkleTree",
+                            "sigYesList",
+                            "sigNoList",
+                            "transctionHash",
+                            "userRepositoryGitHash",
+                            "gitCommitHash"
                         ]
                     }
                 }

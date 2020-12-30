@@ -271,6 +271,7 @@ class Type {
                             $obj->paramList->sigYesList[0] = Type::$list->xPub->paramList;
                             $obj->paramList->sigNoList[0] = Type::$list->xPub->paramList;
                             $obj->paramList->transctionHash = Type::$list->hash->paramList;
+                            $obj->paramList->userRepositoryGitHash = Type::$list->hash->paramList;
                             $obj->paramList->gitCommitHash = Type::$list->hash->paramList;
                         break;
                     case 'type':
@@ -308,7 +309,13 @@ class Type {
                             $obj->paramList->ipv4 = Type::$list->ipv4->paramList;
                             $obj->paramList->userRepositoryGitHash = Type::$list->hash->paramList;
                             $obj->paramList->commitGitHash = Type::$list->hash->paramList;
+                            $obj->paramList->tag = Type::$list->tag->paramList;
                         break;
+                    case 'pegOut':
+
+                            $obj->paramList->sig = Type::$list->sig->paramList;
+                        break;
+
                 }
                 Type::$list->$name = $obj;
             }
