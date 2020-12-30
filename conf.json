@@ -1283,7 +1283,7 @@
                 "publicPeerListGet": {
                     "paramList": {},
                     "reason": {
-                        "gitDataList": [
+                        "gitData": [
                             "ipv4",
                             "userRepositoryGitHash",
                             "commitGitHash",
@@ -1315,7 +1315,9 @@
                 },
                 "publicDidGet": {
                     "paramList": {
-                        "contributionHash": {}
+                        "trace": [
+                            "proofMerkleTree"
+                        ]
                     },
                     "reason": {
                         "gitDataList": [
@@ -1331,6 +1333,23 @@
                 "peerCheck": {
                     "paramList": {},
                     "reason": {}
+                },
+                "peerAsk": {
+                    "paramList": {
+                        "request": [
+                            "metaData",
+                            "method",
+                            "paramList"
+                        ]
+                    },
+                    "reason": {
+                        "response": [
+                            "metaData",
+                            "result",
+                            "reason",
+                            "error"
+                        ]
+                    }
                 }
             }
         }

@@ -553,13 +553,15 @@ class Method {
                         break;
                     case 'publicPeerListGet':
                         
-                        $obj = Method::confGenParamListResponse($obj, $def, 'gitDataList', 'gitData');
+                        $obj = Method::confGenParamResponse($obj, $def, 'gitData');
                         break;
                     case 'publicSDKGet':   
                         
                         $obj = Method::confGenParamListResponse($obj, $def, 'gitDataList', 'gitData');
                         break;
                     case 'publicArchiveGet':
+
+                        $obj = Method::confGenParamRequest($obj, $def, 'trace');
                         
                         $obj = Method::confGenParamListResponse($obj, $def, 'gitDataList', 'gitData');
                         break;
@@ -570,8 +572,11 @@ class Method {
                     case 'peerCheck':                
                         
                         break;
-                    default:
-                        
+                    case 'peerAsk':                
+
+                        $obj = Method::confGenParamRequest($obj, $def, 'request');
+
+                        $obj = Method::confGenParamResponse($obj, $def, 'response');
                         break;
                 }
                 Type::$list->$name = $obj;
