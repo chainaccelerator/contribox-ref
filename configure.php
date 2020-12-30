@@ -363,7 +363,7 @@ class Method {
         $this->response->reason->state = "mock";
         $this->response->reason->type = $type;
     }
-    public static function confGenParamList(stdClass $obj, stdClass $paramList, string $attribute, string $listName, string $elementType): stdClass {
+    public static function confGenParamList(stdClass $obj, string $way, stdClass $paramList, string $attribute, string $listName, string $elementType): stdClass {
 
         $obj->$way->$attribute->$listName[0] = new stdClass();
         $element = Type::$list->$elementType->paramList;
@@ -374,24 +374,24 @@ class Method {
         }
         return $obj;
     }
-    public static function confGenParamListRequest(stdClass $obj, stdClass $def, string $listName): stdClass {
+    public static function confGenParamListRequest(Method $obj, stdClass $def, string $listName, string $elementType): stdClass {
 
         $attribute = 'paramList';
         $paramList = $def->paramList;
 
-        return Method::confGenParam($obj, $paramList, $attribute, $listName, $elementType);
+        return Method::confGenParam($obj, 'request', $paramList, $attribute, $listName, $elementType);
     }
-    public static function confGenParamListResponse(stdClass $obj, stdClass $def, string $listName, string $elementType): stdClass {
+    public static function confGenParamListResponse(Method $obj, stdClass $def, string $listName, string $elementType): stdClass {
 
         $attribute = 'resource';
         $paramList = $def->reason;
 
-        return Method::confGenParam($obj, $paramList, $attribute, $listName, $elementType);
+        return Method::confGenParam($obj, 'response', $paramList, $attribute, $listName, $elementType);
     }
-    public static function confGenParam(stdClass $obj, stdClass $paramList, string $attribute, string $listName): stdClass {
+    public static function confGenParam(Method $obj, string $way, stdClass $paramList, string $attribute, string $listName): stdClass {
 
         $obj->$way->$attribute->$listName = new stdClass();
-        $element = Type::$list->$elementType->paramList;
+        $element = Type::$list->$listName->paramList;
 
         foreach($paramList->$listName as $attributeName) {
                                         
@@ -399,25 +399,25 @@ class Method {
         }
         return $obj;
     }
-    public static function confGenParamRequest(stdClass $obj, stdClass $def, string $listName): stdClass {
+    public static function confGenParamRequest(Method $obj, stdClass $def, string $listName): stdClass {
 
         $attribute = 'paramList';
         $paramList = $def->paramList;
 
-        return Method::confGenParam($obj, $paramList, $attribute, $listName);
+        return Method::confGenParam($obj, 'request', $paramList, $attribute, $listName);
     }
-    public static function confGenParamResponse(stdClass $obj, stdClass $def, string $listName): stdClass {
+    public static function confGenParamResponse(Method $obj, stdClass $def, string $listName): stdClass {
 
         $attribute = 'resource';
         $paramList = $def->reason;
 
-        return Method::confGenParam($obj, $paramList, $attribute, $listName);
+        return Method::confGenParam($obj, 'response', $paramList, $attribute, $listName);
     }
     public static function confGen(stdClass $conf):bool {
 
         Method::$list = new stdClass();
 
-        foreach($conf->method as $type => $method) {
+        foreach($conf->rpc->method as $type => $method) {
 
             switch ($type ) {
                 case 'authentification':

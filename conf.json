@@ -922,17 +922,6 @@
         }
     },
     "rpc": {
-        "request": {
-            "metaData": {},
-            "method": "",
-            "paramList": []
-        },
-        "response": {
-            "metaData": {},
-            "result": 0,
-            "reason": {},
-            "error": 0
-        },
         "method": {
             "authentification": {
                 "authOtpGet": {
