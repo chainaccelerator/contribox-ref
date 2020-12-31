@@ -11,7 +11,7 @@ class Html {
         $f = $t.'.json';
         $c = json_encode($c, JSON_PRETTY_PRINT, 10);
 
-        file_put_contents($f, $t::$conf);
+        file_put_contents($f, $c);
 
         echo '<a href="'.$f.'" target="_blank">'.$t.'</a><br>';
 
