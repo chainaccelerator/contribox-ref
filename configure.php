@@ -8,7 +8,11 @@ class Html {
 
     public static function confGen(string $t, stdClass $c):bool {
     
-        $f = $t.'.json';
+        $d = 'rendered';
+
+        if(is_dir($d) === false) mkdir( $d);
+
+        $f =  $d.DIRECTORY_SEPARATOR.$t.'.json';
         $c = json_encode($c, JSON_PRETTY_PRINT);
 
         file_put_contents($f, $c);
@@ -53,6 +57,9 @@ class Type {
 
         Type::$list = new stdClass();
 
+        $alias = array();
+        $alias = $conf->alias;
+
         foreach($conf->type as $name => $def) {
 
             if($name === 'hash') Type::$list->$name = new Hash("", $def);
@@ -60,39 +67,31 @@ class Type {
 
                 $obj = new Type($name, $def);
 
-                switch ($name) {
+                foreach($obj->paramList as $k => $v) {
 
-                    case 'password':                
-                        
-                        break;
+                    $d = $k;                     
+                    $d = str_replace('List', '', $d);
+
+                    if(strstr($k, 'Hash') !== false ) $d = 'hash';
+
+                    if(isset($alias->$d) === true) $d = $alias->$d;
+
+                    if(strstr($k, 'List') !== false ) {
+
+                        if(isset(Type::$list->$d) === true) $obj->paramList->$k[0] = Type::$list->$d->paramList;
+                    }
+                    else {
+
+                        if(isset(Type::$list->$d) === true) $obj->paramList->$k = Type::$list->$d->paramList;
+                    }
+                }
+                switch ($name) {
+                    
                     case 'timestamp':
 
                             $conf->signature->timeout = $obj->paramList;
                             break;
-                    case 'key':
-                
-                        break;
-                    case 'blindingKey':
-                
-                        break;
-                    case 'xPubRange':
-                        
-                        break;
-                    case 'xPubRange':
-                        
-                        break;
-                    case 'pubKeyEncrypted':
-    
-                        break;
-                    case 'rangeEncrypted':
-
-                        break;
                     case 'xPub':
-
-                            $obj->paramList->xPubRange = Type::$list->xPubRange->paramList;
-                            $obj->paramList->rangeEncrypted = Type::$list->rangeEncrypted->paramList;
-                            $obj->paramList->pubKeyEncrypted = Type::$list->xPubEncrypted->paramList;
-                            $obj->paramList->encrypted = Type::$list->pubKeyEncrypted->paramList;
 
                             foreach($conf->signature->userRoleList as $k => $v) {
                                 
@@ -105,113 +104,27 @@ class Type {
                                 $conf->signature->userRoleList->$k->xPubNoList = array();
                                 $conf->signature->userRoleList->$k->xPubNoList[0] = $obj->paramList;
                             }
-                        break;            
-                    case 'jsonData':
-                            
-                        break;
-                    case 'stateReason':
-                            
-                        break;
-                    case 'keyVal':
-                            $obj->paramList->val = Type::$list->jsonData->paramList;
-                        break;
-                    case 'project':
-                            
-                        break;
-                    case 'licence':
-                            
-                        break;
-                        case 'tag':
-                                
-                        break;
-                    case 'userRole':
-
-                        $obj->paramList->xPubList[0] = Type::$list->xPub->paramList;
-                        $obj->paramList->xPubYesList[0] = Type::$list->xPub->paramList;
-                        $obj->paramList->xPubNoList[0] = Type::$list->xPub->paramList;                    
-                        break;
-                    case 'groupRole':
-
-                        $obj->paramList->xPubList[0] = Type::$list->xPub->paramList;
-                        $obj->paramList->xPubYesList[0] = Type::$list->xPub->paramList;
-                        $obj->paramList->xPubNoList[0] = Type::$list->xPub->paramList;                    
-                        break;
-                    case 'actionRole':
-
-                        $obj->paramList->xPubList[0] = Type::$list->xPub->paramList;
-                        $obj->paramList->xPubYesList[0] = Type::$list->xPub->paramList;
-                        $obj->paramList->xPubNoList[0] = Type::$list->xPub->paramList;
                         break;
                     case 'proof':
-
-                            $obj->paramList->xPub = Type::$list->xPub->paramList;
-                            $obj->paramList->project = Type::$list->project->paramList;
-                            $obj->paramList->licence = Type::$list->licence->paramList;
-                            $obj->paramList->licenceChange = Type::$list->licence->paramList;
+                            
                             $obj->paramList->userRole = $conf->signature->userRoleList->default;
                             $obj->paramList->groupRole = $conf->signature->groupRoleList->default;
                             $obj->paramList->actionRole = $conf->signature->roleActionList->default;
-                            $obj->paramList->descriptionPublicList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->environnementList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->qualityList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->contributeList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->originList[0] = Type::$list->hash->paramList;
-                            $obj->paramList->parentList[0] = Type::$list->hash->paramList;
-                            $obj->paramList->previousList[0] = Type::$list->hash->paramList;
-                            $obj->paramList->leftList[0] = Type::$list->hash->paramList;
-                            $obj->paramList->ndaList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->condifidentialDataList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->metaDataList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->officerList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->ediList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->certificateList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->exportControlList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->keyValueList[0] = Type::$list->keyVal->paramList;
-                            $obj->paramList->forList[0] = Type::$list->xPub->paramList;
-                            $obj->paramList->toList[0] = Type::$list->xPub->paramList;
-                            $obj->paramList->tagList[0] = Type::$list->tag;
                         break;
                     case 'boarding':
 
-                            $obj->paramList->xPubList = Type::$list->xPub->paramList;
                             $obj->paramList->userRole = $conf->signature->userRoleList->default;
                             $obj->paramList->groupRole = $conf->signature->groupRoleList->default;
                             $obj->paramList->actionRole = $conf->signature->roleActionList->default;
                         break;
-                        case 'script':
-                                
-                            break;
                     case 'template':
                             
-                            $obj->paramList->contributionHash = Type::$list->hash->paramList;
-                            $obj->paramList->script = Type::$list->script->paramList;
                             $obj->paramList->userRole = $conf->signature->userRoleList->default;
                             $obj->paramList->groupRole = $conf->signature->groupRoleList->default;
                             $obj->paramList->actionRole = $conf->signature->roleActionList->default;
-                        break;
-                    case 'utxoData':
-                            
-                        break;
-                    case 'txId':
-                            
-                        break;
-                    case 'utxo':
-
-                            $obj->paramList->txId = Type::$list->txId->paramList;
-                            $obj->paramList->utxoData = Type::$list->utxoData->paramList;
-                            $obj->paramList->script = Type::$list->script->paramList;
-                        break;
-                    case 'pubKey':
-                            
-                        break;
-                    case 'sigData':
-                            
                         break;
                     case 'cosig':
 
-                            $obj->paramList->sigData = Type::$list->sigData->paramList;
-                            $obj->paramList->pubKey = Type::$list->pubKey->paramList;
-                            $obj->paramList->xPub = Type::$list->xPub->paramList;
                             $obj->paramList->xPubS = Type::$list->xPub->paramList;
                             $obj->paramList->txId = Type::$list->txId->paramList;
                             $obj->paramList->txIssueAsset = Type::$list->txId->paramList;
@@ -219,123 +132,15 @@ class Type {
                             $obj->paramList->script = Type::$list->script->paramList;
                         break;
                     case 'sig':
-
-                            $obj->paramList->sigData = Type::$list->sigData->paramList;
-                            $obj->paramList->pubKey = Type::$list->pubKey->paramList;
-                            $obj->paramList->xPub = Type::$list->xPub->paramList;
-                            $obj->paramList->xPubS = Type::$list->xPub->paramList;
-                            $obj->paramList->txId = Type::$list->txId->paramList;
-                            $obj->paramList->txIssueAsset = Type::$list->txId->paramList;
-                            $obj->paramList->txUtxo = Type::$list->utxo->paramList;
-                            $obj->paramList->script = Type::$list->script->paramList;                    
+                    
+                            /*
                             $obj->paramList->voutSigList = array();
                             $obj->paramList->voutSigList[0] = Type::$list->cosig->paramList;                            
-                            $obj->paramList->pubKeyEncrypted = Type::$list->pubKeyEncrypted->paramList;
-                            $obj->paramList->pubKeyS = Type::$list->pubKey->paramList;
-                            $obj->paramList->pubKeySEncrypted = Type::$list->pubKeyEncrypted->paramList;
-                            $obj->paramList->xPubHash = Type::$list->hash->paramList;
-                            $obj->paramList->xPubEncrypted = Type::$list->xPubEncrypted->paramList;
-                            $obj->paramList->XPubSHash = Type::$list->hash->paramList;
-                            $obj->paramList->xPubSEncrypted = Type::$list->xPubEncrypted->paramList;
-                        break;
-                    case 'issueAsset':
-
-                            $obj->paramList->xPub = Type::$list->xPub->paramList;
-                            $obj->paramList->rangeEncrypted = Type::$list->rangeEncrypted->paramList;
-                        break;
-                    case 'blindingKeyEncrypted':
-
-                        break;
-                    case 'contribution':
-
-                            $obj->paramList->xPubHash = Type::$list->hash->paramList;
-                            $obj->paramList->proof = Type::$list->proof->paramList;
-                            $obj->paramList->templateHash = Type::$list->hash->paramList;
-                            $obj->paramList->blindKeyEncryptedList[0] = Type::$list->blindingKeyEncrypted->paramList;
-                            $obj->paramList->boardingList[0] = Type::$list->boarding->paramList;
-                            $obj->paramList->sig = Type::$list->sig->paramList;                
-                        break;
-                    case 'keyEncrypted':
-
-                            $obj->paramList->key = Type::$list->key->paramList;
-                        break;
-                    case 'keyShared':
-
-                            $obj->paramList->xPubSList[0] = Type::$list->xPub->paramList;
-                            $obj->paramList->keyEncryptedList[0] = Type::$list->keyEncrypted->paramList;
-                        break;
-                    case 'ipv4':
-                            
-                        break;
-                    case 'nodeURI':
-
-                            $obj->paramList->ipv4 = Type::$list->ipv4->paramList;
-                        break;
-                    case 'otp':
-
-                            $obj->paramList->createDate = Type::$list->timestamp->paramList;
-                            $obj->paramList->expireDate = Type::$list->timestamp->paramList;
-                            $obj->paramList->pubKey = Type::$list->pubKey->paramList;
-                            $obj->paramList->pubId = Type::$list->txId->paramList;
-                        break;
-                    case 'metaData':
-
-                            $obj->paramList->time = Type::$list->timestamp->paramList;
-                            $obj->paramList->ipv4List[0] = Type::$list->ipv4->paramList;
-                            $obj->paramList->pubKey = Type::$list->pubKey->paramList;
-                            $obj->paramList->sig = Type::$list->sig->paramList;
-                            $obj->paramList->PowHash = Type::$list->hash->paramList;
-                            $obj->paramList->otp = Type::$list->otp->paramList;
-                        break;
-                    case 'trace':
-                            $obj->paramList->proofMerkleTree = Type::$list->hash->paramList;
-                            $obj->paramList->sigYesList[0] = Type::$list->xPub->paramList;
-                            $obj->paramList->sigNoList[0] = Type::$list->xPub->paramList;
-                            $obj->paramList->transctionHash = Type::$list->hash->paramList;
-                            $obj->paramList->userRepositoryGitHash = Type::$list->hash->paramList;
-                            $obj->paramList->gitCommitHash = Type::$list->hash->paramList;
-                        break;
-                    case 'type':
-
-                        break;
-                    case 'reason':
-
-                        break;
-                    case 'paramList':
-                        
-                        break;
-                    case 'method':
-                    
-                        break;
-                    case 'result':
-                        
-                        break;
-                    case 'request':
-
-                            $obj->paramList->methodHash = Type::$list->hash->paramList;
-                            $obj->paramList->metaData = Type::$list->metaData->paramList;
-                            $obj->paramList->method = Type::$list->method->paramList;
-                            $obj->paramList->paramList = Type::$list->paramList->paramList;
-                            $obj->paramList->reason = Type::$list->reason->paramList;
+                            */
                         break;
                     case 'response':
 
-                            $obj->paramList->methodHash = Type::$list->hash->paramList;
-                            $obj->paramList->metaData = Type::$list->metaData->paramList;
-                            $obj->paramList->result = Type::$list->result->paramList;
-                            $obj->paramList->reason = Type::$list->reason->paramList;
                             $obj->paramList->resource = new stdClass();
-                        break;
-                    case 'gitData':
-
-                            $obj->paramList->ipv4 = Type::$list->ipv4->paramList;
-                            $obj->paramList->userRepositoryGitHash = Type::$list->hash->paramList;
-                            $obj->paramList->commitGitHash = Type::$list->hash->paramList;
-                            $obj->paramList->tag = Type::$list->tag->paramList;
-                        break;
-                    case 'pegOut':
-
-                            $obj->paramList->sig = Type::$list->sig->paramList;
                         break;
                 }
                 Type::$list->$name = $obj;
@@ -375,14 +180,10 @@ class Method {
         $this->response->reason->state = "mock";
         $this->response->reason->type = $type;
     }
-    public static function confGenParamList(Method $obj, string $way, array $paramList, string $attribute, string $listName, string $alias = ''): Method {
-
-
-        if($alias === '') $elementType = str_replace('List', '', $listName);
-        else $elementType = $alias;
+    public static function confGenParamList(Method $obj, string $way, array $paramList, string $attribute, string $listName, string $alias): Method {
 
         $obj->$way->$attribute->$listName[0] = new stdClass();
-        $element = Type::$list->$elementType->paramList;
+        $element = Type::$list->$alias->paramList;
 
         foreach($paramList as $attributeName) {
                                         
@@ -390,13 +191,10 @@ class Method {
         }
         return $obj;
     }
-    public static function confGenParam(Method $obj, string $way, array $paramList, string $attribute, string $listName, string $alias = ''): Method {
-
-        if($alias === '') $elementType = $listName;
-        else $elementType = $alias;
+    public static function confGenParam(Method $obj, string $way, array $paramList, string $attribute, string $listName, string $alias): Method {
 
         $obj->$way->$attribute->$listName = new stdClass();
-        $element = Type::$list->$elementType->paramList;
+        $element = Type::$list->$alias->paramList;
 
         foreach($paramList as $attributeName) {
                                         
@@ -404,11 +202,30 @@ class Method {
         }
         return $obj;
     }
+    public static function aliasSet(string $paramType, stdClass  $conf): string{
+
+        $alias = $conf->rpc->alias;
+        $a = $paramType;
+
+        if(strstr($paramType, 'Hash') !== false ) $a = 'hash';
+
+        if(isset($alias->$paramType) === true)  $a = $alias->$paramType;
+
+        $a = str_replace('List', '', $a);
+
+        return $a;
+    }
+    public static function funcSet(string $paramType): string {
+
+        $func = 'confGenParam';
+
+        if(strstr($paramType, 'List') !== false) $func = 'confGenParamList';
+
+        return $func;
+    }
     public static function confGen(stdClass $conf):bool {
 
         Method::$list = new stdClass();
-
-        $alias = array('pubKeySEncrypted' => 'pubKeyEncrypted', 'pubKeySEncryptedList' => 'pubKeyEncrypted', 'requestHash' => 'hash', 'requestHashList' => 'hash');
 
         foreach($conf->rpc->method as $type => $method) {
 
@@ -438,21 +255,15 @@ class Method {
 
                 foreach($def->paramList as $paramType => $attributeList) {
 
-                    $a = '';
-
-                    if(isset($alias[$paramType]) === true)  $a = $alias[$paramType];
-                 
-                    if(strstr($paramType, 'List') !== false) $obj = Method::confGenParamList($obj, 'request', $attributeList, 'paramList', $paramType, $a);
-                    else $obj = Method::confGenParam($obj, 'request', $attributeList, 'paramList', $paramType, $a);
+                    $a = self::aliasSet($paramType, $conf);
+                    $func = self::funcSet($paramType);                 
+                    $obj = Method::$func($obj, 'request', $attributeList, 'paramList', $paramType, $a);
                 }
                 foreach($def->reason as $paramType => $attributeList) {
                  
-                    $a = '';
-
-                    if(isset($alias[$paramType]) === true)  $a = $alias[$paramType];
-
-                    if(strstr($paramType, 'List') !== false) $obj = Method::confGenParamList($obj, 'response', $attributeList, 'resource', $paramType, $a);
-                    else $obj = Method::confGenParam($obj, 'response', $attributeList, 'resource', $paramType, $a);
+                    $a = self::aliasSet($paramType, $conf);
+                    $func = self::funcSet($paramType);
+                    $obj = Method::$func($obj, 'response', $attributeList, 'resource', $paramType, $a);
                 }
                 Method::$list->$name = $obj;
             }

@@ -74,6 +74,48 @@
             "signed": ""
         }
     },
+    "alias": {
+        "val": "jsonData",
+        "xPubYesList": "hash",
+        "xPubNoList": "hash",
+        "licenceChange": "licence",
+        "descriptionPublicList": "keyVal",
+        "environnementList": "keyVal",
+        "qualityList": "keyVal",
+        "contributeList": "keyVal",
+        "originList": "hash",
+        "parentList": "hash",
+        "previousList": "hash",
+        "leftList": "hash",
+        "ndaList": "keyVal",
+        "condifidentialDataList": "keyVal",
+        "metaDataList": "keyVal",
+        "officerList": "keyVal",
+        "ediList": "keyVal",
+        "certificateList": "keyVal",
+        "exportControlList": "keyVal",
+        "keyValueList": "keyVal",
+        "forList": "hash",
+        "toList": "hash",
+        "contributionHash": "hash",
+        "xPubS": "xPub",
+        "txIssueAsset": "txId",
+        "txUtxo": "utxo",
+        "voutSigList": "cosig",
+        "xPubHash": "hash",
+        "templateHash": "hash",
+        "time": "timestamp",
+        "createDate": "timestamp",
+        "expireDate": "timestamp",
+        "pubId": "txId",
+        "PowHash": "hash",
+        "sigYesList": "sig",
+        "sigNoList": "sig",
+        "transctionHash": "hash",
+        "userRepositoryGitHash": "hash",
+        "gitCommitHash": "hash",
+        "methodHash": "hash"
+    },
     "type": {
         "hash": {
             "hash": "",
@@ -110,7 +152,6 @@
             "index": 0,
             "data": "",
             "xPubRange": {},
-            "encrypted": {},
             "rangeEncrypted": {},
             "pubKeyEncrypted": {}
         },
@@ -250,8 +291,8 @@
             "xPub": {},
             "xPubHash": {},
             "xPubEncrypted": {},
-            "XPubS": {},
-            "XPubSHash": {},
+            "sPubS": {},
+            "sPubSHash": {},
             "xPubSEncrypted": {},
             "yes": 0,
             "txId": {},
@@ -273,7 +314,7 @@
             "templateHash": {},
             "blindKeyEncryptedList": [],
             "boardingList": [],
-            "Sig": {}
+            "sig": {}
         },
         "keyEncrypted": {
             "key": {},
@@ -317,8 +358,8 @@
         },
         "trace": {
             "proofMerkleTree": {},
-            "sigYes": [],
-            "sigNo": [],
+            "sigYesList": [],
+            "sigNoList": [],
             "userRepositoryGitHash": {},
             "transctionHash": {},
             "gitCommitHash": {}
@@ -950,6 +991,14 @@
         }
     },
     "rpc": {
+        "alias": {
+            "pubKeySEncrypted": "pubKeyEncrypted",
+            "pubKeySEncryptedList": "pubKeyEncrypted",
+            "requestHash": "hash",
+            "requestHashList": "hash",
+            "sigYesList ": "sig",
+            "sigNoList ": "sig"
+        },
         "method": {
             "authentification": {
                 "authOtpGet": {
