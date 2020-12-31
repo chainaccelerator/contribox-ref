@@ -136,6 +136,33 @@
         "tag": {
             "name": ""
         },
+        "userRole": {
+            "xPubList": [],
+            "xPubYesList": [],
+            "xPubNoList": [],
+            "user": "any || timeout",
+            "backup": "timeout && any",
+            "lock": "any",
+            "witness": "any || timeout"
+        },
+        "groupRole": {
+            "xPubList": [],
+            "xPubYesList": [],
+            "xPubNoList": [],
+            "old": "",
+            "parent": "all",
+            "board": "51%",
+            "member": "any || timeout",
+            "cosigner": "all",
+            "witnessG": "any || timeout"
+        },
+        "actionRole": {
+            "xPubList": [],
+            "xPubYesList": [],
+            "xPubNoList": [],
+            "userState": 1,
+            "projectState": 1
+        },
         "proof": {
             "xPub": {},
             "project": {},
@@ -1014,13 +1041,31 @@
                             "name"
                         ],
                         "userRole": [
-                            "name"
+                            "xPubList",
+                            "xPubYesList",
+                            "xPubNoList",
+                            "user",
+                            "backup",
+                            "lock",
+                            "witness"
                         ],
                         "groupRole": [
-                            "name"
+                            "xPubList",
+                            "xPubYesList",
+                            "xPubNoList",
+                            "old",
+                            "parent",
+                            "board",
+                            "member",
+                            "cosigner",
+                            "witnessG"
                         ],
                         "actionRole": [
-                            "name"
+                            "xPubList",
+                            "xPubYesList",
+                            "xPubNoList",
+                            "userState",
+                            "projectState"
                         ]
                     },
                     "reason": {
@@ -1262,17 +1307,15 @@
                         ]
                     },
                     "reason": {
-                        "contribution": {
-                            "trace": [
-                                "hash",
-                                "proofMerkleTree",
-                                "sigYesList",
-                                "sigNoList",
-                                "transctionHash",
-                                "userRepositoryGitHash",
-                                "gitCommitHash"
-                            ]
-                        }
+                        "trace": [
+                            "hash",
+                            "proofMerkleTree",
+                            "sigYesList",
+                            "sigNoList",
+                            "transctionHash",
+                            "userRepositoryGitHash",
+                            "gitCommitHash"
+                        ]
                     }
                 }
             },
@@ -1344,8 +1387,7 @@
                         "response": [
                             "metaData",
                             "result",
-                            "reason",
-                            "error"
+                            "reason"
                         ]
                     }
                 },
