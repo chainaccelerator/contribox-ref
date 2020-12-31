@@ -9,7 +9,7 @@ class Html {
     public static function confGen(string $t, stdClass $c):bool {
     
         $f = $t.'.json';
-        $c = json_encode($c, JSON_PRETTY_PRINT, 10);
+        $c = json_encode($c, JSON_PRETTY_PRINT);
 
         file_put_contents($f, $c);
 
@@ -36,9 +36,9 @@ class Type {
     public static $conf;
     public static $list;
 
-    public $paramList;
     public $name = '';
     public $description = '';
+    public $paramList;
 
     public function __construct(string $name, stdClass $def, string $description = '') {
 
@@ -280,7 +280,7 @@ class Type {
                         break;
                     case 'metaData':
 
-                            $obj->paramList->timeout = Type::$list->timestamp->paramList;
+                            $obj->paramList->time = Type::$list->timestamp->paramList;
                             $obj->paramList->ipv4List[0] = Type::$list->ipv4->paramList;
                             $obj->paramList->pubKey = Type::$list->pubKey->paramList;
                             $obj->paramList->sig = Type::$list->sig->paramList;
@@ -366,6 +366,7 @@ class Method {
         $this->request = Type::$list->request->paramList;
         $this->request->methodHash = $hash->paramList;
         $this->request->method = $name;
+        $this->request->paramList = new stdClass();
         $this->request->reason->state = "mock";
         $this->request->reason->type = $type;
 
