@@ -375,7 +375,7 @@ class Method {
         $this->response->reason->state = "mock";
         $this->response->reason->type = $type;
     }
-    public static function confGenParamList(Method $obj, string $way, stdClass $paramList, string $attribute, string $listName, string $alias = ''): Method {
+    public static function confGenParamList(Method $obj, string $way, array $paramList, string $attribute, string $listName, string $alias = ''): Method {
 
 
         if($alias === '') $elementType = str_replace('List', '', $listName);
@@ -384,27 +384,13 @@ class Method {
         $obj->$way->$attribute->$listName[0] = new stdClass();
         $element = Type::$list->$elementType->paramList;
 
-        foreach($paramList->$listName as $attributeName) {
+        foreach($paramList as $attributeName) {
                                         
             $obj->$way->$attribute->$listName[0]->$attributeName = $element->$attributeName;
         }
         return $obj;
     }
-    public static function confGenParamListRequest(Method $obj, stdClass $def, string $listName, string $alias = ''): Method {
-
-        $attribute = 'paramList';
-        $paramList = $def->paramList;
-
-        return Method::confGenParamList($obj, 'request', $paramList, $attribute, $listName, $alias);
-    }
-    public static function confGenParamListResponse(Method $obj, stdClass $def, string $listName, string $alias = ''): Method {
-
-        $attribute = 'resource';
-        $paramList = $def->reason;
-
-        return Method::confGenParamList($obj, 'response', $paramList, $attribute, $listName, $alias);
-    }
-    public static function confGenParam(Method $obj, string $way, stdClass $paramList, string $attribute, string $listName, string $alias = ''): Method {
+    public static function confGenParam(Method $obj, string $way, array $paramList, string $attribute, string $listName, string $alias = ''): Method {
 
         if($alias === '') $elementType = $listName;
         else $elementType = $alias;
@@ -412,29 +398,17 @@ class Method {
         $obj->$way->$attribute->$listName = new stdClass();
         $element = Type::$list->$elementType->paramList;
 
-        foreach($paramList->$listName as $attributeName) {
+        foreach($paramList as $attributeName) {
                                         
             $obj->$way->$attribute->$listName->$attributeName = $element->$attributeName;
         }
         return $obj;
     }
-    public static function confGenParamRequest(Method $obj, stdClass $def, string $listName, string $alias = ''): Method {
-
-        $attribute = 'paramList';
-        $paramList = $def->paramList;
-
-        return Method::confGenParam($obj, 'request', $paramList, $attribute, $listName, $alias);
-    }
-    public static function confGenParamResponse(Method $obj, stdClass $def, string $listName, string $alias = ''): Method {
-
-        $attribute = 'resource';
-        $paramList = $def->reason;
-
-        return Method::confGenParam($obj, 'response', $paramList, $attribute, $listName, $alias);
-    }
     public static function confGen(stdClass $conf):bool {
 
         Method::$list = new stdClass();
+
+        $alias = array('pubKeySEncrypted' => 'pubKeyEncrypted', 'pubKeySEncryptedList' => 'pubKeyEncrypted', 'requestHash' => 'hash', 'requestHashList' => 'hash');
 
         foreach($conf->rpc->method as $type => $method) {
 
@@ -462,186 +436,23 @@ class Method {
 
                 $obj = new Method($name, $def, $t);
 
-                switch ($name) {
+                foreach($def->paramList as $paramType => $attributeList) {
 
-                    case 'authOtpFinalGet':                
-                                
-                        break;
-                    case 'authResponseGet':                
-                        
-                        break;
-                    case 'keyShare':                
-                        
-                        $obj->request->reason->step = 'todo';
+                    $a = '';
 
-                        $obj = Method::confGenParamListRequest($obj, $def, 'pubKeyEncryptedList');
-                        $obj = Method::confGenParamListRequest($obj, $def, 'pubKeySEncryptedList', 'pubKeyEncrypted');
-                        $obj = Method::confGenParamListRequest($obj, $def, 'keyEncryptedList');
-                        
-                        $obj = Method::confGenParamResponse($obj, $def, 'requestHash', 'hash');
-                        break;
-                    case 'keyShareGet':                
+                    if(isset($alias[$paramType]) === true)  $a = $alias[$paramType];
+                 
+                    if(strstr($paramType, 'List') !== false) $obj = Method::confGenParamList($obj, 'request', $attributeList, 'paramList', $paramType, $a);
+                    else $obj = Method::confGenParam($obj, 'request', $attributeList, 'paramList', $paramType, $a);
+                }
+                foreach($def->reason as $paramType => $attributeList) {
+                 
+                    $a = '';
 
-                        $obj = Method::confGenParamListRequest($obj, $def, 'pubKeySEncryptedList', 'pubKeyEncrypted');
-                        
-                        $obj = Method::confGenParamListResponse($obj, $def, 'requestHashList', 'hash');
-                        $obj = Method::confGenParamListResponse($obj, $def, 'pubKeyEncryptedList');
-                        $obj = Method::confGenParamListResponse($obj, $def, 'keyEncryptedList');
-                        break;
-                    case 'keyShareConfirm':                
-                        
-                        $obj = Method::confGenParamRequest($obj, $def, 'requestHash', 'hash');
-                        $obj = Method::confGenParamListRequest($obj, $def, 'pubKeySEncryptedList', 'pubKeyEncrypted');
-                        $obj = Method::confGenParamListRequest($obj, $def, 'sigList');
-                        break;
-                    case 'keyShareConfirmGet':                
+                    if(isset($alias[$paramType]) === true)  $a = $alias[$paramType];
 
-                        $obj = Method::confGenParamRequest($obj, $def, 'requestHash', 'hash');
-
-                        $obj = Method::confGenParamListResponse($obj, $def, 'sigList');                        
-                        break;
-                    case 'boardingTemplateGet':                
-                        
-                        $obj = Method::confGenParamRequest($obj, $def, 'project');
-                        $obj = Method::confGenParamRequest($obj, $def, 'licence');
-                        $obj = Method::confGenParamRequest($obj, $def, 'userRole');
-                        $obj = Method::confGenParamRequest($obj, $def, 'groupRole');
-                        $obj = Method::confGenParamRequest($obj, $def, 'actionRole');
-
-                        $obj = Method::confGenParamListResponse($obj, $def, 'contributionList');
-                        $obj = Method::confGenParamListResponse($obj, $def, 'templateList');
-                        break;
-                    case 'boarding':
-                        
-                        $obj = Method::confGenParamListRequest($obj, $def, 'pubKeyEncryptedList');
-                        $obj = Method::confGenParamRequest($obj, $def, 'contribution');
-                        $obj = Method::confGenParamRequest($obj, $def, 'template');
-
-                        $obj = Method::confGenParamResponse($obj, $def, 'requestHash', 'hash');
-                        break;
-                    case 'boardingGet':            
-                        
-                        $obj = Method::confGenParamListRequest($obj, $def, 'pubKeySEncryptedList', 'pubKeyEncrypted');
-                        
-                        $obj = Method::confGenParamListResponse($obj, $def, 'requestHashList', 'hash');
-                        $obj = Method::confGenParamListResponse($obj, $def, 'pubKeyEncryptedList');
-                        $obj = Method::confGenParamListResponse($obj, $def, 'contributionList');
-                        $obj = Method::confGenParamListResponse($obj, $def, 'templateList');
-                        break;
-                    case 'boardingBroadcast':
-                        
-                        $obj = Method::confGenParamRequest($obj, $def, 'requestHash', 'hash');
-                        $obj = Method::confGenParamListRequest($obj, $def, 'pubKeySEncryptedList', 'pubKeyEncrypted');
-                        $obj = Method::confGenParamListRequest($obj, $def, 'sigList', 'sig');
-                        break;
-                    case 'boardingBroadcastGet':
-                        
-                        $obj = Method::confGenParamRequest($obj, $def, 'requestHash', 'hash'); 
-                        
-                        $obj = Method::confGenParamResponse($obj, $def, 'trace');
-                        break;
-                    case 'contribution':
-                        
-                        $obj = Method::confGenParamListRequest($obj, $def, 'pubKeyEncryptedList');
-                        $obj = Method::confGenParamRequest($obj, $def, 'contribution');
-                        $obj = Method::confGenParamRequest($obj, $def, 'template');
-
-                        $obj = Method::confGenParamResponse($obj, $def, 'requestHash', 'hash');
-                        break;
-                    case 'contributionGet':             
-                        
-                        $obj = Method::confGenParamListRequest($obj, $def, 'pubKeySEncryptedList', 'pubKeyEncrypted');
-                        
-                        $obj = Method::confGenParamListResponse($obj, $def, 'requestHashList', 'hash');
-                        $obj = Method::confGenParamListResponse($obj, $def, 'pubKeyEncryptedList');
-                        $obj = Method::confGenParamListResponse($obj, $def, 'contributionList');
-                        $obj = Method::confGenParamListResponse($obj, $def, 'templateList');
-                        break;      
-                        
-                        break;
-                    case 'contributionConfirm':          
-                        
-                        $obj = Method::confGenParamRequest($obj, $def, 'requestHash', 'hash');
-                        $obj = Method::confGenParamListRequest($obj, $def, 'pubKeySEncryptedList', 'pubKeyEncrypted');
-                        $obj = Method::confGenParamListRequest($obj, $def, 'sigList', 'sig');
-                        break;              
-                        
-                        break;
-                    case 'contributionConfirmGet':
-                        
-                        $obj = Method::confGenParamRequest($obj, $def, 'requestHash', 'hash'); 
-                        
-                        $obj = Method::confGenParamListResponse($obj, $def, 'pubKeySEncryptedList', 'pubKeyEncrypted');
-                        $obj = Method::confGenParamListResponse($obj, $def, 'sigList'); 
-                        break;
-                    case 'contributionBroadcast':        
-                        
-                        $obj = Method::confGenParamRequest($obj, $def, 'requestHash', 'hash');
-                        $obj = Method::confGenParamListRequest($obj, $def, 'sigList');
-                        break;
-                    case 'contributionBroadcastGet':       
-                        
-                        $obj = Method::confGenParamRequest($obj, $def, 'requestHash', 'hash'); 
-                        
-                        $obj = Method::confGenParamResponse($obj, $def, 'trace');       
-                        break;
-                    case 'publicPeerListGet':
-                        
-                        $obj = Method::confGenParamResponse($obj, $def, 'gitData');
-                        break;
-                    case 'publicSDKGet':   
-                        
-                        $obj = Method::confGenParamListResponse($obj, $def, 'gitDataList');
-                        break;
-                    case 'publicArchiveGet':
-                        
-                        $obj = Method::confGenParamListResponse($obj, $def, 'gitDataList');
-                        break;
-                    case 'publicDidGet':
-                        
-                        $obj = Method::confGenParamListResponse($obj, $def, 'gitDataList');
-                        break;
-                    case 'peerCheck':                
-                        
-                        break;
-                    case 'peerAsk':                
-
-                        $obj = Method::confGenParamRequest($obj, $def, 'request');
-
-                        $obj = Method::confGenParamResponse($obj, $def, 'response');
-                        break;
-                    case 'gitStore': 
-
-
-                        break;
-                    case 'gitGet': 
-
-                        
-                        break;
-                    case 'graphStore': 
-
-                        
-                        break;
-                    case 'graphGet': 
-
-                        
-                        break;
-                    case 'blockchainBroadcast': 
-
-                        
-                        break;
-                    case 'blockchainGet': 
-
-                        
-                        break;
-                    case 'blockchaiValidation': 
-
-                        
-                        break;
-                    case 'blockchainPegOut': 
-
-                        
-                        break;
+                    if(strstr($paramType, 'List') !== false) $obj = Method::confGenParamList($obj, 'response', $attributeList, 'resource', $paramType, $a);
+                    else $obj = Method::confGenParam($obj, 'response', $attributeList, 'resource', $paramType, $a);
                 }
                 Method::$list->$name = $obj;
             }
