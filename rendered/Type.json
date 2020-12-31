@@ -1,5 +1,7 @@
 {
     "hash": {
+        "name": "hash",
+        "description": "",
         "paramList": {
             "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
             "right": "d7eadefaa468516b2f1d625ff44c5bcca490f09c2aaf92d7249b5d9b5c11fa42",

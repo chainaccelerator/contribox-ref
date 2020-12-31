@@ -6,28 +6,64 @@ error_reporting(E_ALL);
 
 class Html {
 
+    public static $method = '';
+    public static $methodLinks = '';
+    public static $type = '';
+    public static $typeLinks = '';
+    public static $dir = 'rendered';
+
     public static function confGen(string $t, stdClass $c):bool {
     
-        $d = 'rendered';
+        if(is_dir(Html::$dir) === false) mkdir(Html::$dir);
 
-        if(is_dir($d) === false) mkdir( $d);
-
-        $f =  $d.DIRECTORY_SEPARATOR.$t.'.json';
+        $f =  Html::$dir.DIRECTORY_SEPARATOR.$t.'.json';
         $c = json_encode($c, JSON_PRETTY_PRINT);
 
         file_put_contents($f, $c);
 
-        echo '<a href="'.$f.'" target="_blank">'.$t.'</a><br>';
 
         return true;
+    }
+    public static function rendered(){
+
+        $html = '';
+       
+        foreach(Method::$list as $m) {
+
+            $html .= '<h3><a name="'.$m->name.'"></a>'.$m->name.'</h3>';
+            $html .= '<p>'.$m->description.'</p>';
+            $html .= '<h4>Request</h4>';
+            $html .= '<code><pre>'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
+            $html .= '<h4>Response</h4>';
+            $html .= '<code><pre>'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
+
+            self::$methodLinks .= '<p><a href="#'.$m->name.'">'.$m->name.'</a></p>';
+        }
+        Html::$method = $html;
+        
+       
+        foreach(Type::$list as $t) {
+
+            $html .= '<h3><a name="'.$t->name.'"></a>'.$t->name.'</h3>';
+            $html .= '<p>'.$t->description.'</p>';
+            $html .= '<h4>Param list</h4>';
+            $html .= '<code><pre>'.json_encode($t->paramList, JSON_PRETTY_PRINT).'</pre></code>';
+
+            self::$methodLinks .= '<p><a href="#'.$t->name.'">'.$t->name.'</a></p>';
+        }
+        Html::$type = $html;
     }
 }
 class Hash {
 
+    public $name = '';
+    public $description = '';
     public $paramList;
     
     public function __construct(string $name, stdClass $def) {
 
+        $this->name = 'hash';
+        $this->description = '';
         $this->paramList = new stdClass();
         $this->paramList->left = hash('sha256', $name);
         $this->paramList->right = hash('sha256', json_encode($def));
@@ -277,4 +313,102 @@ $conf = json_decode(file_get_contents("conf.json"));
 
 Type::confGen($conf);
 Method::confGen($conf);
+Html::rendered();
 
+$c = '<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+      }
+      .header-menu,
+      footer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+      .header-menu {
+        justify-content: flex-end;
+        height: 60px;
+        background: #1c87c9;
+        color: #fff;
+      }
+      h2 {
+        margin: 0 0 8px;
+      }
+      ul li {
+        display: inline-block;
+        padding: 0 10px;
+        list-style: none;
+      }
+      aside {
+        flex: 0.4;
+        height: 165px;
+        padding-left: 15px;
+        border-left: 1px solid #666;
+      }
+      section {
+        flex: 1;
+        padding-right: 15px;
+      }
+      footer {
+        padding: 0 10px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-menu">
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <article>
+        <header>
+            <h2>Documentation Contribox</h2>
+            <p><a href="https://github.com/chainaccelerator/contribox-ref">Rendered with : https://github.com/chainaccelerator/contribox-ref</a></p>
+            <p><a href="rendered/Method.json" target="_blank">Download Method.json</a></p>
+            <p><a href="rendered/Types.json" target="_blank">Download Type.json</a></p>
+        </header>
+      </article>
+      <article>
+        <header>
+          <h2><a name="method"><a>Methods</h2>
+        </header>        
+        '.Html::$method.'
+      </article>      
+      <article>
+        <header>
+          <h2><a name="type"><a>Types</h2>
+        </header>        
+        '. Html::$type.'
+      </article>
+    </section>
+    <aside>
+      <h2>Shortcuts</h2>
+      <p><strong><a href="#method">Method</a></strong></p>
+      '.Html::$methodLinks.'
+      <p><strong><a href="#type">Types</a></strong></p>
+      '.Html::$typeLinks.'
+    </aside>
+    <footer>
+      <small>Company © Chain Accelerator. All rights reserved.</small>
+    </footer>
+  </body>
+</html>';
+
+file_put_contents('rendered/index.html', $c);
