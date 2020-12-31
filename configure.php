@@ -341,14 +341,7 @@ class Type {
                 Type::$list->$name = $obj;
             }
         }    
-        $c = new stdClass();
-
-        foreach(Type::$list as $k => $v) {
-
-            $c->$k = $v->paramList;
-        }        
-        self::$conf = $c;
-        Html::confGen(get_called_class(), $c);
+        Html::confGen(get_called_class(), Type::$list);
 
         return true;
     }
@@ -465,8 +458,6 @@ class Method {
                     break;
             }
             foreach($method as $name => $def) {
-
-                echo $name.'<br>';
 
                 $obj = new Method($name, $def, $t);
 
@@ -654,15 +645,7 @@ class Method {
                 Method::$list->$name = $obj;
             }
         }
-
-        $c = new stdClass();
-
-        foreach(Method::$list as $k => $v) {
-
-            $c->$k = $v->paramList;
-        }
-        self::$conf = $c;
-        Html::confGen(get_called_class(), $c);
+        Html::confGen(get_called_class(), Method::$list);
 
         return true;
     }
