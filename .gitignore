@@ -7,3 +7,5 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+.vscode/launch.json
+.vscode/settings.json
