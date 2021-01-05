@@ -1,7 +1,7 @@
 # contribox-ref
 PHP8 required (types)
 
-Generates the documentation files from the conf.json file into the "rendered" directory
+Generates the documentation files from the conf.json file into the "rendered" directory.
 
 API requests and responses are documented.
 
