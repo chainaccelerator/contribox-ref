@@ -33,9 +33,9 @@ class Html {
             $html .= '<h3><a name="'.$m->name.'"></a>'.$m->name.'</h3>';
             $html .= '<p>'.$m->description.'</p>';
             $html .= '<h4>Request</h4>';
-            $html .= '<code><pre>'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
+            $html .= '<code><pre class="prettyprint">'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
             $html .= '<h4>Response</h4>';
-            $html .= '<code><pre>'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
+            $html .= '<code><pre class="prettyprint">'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
 
             self::$methodLinks .= '<p><a href="#'.$m->name.'">'.$m->name.'</a></p>';
         }
@@ -320,6 +320,7 @@ $c = '<!DOCTYPE HTML>
   <head>
     <title>Title of the document</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=json&skin=sunburst"></script>
     <style>
       html,
       body {
@@ -364,6 +365,10 @@ $c = '<!DOCTYPE HTML>
         padding: 0 10px;
         background: #ccc;
       }
+      pre {
+        height: 300px;
+        overflow: scroll;
+       }
     </style>
   </head>
   <body>
@@ -411,4 +416,8 @@ $c = '<!DOCTYPE HTML>
   </body>
 </html>';
 
-file_put_contents('rendered/index.html', $c);
+file_put_contents(Html::$dir.'/index.html', $c);
+
+echo '<a href="'.Html::$dir.'/index.html" targert="_blank">'.Html::$dir.'/index.html</a><br>';
+echo '<a href="'.Html::$dir.'/Type.html" targert="_blank">'.Html::$dir.'/Type.html</a><br>';
+echo '<a href="'.Html::$dir.'/Method.html" targert="_blank">'.Html::$dir.'/Method.html</a><br>';
