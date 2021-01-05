@@ -36,7 +36,7 @@ class Html {
             $html .= '<code><pre class="prettyprint">'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
             $html .= '<h4>ParamList types:</h4>';
             $html .= '<p>';
-            $html .= '<strong><span class="paramName">Nom</span> <span class="paramType">Type</span></strong><br>'; 
+            $html .= '<strong><span class="paramName">Paramètre</span> <span class="paramType">Type</span></strong><br>'; 
 
             foreach($m->paramTypeList as $paramType => $a) {
               
@@ -45,7 +45,14 @@ class Html {
             $html .= '</p>';
             $html .= '<h4>Response</h4>';
             $html .= '<code><pre class="prettyprint">'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
+            $html .= '<p>';
+            $html .= '<strong><span class="paramName">Paramètre</span> <span class="paramType">Type</span></strong><br>'; 
 
+            foreach($m->responseTypeList as $paramType => $a) {
+              
+              $html .= '<span class="paramName">'.$paramType.':</span> <span class="paramType"><a href="#'.$a.'">'.$a.'</a></span><br>'; 
+            }
+            $html .= '</p>';
             self::$methodLinks .= '<p><a href="#'.$m->name.'">'.$m->name.'</a></p>';
         }
         Html::$method = $html;
@@ -207,6 +214,7 @@ class Method {
     public stdClass $request;
     public stdClass $response;
     public array $paramTypeList = array();
+    public array $responseTypeList = array();
 
     public function __construct(string $name, stdClass $def, string $type, string $description = ''){
 
@@ -303,14 +311,14 @@ class Method {
 
                     $a = self::aliasSet($paramType, $conf);
                     $func = self::funcSet($paramType);
-
                     $obj->paramTypeList[$paramType] = $a;
                     $obj = Method::$func($obj, 'request', $attributeList, 'paramList', $paramType, $a);
                 }
                 foreach($def->reason as $paramType => $attributeList) {
                  
                     $a = self::aliasSet($paramType, $conf);
-                    $func = self::funcSet($paramType);
+                    $func = self::funcSet($paramType);                    
+                    $obj->responseTypeList[$paramType] = $a;
                     $obj = Method::$func($obj, 'response', $attributeList, 'resource', $paramType, $a);
                 }
                 Method::$list->$name = $obj;

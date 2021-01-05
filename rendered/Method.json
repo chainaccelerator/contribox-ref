@@ -1927,7 +1927,8 @@
             },
             "state": "mock"
         },
-        "paramTypeList": []
+        "paramTypeList": [],
+        "responseTypeList": []
     },
     "authOtpFinalGet": {
         "name": "authOtpFinalGet",
@@ -3857,7 +3858,8 @@
             },
             "state": "mock"
         },
-        "paramTypeList": []
+        "paramTypeList": [],
+        "responseTypeList": []
     },
     "authResponseGet": {
         "name": "authResponseGet",
@@ -5787,7 +5789,8 @@
             },
             "state": "mock"
         },
-        "paramTypeList": []
+        "paramTypeList": [],
+        "responseTypeList": []
     },
     "keyShare": {
         "name": "keyShare",
@@ -7721,6 +7724,9 @@
             "pubKeyEncryptedList": "pubKeyEncrypted",
             "pubKeySEncryptedList": "pubKeyEncrypted",
             "keyEncryptedList": "keyEncrypted"
+        },
+        "responseTypeList": {
+            "requestHash": "hash"
         }
     },
     "keyShareGet": {
@@ -9653,6 +9659,11 @@
         },
         "paramTypeList": {
             "pubKeySEncryptedList": "pubKeyEncrypted"
+        },
+        "responseTypeList": {
+            "requestHashList": "hash",
+            "pubKeyEncryptedList": "pubKeyEncrypted",
+            "keyEncryptedList": "keyEncrypted"
         }
     },
     "keyShareConfirm": {
@@ -11587,7 +11598,8 @@
             "requestHash": "hash",
             "pubKeySEncryptedList": "pubKeyEncrypted",
             "sigList": "sig"
-        }
+        },
+        "responseTypeList": []
     },
     "keyShareConfirmGet": {
         "name": "keyShareConfirmGet",
@@ -13519,6 +13531,9 @@
         },
         "paramTypeList": {
             "requestHash": "hash"
+        },
+        "responseTypeList": {
+            "sigList": "sig"
         }
     },
     "boardingTemplateGet": {
@@ -15455,6 +15470,10 @@
             "userRole": "userRole",
             "groupRole": "groupRole",
             "actionRole": "actionRole"
+        },
+        "responseTypeList": {
+            "contributionList": "contribution",
+            "templateList": "template"
         }
     },
     "boarding": {
@@ -17389,6 +17408,9 @@
             "pubKeyEncryptedList": "pubKeyEncrypted",
             "contribution": "contribution",
             "template": "template"
+        },
+        "responseTypeList": {
+            "requestHash": "hash"
         }
     },
     "boardingGet": {
@@ -19321,6 +19343,12 @@
         },
         "paramTypeList": {
             "pubKeySEncryptedList": "pubKeyEncrypted"
+        },
+        "responseTypeList": {
+            "requestHashList": "hash",
+            "pubKeyEncryptedList": "pubKeyEncrypted",
+            "contributionList": "contribution",
+            "templateList": "template"
         }
     },
     "boardingBroadcast": {
@@ -21255,7 +21283,8 @@
             "requestHash": "hash",
             "pubKeySEncryptedList": "pubKeyEncrypted",
             "sigList": "sig"
-        }
+        },
+        "responseTypeList": []
     },
     "boardingBroadcastGet": {
         "name": "boardingBroadcastGet",
@@ -23187,6 +23216,9 @@
         },
         "paramTypeList": {
             "requestHash": "hash"
+        },
+        "responseTypeList": {
+            "trace": "trace"
         }
     },
     "contribution": {
@@ -25121,6 +25153,9 @@
             "pubKeyEncryptedList": "pubKeyEncrypted",
             "contribution": "contribution",
             "template": "template"
+        },
+        "responseTypeList": {
+            "requestHash": "hash"
         }
     },
     "contributionGet": {
@@ -27053,6 +27088,12 @@
         },
         "paramTypeList": {
             "pubKeySEncryptedList": "pubKeyEncrypted"
+        },
+        "responseTypeList": {
+            "requestHashList": "hash",
+            "pubKeyEncryptedList": "pubKeyEncrypted",
+            "contributionList": "contribution",
+            "templateList": "template"
         }
     },
     "contributionConfirm": {
@@ -28987,7 +29028,8 @@
             "requestHash": "hash",
             "pubKeySEncryptedList": "pubKeyEncrypted",
             "sigList": "sig"
-        }
+        },
+        "responseTypeList": []
     },
     "contributionConfirmGet": {
         "name": "contributionConfirmGet",
@@ -30919,6 +30961,10 @@
         },
         "paramTypeList": {
             "requestHash": "hash"
+        },
+        "responseTypeList": {
+            "pubKeySEncryptedList": "pubKeyEncrypted",
+            "sigList": "sig"
         }
     },
     "contributionBroadcast": {
@@ -32852,7 +32898,8 @@
         "paramTypeList": {
             "requestHash": "hash",
             "sigList": "sig"
-        }
+        },
+        "responseTypeList": []
     },
     "contributionBroadcastGet": {
         "name": "contributionBroadcastGet",
@@ -34784,6 +34831,9 @@
         },
         "paramTypeList": {
             "requestHash": "hash"
+        },
+        "responseTypeList": {
+            "trace": "trace"
         }
     },
     "publicPeerListGet": {
@@ -36714,7 +36764,10 @@
             },
             "state": "mock"
         },
-        "paramTypeList": []
+        "paramTypeList": [],
+        "responseTypeList": {
+            "gitData": "gitData"
+        }
     },
     "publicSDKGet": {
         "name": "publicSDKGet",
@@ -38644,7 +38697,10 @@
             },
             "state": "mock"
         },
-        "paramTypeList": []
+        "paramTypeList": [],
+        "responseTypeList": {
+            "gitDataList": "gitData"
+        }
     },
     "publicArchiveGet": {
         "name": "publicArchiveGet",
@@ -40574,7 +40630,10 @@
             },
             "state": "mock"
         },
-        "paramTypeList": []
+        "paramTypeList": [],
+        "responseTypeList": {
+            "gitDataList": "gitData"
+        }
     },
     "publicDidGet": {
         "name": "publicDidGet",
@@ -42506,6 +42565,9 @@
         },
         "paramTypeList": {
             "trace": "trace"
+        },
+        "responseTypeList": {
+            "gitDataList": "gitData"
         }
     },
     "peerCheck": {
@@ -44436,7 +44498,8 @@
             },
             "state": "mock"
         },
-        "paramTypeList": []
+        "paramTypeList": [],
+        "responseTypeList": []
     },
     "peerAsk": {
         "name": "peerAsk",
@@ -46368,6 +46431,9 @@
         },
         "paramTypeList": {
             "request": "request"
+        },
+        "responseTypeList": {
+            "response": "response"
         }
     },
     "gitStore": {
@@ -48299,6 +48365,9 @@
             "state": "mock"
         },
         "paramTypeList": {
+            "gitDataList": "gitData"
+        },
+        "responseTypeList": {
             "gitDataList": "gitData"
         }
     },
@@ -50232,6 +50301,9 @@
         },
         "paramTypeList": {
             "gitDataList": "gitData"
+        },
+        "responseTypeList": {
+            "gitDataList": "gitData"
         }
     },
     "graphStore": {
@@ -52163,6 +52235,9 @@
             "state": "mock"
         },
         "paramTypeList": {
+            "trace": "trace"
+        },
+        "responseTypeList": {
             "trace": "trace"
         }
     },
@@ -54096,6 +54171,9 @@
         },
         "paramTypeList": {
             "hash": "hash"
+        },
+        "responseTypeList": {
+            "trace": "trace"
         }
     },
     "blockchainBroadcast": {
@@ -56028,7 +56106,8 @@
         },
         "paramTypeList": {
             "sigList": "sig"
-        }
+        },
+        "responseTypeList": []
     },
     "blockchainGet": {
         "name": "blockchainGet",
@@ -57960,6 +58039,9 @@
         },
         "paramTypeList": {
             "sigList": "sig"
+        },
+        "responseTypeList": {
+            "sigList": "sig"
         }
     },
     "blockchaiValidation": {
@@ -59890,7 +59972,10 @@
             },
             "state": "mock"
         },
-        "paramTypeList": []
+        "paramTypeList": [],
+        "responseTypeList": {
+            "trace": "trace"
+        }
     },
     "blockchainPegOut": {
         "name": "blockchainPegOut",
@@ -61822,6 +61907,9 @@
         },
         "paramTypeList": {
             "sig": "sig"
+        },
+        "responseTypeList": {
+            "trace": "trace"
         }
     }
 }
