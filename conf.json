@@ -990,6 +990,132 @@
             }
         }
     },
+    "sdk": {
+        "alias": {
+            "pubKeySEncrypted": "pubKeyEncrypted",
+            "pubKeySEncryptedList": "pubKeyEncrypted",
+            "requestHash": "hash",
+            "requestHashList": "hash",
+            "sigYesList ": "sig",
+            "sigNoList ": "sig"
+        },        
+        "method": {
+            "key": {
+                "shareBackup": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "shareLock": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "shareWitness": {
+                    "paramList": {},
+                    "reason": {}
+                }
+            },            
+            "callbacks": {
+                "passwordSet": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "sign": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "signed": {
+                    "paramList": {},
+                    "reason": {}
+                }
+            },
+            "callbacksCall": {
+                "passwordSet": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "sign": {
+                    "paramList": {},
+                    "reason": {}
+                }
+            },
+            "actions": {
+                "issue": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "issueUpdate": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "share": {
+                    "paramList": {},
+                    "reason": {}
+                }
+            },
+            "governance": {
+                "onboardUpdate": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "outboardUpdate": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "banUpdate": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "issueUpdate": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "shareUpdate": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "onboard": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "outboard": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "ban": {
+                    "paramList": {},
+                    "reason": {}
+                }
+            },
+            "helper": {
+                "list": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "proofHash": {
+                    "paramList": {},
+                    "reason": {}
+                }
+            },
+            "exploitation": {
+                "export": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "import": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "backup": {
+                    "paramList": {},
+                    "reason": {}
+                },
+                "lock": {
+                    "paramList": {},
+                    "reason": {}
+                }
+            }
+        }
+    },
     "rpc": {
         "alias": {
             "pubKeySEncrypted": "pubKeyEncrypted",

@@ -1,0 +1,200 @@
+{
+    "shareBackup": {
+        "methodHash": "2deef08ef7d2f095d243a026083e816369d0ac16da58e0f73a734c600781b2e4",
+        "name": "shareBackup",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "shareLock": {
+        "methodHash": "0215d90ad1ecacb7a3fcfa210b6415f4d7e0aef3f6ba3ff17ff8a59414ca1442",
+        "name": "shareLock",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "shareWitness": {
+        "methodHash": "1a3a5a90a25763a955f97f7a43ce5b3028da180803401a5af3e9f9fb0e592316",
+        "name": "shareWitness",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "passwordSet": {
+        "methodHash": "10f9919721d3fef8c5dbf2a3cd661e930c5f4ef8e631a3921181aaedb83bf5d1",
+        "name": "passwordSet",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "sign": {
+        "methodHash": "f93d9b60a4f6e7440b1b2efeff3721c21da6d91b1eb1626671e471b7b8dddf43",
+        "name": "sign",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "signed": {
+        "methodHash": "7c58aa601a4cab64c6967df13ea8edb4b043bb59088633ac540d2bc47223cabb",
+        "name": "signed",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "issue": {
+        "methodHash": "6901a25c8d1481a16c8219bfefa42dd8c1854934c5926e8a7cd17786d162e988",
+        "name": "issue",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "issueUpdate": {
+        "methodHash": "96c38ad18441e2a7496f54ce796d55667286b8d9bc255b9466b8af101ae36efa",
+        "name": "issueUpdate",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "share": {
+        "methodHash": "68214a3598b5daef0c0096177f22177f93ac94de67b49ca522958f341d5c0f38",
+        "name": "share",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "onboardUpdate": {
+        "methodHash": "556ea58e016a2d569e24178026684c38ce56179cc65c4cc935c33d3c70c27ff1",
+        "name": "onboardUpdate",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "outboardUpdate": {
+        "methodHash": "017d5699110e49525cb48a907bc682eee97fe4ae8fd0248dab72c1f4eadfb9b2",
+        "name": "outboardUpdate",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "banUpdate": {
+        "methodHash": "c633d55b6e8c8ae98e879569c7fcc4b5993d958e2ba2c9f7cc198ac2b0f36770",
+        "name": "banUpdate",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "shareUpdate": {
+        "methodHash": "b56bfcde0744c787856885526ab057d8675c3bda754fc2e8e4c49c78a6866b1b",
+        "name": "shareUpdate",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "onboard": {
+        "methodHash": "ad640c7bc87ecbe4a22c4ed83e6d6b3dec834e62051a3863e94aea4e3f2f2993",
+        "name": "onboard",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "outboard": {
+        "methodHash": "30dd38465a199e1f03ffb5e8e0ae1039c89b8df794c342a166cbc9fa0b91380e",
+        "name": "outboard",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "ban": {
+        "methodHash": "62337b8cdaf191e61cbc5f35086eed5fa56dcda29fa7f9080da214bda6fdce56",
+        "name": "ban",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "list": {
+        "methodHash": "0cba1469dab6a0d1914fbefa9e63bbc059a66cfdda4743ed0d18e8f2542af9e0",
+        "name": "list",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "proofHash": {
+        "methodHash": "ce36c1fd22ecc4212012d20f26b787354d15eebe38cc6022ac6c306f25ed001c",
+        "name": "proofHash",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "export": {
+        "methodHash": "8c0a136db5fb8e2af1ef5f10e74d14a4caed228f43d4e5dc71840a35ec1e22b6",
+        "name": "export",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "import": {
+        "methodHash": "e37ecb0afc7193457c5327058b39cfcdf04ae3a62e8301a824f3cd0f622a6533",
+        "name": "import",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "backup": {
+        "methodHash": "c9e71a347dc7aa6577659c3cde236cce4a26f4fe6fc70c320df2fd2615ad623f",
+        "name": "backup",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    },
+    "lock": {
+        "methodHash": "b06b23e75be26232839da635bf7b506e0a5e221c67a87c4060fa16a62b4b8f4a",
+        "name": "lock",
+        "description": "",
+        "request": {},
+        "response": {},
+        "paramTypeList": [],
+        "responseTypeList": []
+    }
+}
