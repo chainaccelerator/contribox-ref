@@ -86,14 +86,15 @@ class Html {
             $html .= Html::renderedParamTypeList($m->responseTypeList, $conf);
             Html::$methodLinks .= '<p><a href="#'.$m->name.'">'.$m->name.'</a></p>';
         }
-        Html::$method = $html;        
+        Html::$method = $html;  
+        $html = '';      
        
         foreach(Type::$list as $t) {
 
             $html .= '<h3><a name="'.$t->name.'"></a>'.$t->name.'</h3>';
             $html .= '<p>'.$t->description.'</p>';
             $html .= '<h4>Param list</h4>';
-            $html .= '<code><pre>'.json_encode($t->paramList, JSON_PRETTY_PRINT).'</pre></code>';
+            $html .= '<code><pre class="prettyprint">'.json_encode($t->paramList, JSON_PRETTY_PRINT).'</pre></code>';
             $html .= Html::renderedTypeParamTypeList($t->paramList, $conf);
             Html::$typeLinks .= '<p><a href="#'.$t->name.'">'.$t->name.'</a></p>';
         }
