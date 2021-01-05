@@ -81,7 +81,8 @@ class Html {
             $html .= '<h4>ParamList types:</h4>';
             $html .= Html::renderedParamTypeList($m->paramTypeList, $conf);
             $html .= '<h4>Response</h4>';
-            $html .= '<code><pre class="prettyprint">'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
+            $html .= '<code><pre class="prettyprint">'.json_encode($m->response, JSON_PRETTY_PRINT).'</pre></code>';
+            $html .= '<h4>Resource types:</h4>';
             $html .= Html::renderedParamTypeList($m->responseTypeList, $conf);
             Html::$methodLinks .= '<p><a href="#'.$m->name.'">'.$m->name.'</a></p>';
         }
