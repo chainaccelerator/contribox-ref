@@ -6,11 +6,11 @@ error_reporting(E_ALL);
 
 class Html {
 
-    public static $method = '';
-    public static $methodLinks = '';
-    public static $type = '';
-    public static $typeLinks = '';
-    public static $dir = 'rendered';
+    public static string $method = '';
+    public static string $methodLinks = '';
+    public static string $type = '';
+    public static string $typeLinks = '';
+    public static string $dir = 'rendered';
 
     public static function confGen(string $t, stdClass $c):bool {
     
@@ -34,6 +34,15 @@ class Html {
             $html .= '<p>'.$m->description.'</p>';
             $html .= '<h4>Request</h4>';
             $html .= '<code><pre class="prettyprint">'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
+            $html .= '<h4>ParamList types:</h4>';
+            $html .= '<p>';
+            $html .= '<strong><span class="paramName">Nom</span> <span class="paramType">Type</span></strong><br>'; 
+
+            foreach($m->paramTypeList as $paramType => $a) {
+              
+              $html .= '<span class="paramName">'.$paramType.':</span> <span class="paramType"><a href="#'.$a.'">'.$a.'</a></span><br>'; 
+            }
+            $html .= '</p>';
             $html .= '<h4>Response</h4>';
             $html .= '<code><pre class="prettyprint">'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
 
@@ -56,9 +65,9 @@ class Html {
 }
 class Hash {
 
-    public $name = '';
-    public $description = '';
-    public $paramList;
+    public string $name = '';
+    public string $description = '';
+    public stdClass $paramList;
     
     public function __construct(string $name, stdClass $def) {
 
@@ -73,12 +82,12 @@ class Hash {
 }
 class Type {
     
-    public static $conf;
-    public static $list;
+    public static stdClass $conf;
+    public static stdClass $list;
 
-    public $name = '';
-    public $description = '';
-    public $paramList;
+    public string $name = '';
+    public string $description = '';
+    public stdClass $paramList;
 
     public function __construct(string $name, stdClass $def, string $description = '') {
 
@@ -190,13 +199,14 @@ class Type {
 
 class Method {
 
-    public static $conf;
-    public static $list;
+    public static stdClass $conf;
+    public static stdClass $list;
 
-    public $name = '';
-    public $description = ''; 
-    public $request;
-    public $response;
+    public string $name = '';
+    public string $description = ''; 
+    public stdClass $request;
+    public stdClass $response;
+    public array $paramTypeList = array();
 
     public function __construct(string $name, stdClass $def, string $type, string $description = ''){
 
@@ -292,7 +302,9 @@ class Method {
                 foreach($def->paramList as $paramType => $attributeList) {
 
                     $a = self::aliasSet($paramType, $conf);
-                    $func = self::funcSet($paramType);                 
+                    $func = self::funcSet($paramType);
+
+                    $obj->paramTypeList[$paramType] = $a;
                     $obj = Method::$func($obj, 'request', $attributeList, 'paramList', $paramType, $a);
                 }
                 foreach($def->reason as $paramType => $attributeList) {
@@ -369,6 +381,12 @@ $c = '<!DOCTYPE HTML>
         height: 300px;
         overflow: scroll;
        } 
+       .paramtype {
+       } 
+       .paramName {
+         display: inline-block;
+        width: 200px;
+       }
     </style>
   </head>
   <body>
@@ -419,5 +437,5 @@ $c = '<!DOCTYPE HTML>
 file_put_contents(Html::$dir.'/index.html', $c);
 
 echo '<a href="'.Html::$dir.'/index.html" targert="_blank">'.Html::$dir.'/index.html</a><br>';
-echo '<a href="'.Html::$dir.'/Type.html" targert="_blank">'.Html::$dir.'/Type.html</a><br>';
-echo '<a href="'.Html::$dir.'/Method.html" targert="_blank">'.Html::$dir.'/Method.html</a><br>';
+echo '<a href="'.Html::$dir.'/Type.json" targert="_blank">'.Html::$dir.'/Type.json</a><br>';
+echo '<a href="'.Html::$dir.'/Method.json" targert="_blank">'.Html::$dir.'/Method.json</a><br>';

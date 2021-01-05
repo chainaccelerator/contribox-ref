@@ -1926,7 +1926,8 @@
                 "data": ""
             },
             "state": "mock"
-        }
+        },
+        "paramTypeList": []
     },
     "authOtpFinalGet": {
         "name": "authOtpFinalGet",
@@ -3855,7 +3856,8 @@
                 "data": ""
             },
             "state": "mock"
-        }
+        },
+        "paramTypeList": []
     },
     "authResponseGet": {
         "name": "authResponseGet",
@@ -5784,7 +5786,8 @@
                 "data": ""
             },
             "state": "mock"
-        }
+        },
+        "paramTypeList": []
     },
     "keyShare": {
         "name": "keyShare",
@@ -7713,6 +7716,11 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "pubKeyEncryptedList": "pubKeyEncrypted",
+            "pubKeySEncryptedList": "pubKeyEncrypted",
+            "keyEncryptedList": "keyEncrypted"
         }
     },
     "keyShareGet": {
@@ -9642,6 +9650,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "pubKeySEncryptedList": "pubKeyEncrypted"
         }
     },
     "keyShareConfirm": {
@@ -11571,6 +11582,11 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "requestHash": "hash",
+            "pubKeySEncryptedList": "pubKeyEncrypted",
+            "sigList": "sig"
         }
     },
     "keyShareConfirmGet": {
@@ -13500,6 +13516,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "requestHash": "hash"
         }
     },
     "boardingTemplateGet": {
@@ -15429,6 +15448,13 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "project": "project",
+            "licence": "licence",
+            "userRole": "userRole",
+            "groupRole": "groupRole",
+            "actionRole": "actionRole"
         }
     },
     "boarding": {
@@ -17358,6 +17384,11 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "pubKeyEncryptedList": "pubKeyEncrypted",
+            "contribution": "contribution",
+            "template": "template"
         }
     },
     "boardingGet": {
@@ -19287,6 +19318,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "pubKeySEncryptedList": "pubKeyEncrypted"
         }
     },
     "boardingBroadcast": {
@@ -21216,6 +21250,11 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "requestHash": "hash",
+            "pubKeySEncryptedList": "pubKeyEncrypted",
+            "sigList": "sig"
         }
     },
     "boardingBroadcastGet": {
@@ -23145,6 +23184,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "requestHash": "hash"
         }
     },
     "contribution": {
@@ -25074,6 +25116,11 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "pubKeyEncryptedList": "pubKeyEncrypted",
+            "contribution": "contribution",
+            "template": "template"
         }
     },
     "contributionGet": {
@@ -27003,6 +27050,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "pubKeySEncryptedList": "pubKeyEncrypted"
         }
     },
     "contributionConfirm": {
@@ -28932,6 +28982,11 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "requestHash": "hash",
+            "pubKeySEncryptedList": "pubKeyEncrypted",
+            "sigList": "sig"
         }
     },
     "contributionConfirmGet": {
@@ -30861,6 +30916,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "requestHash": "hash"
         }
     },
     "contributionBroadcast": {
@@ -32790,6 +32848,10 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "requestHash": "hash",
+            "sigList": "sig"
         }
     },
     "contributionBroadcastGet": {
@@ -34719,6 +34781,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "requestHash": "hash"
         }
     },
     "publicPeerListGet": {
@@ -36648,7 +36713,8 @@
                 "data": ""
             },
             "state": "mock"
-        }
+        },
+        "paramTypeList": []
     },
     "publicSDKGet": {
         "name": "publicSDKGet",
@@ -38577,7 +38643,8 @@
                 "data": ""
             },
             "state": "mock"
-        }
+        },
+        "paramTypeList": []
     },
     "publicArchiveGet": {
         "name": "publicArchiveGet",
@@ -40506,7 +40573,8 @@
                 "data": ""
             },
             "state": "mock"
-        }
+        },
+        "paramTypeList": []
     },
     "publicDidGet": {
         "name": "publicDidGet",
@@ -42435,6 +42503,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "trace": "trace"
         }
     },
     "peerCheck": {
@@ -44364,7 +44435,8 @@
                 "data": ""
             },
             "state": "mock"
-        }
+        },
+        "paramTypeList": []
     },
     "peerAsk": {
         "name": "peerAsk",
@@ -46293,6 +46365,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "request": "request"
         }
     },
     "gitStore": {
@@ -48222,6 +48297,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "gitDataList": "gitData"
         }
     },
     "gitGet": {
@@ -50151,6 +50229,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "gitDataList": "gitData"
         }
     },
     "graphStore": {
@@ -52080,6 +52161,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "trace": "trace"
         }
     },
     "graphGet": {
@@ -54009,6 +54093,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "hash": "hash"
         }
     },
     "blockchainBroadcast": {
@@ -55938,6 +56025,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "sigList": "sig"
         }
     },
     "blockchainGet": {
@@ -57867,6 +57957,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "sigList": "sig"
         }
     },
     "blockchaiValidation": {
@@ -59796,7 +59889,8 @@
                 "data": ""
             },
             "state": "mock"
-        }
+        },
+        "paramTypeList": []
     },
     "blockchainPegOut": {
         "name": "blockchainPegOut",
@@ -61725,6 +61819,9 @@
                 "data": ""
             },
             "state": "mock"
+        },
+        "paramTypeList": {
+            "sig": "sig"
         }
     }
 }
