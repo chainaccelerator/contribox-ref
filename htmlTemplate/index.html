@@ -4,6 +4,25 @@
     <title>Contribox documentation</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=json&skin=sunburst"></script>
+    <script>
+$vars
+function rpctry(name, params) {
+    
+    var http = new XMLHttpRequest();
+    var url = '../gen.php';
+    http.open('POST', url, true);
+    http.setRequestHeader('Content-type', 'application/json');
+    http.onreadystatechange = function() {
+        if(http.readyState == 4 && http.status == 200) {
+            
+            document.getElementById(name).innerText = http.responseText;
+            document.getElementById(name).style.backgroundColor = "#ffffff";
+        }
+    }
+    http.send(params);
+}
+
+    </script>
     <link rel="stylesheet" type="text/css" href="index.css">
   </head>
   <body>

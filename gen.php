@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 
 class Html {
 
+    public static string $vars = '';
     public static string $method = '';
     public static string $methodLinks = '';
     public static string $sdk = '';
@@ -79,13 +80,16 @@ class Html {
           $html .= '<p>'.$m->description.'</p>';
           $html .= '<h4>Request</h4>';
           $html .= '<code><pre class="prettyprint">'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
+          $html .= '<br><button onclick="rpctry(\''.$m->name.'\', '.$m->name.')">Try</button><br>';
           $html .= '<h4>ParamList types:</h4>';
           $html .= Html::renderedParamTypeList($m->paramTypeList, $conf);
           $html .= '<h4>Response</h4>';
-          $html .= '<code><pre class="prettyprint">'.json_encode($m->response, JSON_PRETTY_PRINT).'</pre></code>';
+          $html .= '<code><pre class="prettyprint" id="'.$m->name.'">'.json_encode($m->response, JSON_PRETTY_PRINT).'</pre></code>';
           $html .= '<h4>Resource types:</h4>';
           $html .= Html::renderedParamTypeList($m->responseTypeList, $conf);
           Html::$methodLinks .= '<p><a href="#'.$m->name.'">'.$m->name.'</a></p>';
+
+          Html::$vars .= 'var '.$m->name.' = \''.json_encode($m->request).'\''."\r\n";
       }
       Html::$method = $html;
 
@@ -137,6 +141,8 @@ class Html {
         Html::renderedType($conf);
 
         $c = file_get_contents('htmlTemplate/index.html');
+
+        $c = str_replace('$vars', Html::$vars, $c);       
 
         $c = str_replace('$methodLinks', Html::$methodLinks, $c);
         $c = str_replace('$typeLinks', Html::$typeLinks, $c);
@@ -526,8 +532,21 @@ class Sdk extends Method {
       return true;
   }
 }
+$input = file_get_contents('php://input');
 
-$conf = json_decode(file_get_contents("conf.json"));
+if (strlen($input) > 0 && count($_POST) == 0 || count($_POST) > 0)  {
+
+  $request = json_decode($input);
+  $m = $request->method;
+
+  $responses = json_decode(file_get_contents(Html::$dir.'/Method.json'));
+  $r = $responses->$m->response;
+
+  header('Content-Type: application/json');
+  echo json_encode($r, JSON_PRETTY_PRINT);
+  exit();
+}
+$conf = json_decode(file_get_contents('conf.json'));
 
 Type::confGen($conf);
 Method::confGen($conf);
