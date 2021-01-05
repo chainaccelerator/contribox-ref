@@ -4,69 +4,15 @@
     <title>Contribox documentation</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=json&skin=sunburst"></script>
-    <style>
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0;
-      }
-      .header-menu,
-      footer {
-        display: flex;
-        align-items: center;
-        width: 100%;
-      }
-      .header-menu {
-        justify-content: flex-end;
-        height: 60px;
-        background: #1c87c9;
-        color: #fff;
-      }
-      h2 {
-        margin: 0 0 8px;
-      }
-      ul li {
-        display: inline-block;
-        padding: 0 10px;
-        list-style: none;
-      }
-      aside {
-        flex: 0.4;
-        height: 165px;
-        padding-left: 15px;
-        border-left: 1px solid #666;
-      }
-      section {
-        flex: 1;
-        padding-right: 15px;
-      }
-      footer {
-        padding: 0 10px;
-        background: #ccc;
-      }
-      pre {
-        height: 300px;
-        overflow: scroll;
-       } 
-       .paramtype {
-       } 
-       .paramName {
-         display: inline-block;
-        width: 200px;
-       }
-    </style>
+    <link rel="stylesheet" type="text/css" href="index.css">
   </head>
   <body>
     <header class="header-menu">
       <nav>
         <ul>
           <li>Home</li>
-          <li></li>
-          <li></li>
+          <li><a href="#method">Method</a></li>
+          <li><a href="#type">Types</a></li>
         </ul>
       </nav>
     </header>
@@ -50654,7 +50600,7 @@
     "right": "d7eadefaa468516b2f1d625ff44c5bcca490f09c2aaf92d7249b5d9b5c11fa42",
     "hash": "a0c12b83bc8b79bd1ebebfe06fab940a5ded91e08e228e03d4d621776a8383b0",
     "data": ""
-}</pre></code><h3><a name="password"></a>password</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">left </span> <span class="paramType">string </span><br><span class="paramName">right </span> <span class="paramType">string </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br></p><h3><a name="password"></a>password</h3><p></p><h4>Param list</h4><code><pre>{
     "password": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -50663,7 +50609,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="timestamp"></a>timestamp</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">password </span> <span class="paramType">Object <a href="#password">password</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="timestamp"></a>timestamp</h3><p></p><h4>Param list</h4><code><pre>{
     "time": 0,
     "delay": 0,
     "hash": {
@@ -50673,7 +50619,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="key"></a>key</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">time </span> <span class="paramType">{"type":"int","min":1,"max":14,"default":0} </span><br><span class="paramName">delay </span> <span class="paramType">{"type":"int","min":1,"max":14,"default":0} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="key"></a>key</h3><p></p><h4>Param list</h4><code><pre>{
     "data": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -50682,7 +50628,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="blindingKey"></a>blindingKey</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="blindingKey"></a>blindingKey</h3><p></p><h4>Param list</h4><code><pre>{
     "data": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -50691,7 +50637,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="xPubRange"></a>xPubRange</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="xPubRange"></a>xPubRange</h3><p></p><h4>Param list</h4><code><pre>{
     "min": 0,
     "max": 0,
     "hash": {
@@ -50701,7 +50647,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="pubKeyEncrypted"></a>pubKeyEncrypted</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">min </span> <span class="paramType">{"type":"int","min":1,"max":14,"default":0} </span><br><span class="paramName">max </span> <span class="paramType">{"type":"int","min":1,"max":14,"default":1000} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="pubKeyEncrypted"></a>pubKeyEncrypted</h3><p></p><h4>Param list</h4><code><pre>{
     "encrypted": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -50710,7 +50656,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="rangeEncrypted"></a>rangeEncrypted</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">encrypted </span> <span class="paramType">{"type":"string","min":64,"max":6400000000} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="rangeEncrypted"></a>rangeEncrypted</h3><p></p><h4>Param list</h4><code><pre>{
     "encrypted": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -50719,7 +50665,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="xPubEncrypted"></a>xPubEncrypted</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">encrypted </span> <span class="paramType">{"type":"string","min":64,"max":6400000000} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="xPubEncrypted"></a>xPubEncrypted</h3><p></p><h4>Param list</h4><code><pre>{
     "encrypted": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -50728,7 +50674,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="xPub"></a>xPub</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">encrypted </span> <span class="paramType">{"type":"string","min":64,"max":6400000000} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="xPub"></a>xPub</h3><p></p><h4>Param list</h4><code><pre>{
     "index": 0,
     "data": "",
     "xPubRange": {
@@ -50769,7 +50715,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="jsonData"></a>jsonData</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">index </span> <span class="paramType">{"type":"int","min":1,"max":10,"default":0} </span><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br><span class="paramName">xPubRange </span> <span class="paramType">Object <a href="#xPubRange">xPubRange</a> </span><br><span class="paramName">rangeEncrypted </span> <span class="paramType">Object <a href="#rangeEncrypted">rangeEncrypted</a> </span><br><span class="paramName">pubKeyEncrypted </span> <span class="paramType">Object <a href="#pubKeyEncrypted">pubKeyEncrypted</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="jsonData"></a>jsonData</h3><p></p><h4>Param list</h4><code><pre>{
     "data": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -50778,7 +50724,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="stateReason"></a>stateReason</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="stateReason"></a>stateReason</h3><p></p><h4>Param list</h4><code><pre>{
     "reason": "todo|toComplete|done|rejected|stored",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -50787,7 +50733,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="keyVal"></a>keyVal</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">reason </span> <span class="paramType">Object <a href="#reason">reason</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="keyVal"></a>keyVal</h3><p></p><h4>Param list</h4><code><pre>{
     "key": {
         "data": "",
         "hash": {
@@ -50815,7 +50761,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="project"></a>project</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">key </span> <span class="paramType">Object <a href="#key">key</a> </span><br><span class="paramName">val </span> <span class="paramType">object </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="project"></a>project</h3><p></p><h4>Param list</h4><code><pre>{
     "name": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -50824,7 +50770,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="licence"></a>licence</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">name </span> <span class="paramType">{"type":"string","min":1,"max":256,"default":"default"} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="licence"></a>licence</h3><p></p><h4>Param list</h4><code><pre>{
     "name": "",
     "SPDX": "",
     "hash": {
@@ -50834,7 +50780,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="tag"></a>tag</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">name </span> <span class="paramType">{"type":"string","min":1,"max":256,"default":"default"} </span><br><span class="paramName">SPDX </span> <span class="paramType">{"type":"string","min":1,"max":256,"default":"default"} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="tag"></a>tag</h3><p></p><h4>Param list</h4><code><pre>{
     "name": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -50843,7 +50789,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="userRole"></a>userRole</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">name </span> <span class="paramType">{"type":"string","min":1,"max":256,"default":"default"} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="userRole"></a>userRole</h3><p></p><h4>Param list</h4><code><pre>{
     "xPubList": [
         {
             "index": 0,
@@ -50901,7 +50847,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="groupRole"></a>groupRole</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">xPubList </span> <span class="paramType">array </span><br><span class="paramName">xPubYesList </span> <span class="paramType">array </span><br><span class="paramName">xPubNoList </span> <span class="paramType">array </span><br><span class="paramName">user </span> <span class="paramType">{"type":"string","valueList":["any || timeout","timeout && any","x","any","all","51%"],"default":"any || timeout"} </span><br><span class="paramName">backup </span> <span class="paramType">{"type":"string","valueList":["any || timeout","timeout && any","x","any","all","51%"],"default":"timeout && any"} </span><br><span class="paramName">lock </span> <span class="paramType">{"type":"string","valueList":["any || timeout","timeout && any","x","any","all","51%"],"default":"any"} </span><br><span class="paramName">witness </span> <span class="paramType">{"type":"string","valueList":["any || timeout","timeout && any","x","any","all","51%"],"default":"any || timeout"} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="groupRole"></a>groupRole</h3><p></p><h4>Param list</h4><code><pre>{
     "xPubList": [
         {
             "index": 0,
@@ -50961,7 +50907,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="actionRole"></a>actionRole</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">xPubList </span> <span class="paramType">array </span><br><span class="paramName">xPubYesList </span> <span class="paramType">array </span><br><span class="paramName">xPubNoList </span> <span class="paramType">array </span><br><span class="paramName">old </span> <span class="paramType">{"type":"string","valueList":["any || timeout","timeout && any","x","any","all","51%"],"default":"x"} </span><br><span class="paramName">parent </span> <span class="paramType">{"type":"string","valueList":["any || timeout","timeout && any","x","any","all","51%"],"default":"all"} </span><br><span class="paramName">board </span> <span class="paramType">{"type":"string","valueList":["any || timeout","timeout && any","x","any","all","51%"],"default":"51%"} </span><br><span class="paramName">member </span> <span class="paramType">{"type":"string","valueList":["any || timeout","timeout && any","x","any","all","51%"],"default":"any || timeout"} </span><br><span class="paramName">cosigner </span> <span class="paramType">{"type":"string","valueList":["any || timeout","timeout && any","x","any","all","51%"],"default":"all"} </span><br><span class="paramName">witnessG </span> <span class="paramType">{"type":"string","valueList":["any || timeout","timeout && any","x","any","all","51%"],"default":"any || timeout"} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="actionRole"></a>actionRole</h3><p></p><h4>Param list</h4><code><pre>{
     "xPubList": [
         {
             "index": 0,
@@ -51017,7 +50963,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="proof"></a>proof</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">xPubList </span> <span class="paramType">array </span><br><span class="paramName">xPubYesList </span> <span class="paramType">array </span><br><span class="paramName">xPubNoList </span> <span class="paramType">array </span><br><span class="paramName">userState </span> <span class="paramType">{"type":"bool","valueList":[0,1],"default":1} </span><br><span class="paramName">projectState </span> <span class="paramType">{"type":"bool","valueList":[0,1],"default":1} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="proof"></a>proof</h3><p></p><h4>Param list</h4><code><pre>{
     "xPub": {
         "index": 0,
         "data": "",
@@ -51293,7 +51239,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="boarding"></a>boarding</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">xPub </span> <span class="paramType">Object <a href="#xPub">xPub</a> </span><br><span class="paramName">project </span> <span class="paramType">Object <a href="#project">project</a> </span><br><span class="paramName">licence </span> <span class="paramType">Object <a href="#licence">licence</a> </span><br><span class="paramName">licenceChange </span> <span class="paramType">object </span><br><span class="paramName">userRole </span> <span class="paramType">Object <a href="#userRole">userRole</a> </span><br><span class="paramName">groupRole </span> <span class="paramType">Object <a href="#groupRole">groupRole</a> </span><br><span class="paramName">actionRole </span> <span class="paramType">Object <a href="#actionRole">actionRole</a> </span><br><span class="paramName">descriptionPublicList </span> <span class="paramType">array </span><br><span class="paramName">identityList </span> <span class="paramType">array </span><br><span class="paramName">environnementList </span> <span class="paramType">array </span><br><span class="paramName">qualityList </span> <span class="paramType">array </span><br><span class="paramName">contributeList </span> <span class="paramType">array </span><br><span class="paramName">originList </span> <span class="paramType">array </span><br><span class="paramName">parentList </span> <span class="paramType">array </span><br><span class="paramName">previousList </span> <span class="paramType">array </span><br><span class="paramName">leftList </span> <span class="paramType">array </span><br><span class="paramName">ndaList </span> <span class="paramType">array </span><br><span class="paramName">condifidentialDataList </span> <span class="paramType">array </span><br><span class="paramName">metaDataList </span> <span class="paramType">array </span><br><span class="paramName">officerList </span> <span class="paramType">array </span><br><span class="paramName">ediList </span> <span class="paramType">array </span><br><span class="paramName">certificateList </span> <span class="paramType">array </span><br><span class="paramName">exportControlList </span> <span class="paramType">array </span><br><span class="paramName">keyValueList </span> <span class="paramType">array </span><br><span class="paramName">forList </span> <span class="paramType">array </span><br><span class="paramName">toList </span> <span class="paramType">array </span><br><span class="paramName">tagList </span> <span class="paramType">array </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="boarding"></a>boarding</h3><p></p><h4>Param list</h4><code><pre>{
     "xPubList": [
         {
             "index": 0,
@@ -51509,7 +51455,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="script"></a>script</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">xPubList </span> <span class="paramType">array </span><br><span class="paramName">in </span> <span class="paramType">integer </span><br><span class="paramName">userRole </span> <span class="paramType">Object <a href="#userRole">userRole</a> </span><br><span class="paramName">groupRole </span> <span class="paramType">Object <a href="#groupRole">groupRole</a> </span><br><span class="paramName">actionRole </span> <span class="paramType">Object <a href="#actionRole">actionRole</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="script"></a>script</h3><p></p><h4>Param list</h4><code><pre>{
     "data": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -51518,7 +51464,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="template"></a>template</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="template"></a>template</h3><p></p><h4>Param list</h4><code><pre>{
     "contributionHash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "right": "d7eadefaa468516b2f1d625ff44c5bcca490f09c2aaf92d7249b5d9b5c11fa42",
@@ -51705,7 +51651,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="utxoData"></a>utxoData</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">contributionHash </span> <span class="paramType">object </span><br><span class="paramName">userRole </span> <span class="paramType">Object <a href="#userRole">userRole</a> </span><br><span class="paramName">groupRole </span> <span class="paramType">Object <a href="#groupRole">groupRole</a> </span><br><span class="paramName">actionRole </span> <span class="paramType">Object <a href="#actionRole">actionRole</a> </span><br><span class="paramName">script </span> <span class="paramType">Object <a href="#script">script</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="utxoData"></a>utxoData</h3><p></p><h4>Param list</h4><code><pre>{
     "data": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -51714,7 +51660,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="txId"></a>txId</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="txId"></a>txId</h3><p></p><h4>Param list</h4><code><pre>{
     "id": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -51723,7 +51669,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="utxo"></a>utxo</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">id </span> <span class="paramType">{"type":"string","min":1,"max":256} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="utxo"></a>utxo</h3><p></p><h4>Param list</h4><code><pre>{
     "txId": {
         "id": "",
         "hash": {
@@ -51761,7 +51707,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="pubKey"></a>pubKey</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">txId </span> <span class="paramType">Object <a href="#txId">txId</a> </span><br><span class="paramName">utxoData </span> <span class="paramType">Object <a href="#utxoData">utxoData</a> </span><br><span class="paramName">script </span> <span class="paramType">Object <a href="#script">script</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="pubKey"></a>pubKey</h3><p></p><h4>Param list</h4><code><pre>{
     "data": "",
     "base58Encoded": 1,
     "hash": {
@@ -51771,7 +51717,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="sigData"></a>sigData</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br><span class="paramName">base58Encoded </span> <span class="paramType">{"type":"string","valueList":[0,1]} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="sigData"></a>sigData</h3><p></p><h4>Param list</h4><code><pre>{
     "data": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -51780,7 +51726,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="cosig"></a>cosig</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="cosig"></a>cosig</h3><p></p><h4>Param list</h4><code><pre>{
     "txVoutindex": 0,
     "sigData": {
         "data": "",
@@ -51966,7 +51912,7 @@
         },
         "state": "mock"
     }
-}</pre></code><h3><a name="sig"></a>sig</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">txVoutindex </span> <span class="paramType">{"type":"int","min":1,"max":10,"default":1} </span><br><span class="paramName">sigData </span> <span class="paramType">Object <a href="#sigData">sigData</a> </span><br><span class="paramName">pubKey </span> <span class="paramType">Object <a href="#pubKey">pubKey</a> </span><br><span class="paramName">xPub </span> <span class="paramType">Object <a href="#xPub">xPub</a> </span><br><span class="paramName">XPubS </span> <span class="paramType">object </span><br><span class="paramName">yes </span> <span class="paramType">{"type":"bool","valueList":[0,1],"default":0} </span><br><span class="paramName">txId </span> <span class="paramType">Object <a href="#txId">txId</a> </span><br><span class="paramName">txAmount </span> <span class="paramType">{"type":"int","min":1,"max":18,"default":0} </span><br><span class="paramName">txIssueAsset </span> <span class="paramType">object </span><br><span class="paramName">txUtxo </span> <span class="paramType">object </span><br><span class="paramName">script </span> <span class="paramType">Object <a href="#script">script</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br><span class="paramName">xPubS </span> <span class="paramType">object </span><br></p><h3><a name="sig"></a>sig</h3><p></p><h4>Param list</h4><code><pre>{
     "txVoutindex": 0,
     "sigData": {
         "data": "",
@@ -52146,7 +52092,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="issueAsset"></a>issueAsset</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">txVoutindex </span> <span class="paramType">{"type":"int","min":1,"max":10,"default":1} </span><br><span class="paramName">sigData </span> <span class="paramType">Object <a href="#sigData">sigData</a> </span><br><span class="paramName">pubKey </span> <span class="paramType">Object <a href="#pubKey">pubKey</a> </span><br><span class="paramName">pubKeyEncrypted </span> <span class="paramType">Object <a href="#pubKeyEncrypted">pubKeyEncrypted</a> </span><br><span class="paramName">pubKeyS </span> <span class="paramType">object </span><br><span class="paramName">pubKeySEncrypted </span> <span class="paramType">object </span><br><span class="paramName">xPub </span> <span class="paramType">Object <a href="#xPub">xPub</a> </span><br><span class="paramName">xPubHash </span> <span class="paramType">object </span><br><span class="paramName">xPubEncrypted </span> <span class="paramType">Object <a href="#xPubEncrypted">xPubEncrypted</a> </span><br><span class="paramName">sPubS </span> <span class="paramType">object </span><br><span class="paramName">sPubSHash </span> <span class="paramType">object </span><br><span class="paramName">xPubSEncrypted </span> <span class="paramType">object </span><br><span class="paramName">yes </span> <span class="paramType">{"type":"bool","valueList":[0,1],"default":0} </span><br><span class="paramName">txId </span> <span class="paramType">Object <a href="#txId">txId</a> </span><br><span class="paramName">txAmount </span> <span class="paramType">{"type":"int","min":1,"max":18,"default":0} </span><br><span class="paramName">txIssueAsset </span> <span class="paramType">object </span><br><span class="paramName">txUtxo </span> <span class="paramType">object </span><br><span class="paramName">script </span> <span class="paramType">Object <a href="#script">script</a> </span><br><span class="paramName">voutSigList </span> <span class="paramType">array </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="issueAsset"></a>issueAsset</h3><p></p><h4>Param list</h4><code><pre>{
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "right": "d7eadefaa468516b2f1d625ff44c5bcca490f09c2aaf92d7249b5d9b5c11fa42",
@@ -52154,7 +52100,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="blindingKeyEncrypted"></a>blindingKeyEncrypted</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="blindingKeyEncrypted"></a>blindingKeyEncrypted</h3><p></p><h4>Param list</h4><code><pre>{
     "xPub": {
         "index": 0,
         "data": "",
@@ -52215,7 +52161,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="contribution"></a>contribution</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">xPub </span> <span class="paramType">Object <a href="#xPub">xPub</a> </span><br><span class="paramName">encrypted </span> <span class="paramType">{"type":"string","min":64,"max":6400000000} </span><br><span class="paramName">rangeEncrypted </span> <span class="paramType">Object <a href="#rangeEncrypted">rangeEncrypted</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="contribution"></a>contribution</h3><p></p><h4>Param list</h4><code><pre>{
     "xPubHash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "right": "d7eadefaa468516b2f1d625ff44c5bcca490f09c2aaf92d7249b5d9b5c11fa42",
@@ -52913,7 +52859,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="keyEncrypted"></a>keyEncrypted</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">xPubHash </span> <span class="paramType">object </span><br><span class="paramName">proof </span> <span class="paramType">Object <a href="#proof">proof</a> </span><br><span class="paramName">templateHash </span> <span class="paramType">object </span><br><span class="paramName">blindKeyEncryptedList </span> <span class="paramType">array </span><br><span class="paramName">boardingList </span> <span class="paramType">array </span><br><span class="paramName">sig </span> <span class="paramType">Object <a href="#sig">sig</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="keyEncrypted"></a>keyEncrypted</h3><p></p><h4>Param list</h4><code><pre>{
     "key": {
         "data": "",
         "hash": {
@@ -52932,7 +52878,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="keyShared"></a>keyShared</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">key </span> <span class="paramType">Object <a href="#key">key</a> </span><br><span class="paramName">encrypted </span> <span class="paramType">{"type":"string","min":64,"max":6400000000} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="keyShared"></a>keyShared</h3><p></p><h4>Param list</h4><code><pre>{
     "xPubSList": [
         {
             "index": 0,
@@ -53006,7 +52952,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="ipv4"></a>ipv4</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">xPubSList </span> <span class="paramType">array </span><br><span class="paramName">keyEncryptedList </span> <span class="paramType">array </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="ipv4"></a>ipv4</h3><p></p><h4>Param list</h4><code><pre>{
     "part1": 0,
     "part2": 0,
     "part3": 0,
@@ -53018,7 +52964,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="nodeURI"></a>nodeURI</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">part1 </span> <span class="paramType">{"type":"int","min":1,"max":3,"default":0} </span><br><span class="paramName">part2 </span> <span class="paramType">{"type":"int","min":1,"max":3,"default":0} </span><br><span class="paramName">part3 </span> <span class="paramType">{"type":"int","min":1,"max":3,"default":0} </span><br><span class="paramName">part4 </span> <span class="paramType">{"type":"int","min":1,"max":3,"default":0} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="nodeURI"></a>nodeURI</h3><p></p><h4>Param list</h4><code><pre>{
     "ipv4": {
         "part1": 0,
         "part2": 0,
@@ -53040,7 +52986,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="otp"></a>otp</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">ipv4 </span> <span class="paramType">Object <a href="#ipv4">ipv4</a> </span><br><span class="paramName">port </span> <span class="paramType">{"type":"int","min":1,"max":5,"default":80} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="otp"></a>otp</h3><p></p><h4>Param list</h4><code><pre>{
     "salt": "",
     "saltMethod": "",
     "createDate": {
@@ -53093,7 +53039,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="metaData"></a>metaData</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">salt </span> <span class="paramType">{"type":"string","min":1,"max":256} </span><br><span class="paramName">saltMethod </span> <span class="paramType">{"type":"string","min":1,"max":256,"default":"sha256"} </span><br><span class="paramName">createDate </span> <span class="paramType">object </span><br><span class="paramName">expireDate </span> <span class="paramType">object </span><br><span class="paramName">pubKey </span> <span class="paramType">Object <a href="#pubKey">pubKey</a> </span><br><span class="paramName">pubId </span> <span class="paramType">object </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="metaData"></a>metaData</h3><p></p><h4>Param list</h4><code><pre>{
     "version": "",
     "time": {
         "time": 0,
@@ -53370,7 +53316,7 @@
         "hash": "a0c12b83bc8b79bd1ebebfe06fab940a5ded91e08e228e03d4d621776a8383b0",
         "data": ""
     }
-}</pre></code><h3><a name="trace"></a>trace</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">version </span> <span class="paramType">{"type":"string","min":1,"max":256,"default":"v0"} </span><br><span class="paramName">time </span> <span class="paramType">{"type":"int","min":1,"max":14,"default":0} </span><br><span class="paramName">peerList </span> <span class="paramType">array </span><br><span class="paramName">pubKey </span> <span class="paramType">Object <a href="#pubKey">pubKey</a> </span><br><span class="paramName">sig </span> <span class="paramType">Object <a href="#sig">sig</a> </span><br><span class="paramName">PowDiff </span> <span class="paramType">integer </span><br><span class="paramName">PowPrefix </span> <span class="paramType">{"type":"string","min":1,"max":256,"default":"W"} </span><br><span class="paramName">PowNonce </span> <span class="paramType">{"type":"int","min":1,"max":10,"default":0} </span><br><span class="paramName">PowHash </span> <span class="paramType">object </span><br><span class="paramName">id </span> <span class="paramType">{"type":"string","min":1,"max":256} </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br><span class="paramName">otp </span> <span class="paramType">Object <a href="#otp">otp</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br></p><h3><a name="trace"></a>trace</h3><p></p><h4>Param list</h4><code><pre>{
     "proofMerkleTree": {},
     "sigYesList": [],
     "sigNoList": [],
@@ -53399,7 +53345,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="type"></a>type</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">proofMerkleTree </span> <span class="paramType">object </span><br><span class="paramName">sigYesList </span> <span class="paramType">array </span><br><span class="paramName">sigNoList </span> <span class="paramType">array </span><br><span class="paramName">userRepositoryGitHash </span> <span class="paramType">object </span><br><span class="paramName">transctionHash </span> <span class="paramType">object </span><br><span class="paramName">gitCommitHash </span> <span class="paramType">object </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="type"></a>type</h3><p></p><h4>Param list</h4><code><pre>{
     "data": "share|backup|lock",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -53408,7 +53354,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="reason"></a>reason</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="reason"></a>reason</h3><p></p><h4>Param list</h4><code><pre>{
     "resource": {},
     "data": "",
     "msg": "",
@@ -53422,7 +53368,7 @@
         "hash": "a0c12b83bc8b79bd1ebebfe06fab940a5ded91e08e228e03d4d621776a8383b0",
         "data": ""
     }
-}</pre></code><h3><a name="paramList"></a>paramList</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">resource </span> <span class="paramType">object </span><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br><span class="paramName">msg </span> <span class="paramType">string </span><br><span class="paramName">code </span> <span class="paramType">integer </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br><span class="paramName">type </span> <span class="paramType">Object <a href="#type">type</a> </span><br><span class="paramName">step </span> <span class="paramType">string </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br></p><h3><a name="paramList"></a>paramList</h3><p></p><h4>Param list</h4><code><pre>{
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "right": "d7eadefaa468516b2f1d625ff44c5bcca490f09c2aaf92d7249b5d9b5c11fa42",
@@ -53430,7 +53376,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="result"></a>result</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="result"></a>result</h3><p></p><h4>Param list</h4><code><pre>{
     "bool": 0,
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -53439,7 +53385,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="method"></a>method</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">bool </span> <span class="paramType">integer </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="method"></a>method</h3><p></p><h4>Param list</h4><code><pre>{
     "name": "",
     "hash": {
         "left": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -53448,7 +53394,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="request"></a>request</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">name </span> <span class="paramType">{"type":"string","min":1,"max":256,"default":"default"} </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="request"></a>request</h3><p></p><h4>Param list</h4><code><pre>{
     "methodHash": {
         "left": "069504185580363365e0f32ff2e2ded4b02eb8486aa4e01d3afd7976751aa1f1",
         "right": "42e08999afc63a31493b8296a85952a0b79b9ba4b809fad269df1620e4e329e4",
@@ -53843,7 +53789,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="response"></a>response</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">methodHash </span> <span class="paramType">object </span><br><span class="paramName">metaData </span> <span class="paramType">Object <a href="#metaData">metaData</a> </span><br><span class="paramName">method </span> <span class="paramType">Object <a href="#method">method</a> </span><br><span class="paramName">paramList </span> <span class="paramType">Object <a href="#paramList">paramList</a> </span><br><span class="paramName">reason </span> <span class="paramType">Object <a href="#reason">reason</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="response"></a>response</h3><p></p><h4>Param list</h4><code><pre>{
     "methodHash": {
         "left": "069504185580363365e0f32ff2e2ded4b02eb8486aa4e01d3afd7976751aa1f1",
         "right": "42e08999afc63a31493b8296a85952a0b79b9ba4b809fad269df1620e4e329e4",
@@ -55371,7 +55317,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="pegOut"></a>pegOut</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">methodHash </span> <span class="paramType">object </span><br><span class="paramName">metaData </span> <span class="paramType">Object <a href="#metaData">metaData</a> </span><br><span class="paramName">result </span> <span class="paramType">Object <a href="#result">result</a> </span><br><span class="paramName">resource </span> <span class="paramType">object </span><br><span class="paramName">reason </span> <span class="paramType">Object <a href="#reason">reason</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="pegOut"></a>pegOut</h3><p></p><h4>Param list</h4><code><pre>{
     "sig": {
         "txVoutindex": 0,
         "sigData": {
@@ -55560,7 +55506,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code><h3><a name="gitData"></a>gitData</h3><p></p><h4>Param list</h4><code><pre>{
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">sig </span> <span class="paramType">Object <a href="#sig">sig</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p><h3><a name="gitData"></a>gitData</h3><p></p><h4>Param list</h4><code><pre>{
     "ipv4": {
         "part1": 0,
         "part2": 0,
@@ -55604,7 +55550,7 @@
         "data": ""
     },
     "state": "mock"
-}</pre></code>
+}</pre></code><p><strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br><span class="paramName">ipv4 </span> <span class="paramType">Object <a href="#ipv4">ipv4</a> </span><br><span class="paramName">userRepositoryGitHash </span> <span class="paramType">object </span><br><span class="paramName">commitGitHash </span> <span class="paramType">object </span><br><span class="paramName">data </span> <span class="paramType">{"type":"string","min":64,"max":6400000000,"default":""} </span><br><span class="paramName">tag </span> <span class="paramType">Object <a href="#tag">tag</a> </span><br><span class="paramName">hash </span> <span class="paramType">Object <a href="#hash">hash</a> </span><br><span class="paramName">state </span> <span class="paramType">{"type":"string","valueList":["mock","test","dev","prod"],"default":"mock"} </span><br></p>
       </article>
     </section>
     <aside>

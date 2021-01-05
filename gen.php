@@ -24,7 +24,51 @@ class Html {
 
         return true;
     }
-    public static function rendered(){
+    public static function renderedParamTypeList(array $list, stdClass $conf): string{
+
+      $html = '<p>';
+      $html .= '<strong><span class="paramName">Paramètre</span> <span class="paramType">Type</span></strong><br>'; 
+
+      foreach($list as $paramType => $a) {
+        
+        $html .= '<span class="paramName">'.$paramType.':</span> <span class="paramType"><a href="#'.$a.'">'.$a.'</a></span><br>'; 
+      }
+      $html .= '</p>';
+
+      return $html;
+    }
+    public static function renderedTypeParamTypeList(array|stdClass $list, stdClass $conf): string{
+
+      $html = '<p>';
+      $html .= '<strong><span class="paramName">Paramètre</span> <span class="paramName">Type</span> <span class="paramType">Validation</span></strong><br>'; 
+
+      foreach($list as $paramType => $a) {
+
+        if($a === "") $o = 'string';
+        elseif($a === 0) $o = 'int';
+        if(isset(Type::$list->$paramType) === true) {
+          
+          $o = 'Object <a href="#'.$paramType.'">'.$paramType.'</a>';
+        }
+        else {
+
+          if(isset($conf->typeControle->$paramType) === true ) {
+            
+            $o = json_encode($conf->typeControle->$paramType);
+          }
+          else {
+
+            $o = gettype($a);
+          }
+        }        
+        $html .= '<span class="paramName">'.$paramType.' </span> <span class="paramType">'.$o.' </span><br>'; 
+      }
+      $html .= '</p>';
+
+      return $html;
+    }
+
+    public static function rendered(stdClass $conf){
 
         $html = '';
        
@@ -35,28 +79,13 @@ class Html {
             $html .= '<h4>Request</h4>';
             $html .= '<code><pre class="prettyprint">'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
             $html .= '<h4>ParamList types:</h4>';
-            $html .= '<p>';
-            $html .= '<strong><span class="paramName">Paramètre</span> <span class="paramType">Type</span></strong><br>'; 
-
-            foreach($m->paramTypeList as $paramType => $a) {
-              
-              $html .= '<span class="paramName">'.$paramType.':</span> <span class="paramType"><a href="#'.$a.'">'.$a.'</a></span><br>'; 
-            }
-            $html .= '</p>';
+            $html .= Html::renderedParamTypeList($m->paramTypeList, $conf);
             $html .= '<h4>Response</h4>';
             $html .= '<code><pre class="prettyprint">'.json_encode($m->request, JSON_PRETTY_PRINT).'</pre></code>';
-            $html .= '<p>';
-            $html .= '<strong><span class="paramName">Paramètre</span> <span class="paramType">Type</span></strong><br>'; 
-
-            foreach($m->responseTypeList as $paramType => $a) {
-              
-              $html .= '<span class="paramName">'.$paramType.':</span> <span class="paramType"><a href="#'.$a.'">'.$a.'</a></span><br>'; 
-            }
-            $html .= '</p>';
-            self::$methodLinks .= '<p><a href="#'.$m->name.'">'.$m->name.'</a></p>';
+            $html .= Html::renderedParamTypeList($m->responseTypeList, $conf);
+            Html::$methodLinks .= '<p><a href="#'.$m->name.'">'.$m->name.'</a></p>';
         }
-        Html::$method = $html;
-        
+        Html::$method = $html;        
        
         foreach(Type::$list as $t) {
 
@@ -64,8 +93,8 @@ class Html {
             $html .= '<p>'.$t->description.'</p>';
             $html .= '<h4>Param list</h4>';
             $html .= '<code><pre>'.json_encode($t->paramList, JSON_PRETTY_PRINT).'</pre></code>';
-
-            self::$typeLinks .= '<p><a href="#'.$t->name.'">'.$t->name.'</a></p>';
+            $html .= Html::renderedTypeParamTypeList($t->paramList, $conf);
+            Html::$typeLinks .= '<p><a href="#'.$t->name.'">'.$t->name.'</a></p>';
         }
         Html::$type = $html;       
         $c = file_get_contents('htmlTemplate/index.html');
@@ -75,6 +104,7 @@ class Html {
         $c = str_replace('$type', Html::$type, $c);
 
         file_put_contents(Html::$dir.'/index.html', $c);
+        copy('htmlTemplate/index.css', Html::$dir.'/index.css');
     }
 }
 class Hash {
@@ -340,8 +370,8 @@ $conf = json_decode(file_get_contents("conf.json"));
 
 Type::confGen($conf);
 Method::confGen($conf);
-Html::rendered();
+Html::rendered($conf);
 
-echo '<a href="'.Html::$dir.'/index.html" targert="_blank">'.Html::$dir.'/index.html</a><br>';
-echo '<a href="'.Html::$dir.'/Type.json" targert="_blank">'.Html::$dir.'/Type.json</a><br>';
-echo '<a href="'.Html::$dir.'/Method.json" targert="_blank">'.Html::$dir.'/Method.json</a><br>';
+echo '<a href="'.Html::$dir.'/index.html" target="_blank">'.Html::$dir.'/index.html</a><br>';
+echo '<a href="'.Html::$dir.'/Type.json" target="_blank">'.Html::$dir.'/Type.json</a><br>';
+echo '<a href="'.Html::$dir.'/Method.json" target="_blank">'.Html::$dir.'/Method.json</a><br>';
