@@ -65,9 +65,16 @@ class Html {
             $html .= '<h4>Param list</h4>';
             $html .= '<code><pre>'.json_encode($t->paramList, JSON_PRETTY_PRINT).'</pre></code>';
 
-            self::$methodLinks .= '<p><a href="#'.$t->name.'">'.$t->name.'</a></p>';
+            self::$typeLinks .= '<p><a href="#'.$t->name.'">'.$t->name.'</a></p>';
         }
-        Html::$type = $html;
+        Html::$type = $html;       
+        $c = file_get_contents('htmlTemplate/index.html');
+        $c = str_replace('$methodLinks', Html::$methodLinks, $c);
+        $c = str_replace('$typeLinks', Html::$typeLinks, $c);
+        $c = str_replace('$method', Html::$method, $c);
+        $c = str_replace('$type', Html::$type, $c);
+
+        file_put_contents(Html::$dir.'/index.html', $c);
     }
 }
 class Hash {
@@ -334,115 +341,6 @@ $conf = json_decode(file_get_contents("conf.json"));
 Type::confGen($conf);
 Method::confGen($conf);
 Html::rendered();
-
-$c = '<!DOCTYPE HTML>
-<html>
-  <head>
-    <title>Title of the document</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=json&skin=sunburst"></script>
-    <style>
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0;
-      }
-      .header-menu,
-      footer {
-        display: flex;
-        align-items: center;
-        width: 100%;
-      }
-      .header-menu {
-        justify-content: flex-end;
-        height: 60px;
-        background: #1c87c9;
-        color: #fff;
-      }
-      h2 {
-        margin: 0 0 8px;
-      }
-      ul li {
-        display: inline-block;
-        padding: 0 10px;
-        list-style: none;
-      }
-      aside {
-        flex: 0.4;
-        height: 165px;
-        padding-left: 15px;
-        border-left: 1px solid #666;
-      }
-      section {
-        flex: 1;
-        padding-right: 15px;
-      }
-      footer {
-        padding: 0 10px;
-        background: #ccc;
-      }
-      pre {
-        height: 300px;
-        overflow: scroll;
-       } 
-       .paramtype {
-       } 
-       .paramName {
-         display: inline-block;
-        width: 200px;
-       }
-    </style>
-  </head>
-  <body>
-    <header class="header-menu">
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li></li>
-          <li></li>
-        </ul>
-      </nav>
-    </header>
-    <section>
-      <article>
-        <header>
-            <h2>Documentation Contribox</h2>
-            <p><a href="https://github.com/chainaccelerator/contribox-ref">Rendered with : https://github.com/chainaccelerator/contribox-ref</a></p>
-            <p><a href="rendered/Method.json" target="_blank">Download Method.json</a></p>
-            <p><a href="rendered/Types.json" target="_blank">Download Type.json</a></p>
-        </header>
-      </article>
-      <article>
-        <header>
-          <h2><a name="method"><a>Methods</h2>
-        </header>        
-        '.Html::$method.'
-      </article>      
-      <article>
-        <header>
-          <h2><a name="type"><a>Types</h2>
-        </header>        
-        '. Html::$type.'
-      </article>
-    </section>
-    <aside>
-      <h2>Shortcuts</h2>
-      <p><strong><a href="#method">Method</a></strong></p>
-      '.Html::$methodLinks.'
-      <p><strong><a href="#type">Types</a></strong></p>
-      '.Html::$typeLinks.'
-    </aside>
-    <footer>
-      <small>Company © Chain Accelerator. All rights reserved.</small>
-    </footer>
-  </body>
-</html>';
-
-file_put_contents(Html::$dir.'/index.html', $c);
 
 echo '<a href="'.Html::$dir.'/index.html" targert="_blank">'.Html::$dir.'/index.html</a><br>';
 echo '<a href="'.Html::$dir.'/Type.json" targert="_blank">'.Html::$dir.'/Type.json</a><br>';
