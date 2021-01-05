@@ -368,7 +368,7 @@ $c = '<!DOCTYPE HTML>
       pre {
         height: 300px;
         overflow: scroll;
-       }
+       } 
     </style>
   </head>
   <body>
